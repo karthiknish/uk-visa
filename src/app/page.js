@@ -17,7 +17,7 @@ export default function Home() {
           { href: "#services", label: "Services" },
           { href: "#how-we-work", label: "How We Work" },
           { href: "/free-review?scroll=form", label: "Free Review" },
-          { href: "#contact", label: "Contact" },
+          { href: "/contact", label: "Contact" },
         ]}
       />
 
