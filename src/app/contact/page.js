@@ -219,7 +219,7 @@ export default function ContactPage() {
                   </h3>
                   <p className="text-gray-600">
                     The required documents vary depending on your visa type.
-                    We'll provide a detailed checklist after our initial
+                    We&apos;ll provide a detailed checklist after our initial
                     consultation.
                   </p>
                 </div>
