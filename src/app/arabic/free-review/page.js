@@ -1,22 +1,28 @@
-"use client";
+// app/arabic/free-review/page.js (or your equivalent path)
+"use client"; // Keep this if other parts of FreeReviewArabic need to be client components (like Navigation or Footer if they have client-side interactivity not managed by their own "use client")
+// However, the page itself can often be a Server Component if the only client part is what's inside Suspense.
+// For this specific fix, we are focusing on the component using useSearchParams.
 
-import { useEffect, useRef } from "react";
-import { useSearchParams } from "next/navigation";
-import { FadeIn, ScaleIn } from "@/components/animations";
+import React, { Suspense } from "react"; // Import Suspense
+// Remove useEffect, useRef, useSearchParams from here if they are solely used by FreeReviewContent
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import Image from "next/image";
-import Link from "next/link";
+import Image from "next/image"; // Keep if used directly in FreeReviewArabic
+// import Link from "next/link"; // Keep if used directly in FreeReviewArabic
+import { FadeIn } from "@/components/animations"; // Keep if used directly
+
+// Import the new component
+import FreeReviewContent from "@/components/FreeReviewContent"; // Adjust path as needed
 
 export default function FreeReviewArabic() {
-  const formRef = useRef(null);
-  const searchParams = useSearchParams();
+  // const formRef = useRef(null); // This ref might need to be passed down to FreeReviewContent if it's the target
+  // const searchParams = useSearchParams(); // REMOVE THIS LINE
 
-  useEffect(() => {
-    if (searchParams.get("scroll") === "form" && formRef.current) {
-      formRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-  }, [searchParams]);
+  // useEffect(() => { // REMOVE THIS EFFECT
+  //   if (searchParams.get("scroll") === "form" && formRef.current) {
+  //     formRef.current.scrollIntoView({ behavior: "smooth" });
+  //   }
+  // }, [searchParams]);
 
   return (
     <div
@@ -55,55 +61,12 @@ export default function FreeReviewArabic() {
           </div>
         </section>
 
-        {/* Main Content */}
-        <section className="py-16">
-          <div className="container mx-auto px-4 max-w-4xl">
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <div className="mb-12">
-                <ScaleIn>
-                  <div className="w-full h-[300px] relative rounded-lg overflow-hidden mb-8">
-                    <Image
-                      src="https://images.pexels.com/photos/1008155/pexels-photo-1008155.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                      alt="خدمات استشارات وتقييم التأشيرات المهنية"
-                      fill
-                      className="object-cover"
-                      priority
-                    />
-                  </div>
-                </ScaleIn>
-
-                <FadeIn>
-                  <p className="text-lg mb-6">
-                    إذا كانت لديك أي مشكلة متعلقة بالهجرة، يمكنك الحصول على
-                    تقييم من أحد خبرائنا. سنزودك بجميع المعلومات التي تحتاجها
-                    لاتخاذ القرار الأمثل بشأن قضيتك.
-                  </p>
-
-                  <p className="text-lg mb-6">
-                    نقدم استشارات قانونية في قضايا الهجرة. يتمتع محامونا بخبرة
-                    واسعة ومهارة في تمثيل العملاء أمام القضاة وفي إجراءات
-                    التحكيم والوساطة.
-                  </p>
-
-                  <p className="text-lg mb-6">
-                    إذا كنت مهاجرًا غير موثق، فقد يصعب عليك نظام الهجرة الحصول
-                    على الحماية القانونية التي تحتاجها. يمكننا مساعدتك في الحصول
-                    على تصريح عمل. كما يمكننا مساعدتك في تجديد تصريح عملك.
-                  </p>
-
-                  <div className="mt-12 text-center">
-                    <Link
-                      href="/arabic/contact"
-                      className="inline-block bg-[#003D6E] text-white px-8 py-3 rounded-lg hover:bg-[#002D4E] transition-colors"
-                    >
-                      احصل على تقييمك المجاني
-                    </Link>
-                  </div>
-                </FadeIn>
-              </div>
-            </div>
-          </div>
-        </section>
+        {/* Main Content wrapped in Suspense */}
+        <Suspense
+          fallback={<div className="text-center py-16">جار التحميل...</div>}
+        >
+          <FreeReviewContent />
+        </Suspense>
       </main>
 
       <Footer
