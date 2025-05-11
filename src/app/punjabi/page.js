@@ -4,23 +4,20 @@ import Image from "next/image";
 import { FadeIn, ScaleIn, StaggerContainer, staggerItem } from "@/components/animations";
 import { motion } from "framer-motion";
 
-export default function Home() {
+export default function PunjabiPage() {
   return (
     <div className="min-h-screen font-[family-name:var(--font-geist-sans)]">
       <header className="primary-bg text-white py-4">
         <div className="container mx-auto px-6 flex justify-between items-center">
-          <div className="font-bold text-2xl">UK Visa Help Consultants</div>
+          <div className="font-bold text-2xl">ਯੂਕੇ ਵੀਜ਼ਾ ਹੈਲਪ ਕਨਸਲਟੈਂਟਸ</div>
           <nav className="hidden md:flex space-x-6">
-            <a href="#" className="hover:text-gray-300">Home</a>
-            <a href="#services" className="hover:text-gray-300">Services</a>
-            <a href="#how-we-work" className="hover:text-gray-300">How We Work</a>
-            <a href="/free-review" className="hover:text-gray-300">Free Review</a>
-            <a href="#contact" className="hover:text-gray-300">Contact</a>
-            <div className="border-l border-gray-500 h-6 self-center mx-2"></div>
+            <a href="/" className="hover:text-gray-300">English</a>
             <a href="/bengali" className="hover:text-gray-300">Bengali</a>
             <a href="/urdu" className="hover:text-gray-300">Urdu</a>
-            <a href="/punjabi" className="hover:text-gray-300">Punjabi</a>
             <a href="/farsi" className="hover:text-gray-300">Farsi</a>
+            <a href="#services" className="hover:text-gray-300">ਸੇਵਾਵਾਂ</a>
+            <a href="#how-we-work" className="hover:text-gray-300">ਕੰਮ ਦੀ ਪ੍ਰਕਿਰਿਆ</a>
+            <a href="#contact" className="hover:text-gray-300">ਸੰਪਰਕ</a>
           </nav>
         </div>
       </header>
@@ -29,75 +26,22 @@ export default function Home() {
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row gap-8 items-center">
             <FadeIn direction="right" className="md:w-1/2">
-              <h1 className="text-4xl sm:text-5xl font-bold mb-6">UK Visa & Immigration Specialists</h1>
-              <p className="text-xl mb-8">Expert consultation for all types of UK visas and immigration applications</p>
+              <h1 className="text-4xl sm:text-5xl font-bold mb-6">ਯੂਕੇ ਵੀਜ਼ਾ ਅਤੇ ਇਮੀਗ੍ਰੇਸ਼ਨ ਮਾਹਿਰ</h1>
+              <p className="text-xl mb-8">ਯੂਕੇ ਵੀਜ਼ਾ ਅਤੇ ਸੈਟਲਮੈਂਟ ਅਰਜ਼ੀਆਂ ਲਈ ਮਾਹਰ ਸੇਵਾਵਾਂ</p>
               <motion.a 
                 href="#services" 
                 className="inline-block bg-white text-[#003D6E] font-bold py-3 px-8 rounded-full hover:bg-gray-100 transition-colors"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-              >Our Services</motion.a>
+              >ਸਾਡੀਆਂ ਸੇਵਾਵਾਂ</motion.a>
             </FadeIn>
+            
             {/* Hero Image Placeholder */}
-            <div className="hidden md:block md:w-1/2">
+            <div className="md:w-1/2">
               <div className="bg-gray-200 rounded-lg w-full h-[350px] flex items-center justify-center">
                 <p className="text-gray-500">Hero Image (600x400px)</p>
               </div>
             </div>
-            <FadeIn direction="left" className="md:w-1/2 bg-white rounded-lg shadow-lg p-6">
-              <h2 className="text-[#003D6E] text-2xl font-bold mb-4">Get Free Consultation</h2>
-              <form className="space-y-4">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div>
-                    <input 
-                      type="text" 
-                      placeholder="Your First Name" 
-                      className="w-full p-3 border border-gray-300 rounded-md focus:ring-[#003D6E] focus:border-[#003D6E] outline-none text-gray-700"
-                      required
-                    />
-                  </div>
-                  <div>
-                    <input 
-                      type="text" 
-                      placeholder="Your Last Name" 
-                      className="w-full p-3 border border-gray-300 rounded-md focus:ring-[#003D6E] focus:border-[#003D6E] outline-none text-gray-700"
-                      required
-                    />
-                  </div>
-                </div>
-                <div>
-                  <input 
-                    type="email" 
-                    placeholder="Enter Your Email Address" 
-                    className="w-full p-3 border border-gray-300 rounded-md focus:ring-[#003D6E] focus:border-[#003D6E] outline-none text-gray-700"
-                    required
-                  />
-                </div>
-                <div>
-                  <input 
-                    type="text" 
-                    placeholder="What country are you in" 
-                    className="w-full p-3 border border-gray-300 rounded-md focus:ring-[#003D6E] focus:border-[#003D6E] outline-none text-gray-700"
-                    required
-                  />
-                </div>
-                <div>
-                  <textarea 
-                    placeholder="Describe In More Detail" 
-                    className="w-full p-3 border border-gray-300 rounded-md h-24 focus:ring-[#003D6E] focus:border-[#003D6E] outline-none text-gray-700"
-                    required
-                  ></textarea>
-                </div>
-                <div className="pt-2">
-                  <button 
-                    type="submit"
-                    className="bg-[#003D6E] text-white py-3 px-8 rounded-md hover:bg-[#004d8a] transition-colors font-medium w-full"
-                  >
-                    Submit Request
-                  </button>
-                </div>
-              </form>
-            </FadeIn>
           </div>
         </div>
       </div>
@@ -106,23 +50,23 @@ export default function Home() {
         <section className="py-16 container mx-auto px-6">
           <div className="flex flex-col md:flex-row gap-12">
             <FadeIn direction="up" delay={0.2} className="md:w-1/2">
-              <h2 className="text-3xl font-bold mb-6 text-[#003D6E]">About <span className="text-black">Us</span></h2>
+              <h2 className="text-3xl font-bold mb-6 text-[#003D6E]">ਸਾਡੇ <span className="text-black">ਬਾਰੇ</span></h2>
               <div className="h-1 w-20 bg-[#003D6E] mb-6"></div>
               <p className="mb-4 text-gray-700">
-                UK Visa Help Consultants is one of the leading UK Visa Consultancies with a panel of specialist consultants for UK Visa and settlement applications. The team is made up of specially trained advisors, consultants, and experienced processing teams who place great emphasis on client care.
+                UK Visa Help Consultants ਯੂਕੇ ਵਿੱਚ ਵੀਜ਼ਾ ਅਤੇ ਸੈਟਲਮੈਂਟ ਅਰਜ਼ੀਆਂ ਲਈ ਮਾਹਰ ਸਲਾਹਕਾਰਾਂ ਦੇ ਪੈਨਲ ਨਾਲ ਇੱਕ ਪ੍ਰਮੁੱਖ ਯੂਕੇ ਵੀਜ਼ਾ ਕੰਸਲਟੈਂਸੀ ਹੈ। ਟੀਮ ਵਿੱਚ ਵਿਸ਼ੇਸ਼ ਤੌਰ 'ਤੇ ਪ੍ਰਸ਼ਿਕ੍਷ਤ ਸਲਾਹਕਾਰ, ਕਨਸਲਟੈਂਟ ਅਤੇ ਅਨੁਭਵੀ ਪ੍ਰੋਸੈਸਿੰਗ ਟੀਮਾਂ ਸ਼ਾਮਲ ਹਨ ਜੋ ਗ੍ਰਾਹਕ ਦੀ ਦੇਖਭਾਲ 'ਤੇ ਜ਼ੋਰ ਦਿੰਦੀਆਂ ਹਨ।
               </p>
               <p className="mb-6 text-gray-700">
-                UK Visa Help Consultants has expertise at all levels of immigration and our focus is on providing you with the best assistance we possibly can. If you are planning to travel, reside or extend your stay in the UK, our expert advisors are on hand to help you and your family with our customised immigration advice services.
+                UK Visa Help Consultants ਨੂੰ ਇਮੀਗ੍ਰੇਸ਼ਨ ਦੇ ਹਰ ਪੱਧਰ 'ਤੇ ਮਹਾਰਤ ਹਾਸਲ ਹੈ ਅਤੇ ਸਾਡਾ ਧਿਆਨ ਤੁਹਾਨੂੰ ਸਭ ਤੋਂ ਵਧੀਆ ਮਦਦ ਪ੍ਰਦਾਨ ਕਰਨ 'ਤੇ ਹੈ। ਜੇ ਤੁਸੀਂ ਯੂਕੇ ਯਾਤਰਾ ਕਰਨ, ਰਹਿਣ ਜਾਂ ਆਪਣੇ ਰਹਿਣ ਦੀ ਮਿਆਦ ਵਧਾਉਣ ਦੀ ਯੋਜਨਾ ਬਣਾ ਰਹੇ ਹੋ, ਤਾਂ ਸਾਡੇ ਮਾਹਰ ਸਲਾਹਕਾਰ ਤੁਹਾਡੇ ਅਤੇ ਤੁਹਾਡੇ ਪਰਿਵਾਰ ਦੀ ਮਦਦ ਕਰਨ ਲਈ ਹਮੇਸ਼ਾਂ ਤਿਆਰ ਹਨ।
               </p>
               <motion.a 
                 href="#contact" 
                 className="inline-block bg-[#003D6E] text-white font-bold py-2 px-6 rounded hover:bg-[#004d8a] transition-colors"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-              >Contact Us</motion.a>
+              >ਸੰਪਰਕ ਕਰੋ</motion.a>
             </FadeIn>
             <FadeIn direction="up" delay={0.4} className="md:w-1/2 bg-gray-100 rounded-lg p-8">
-              <h2 className="text-2xl font-bold mb-4 text-[#003D6E]">Why Clients Choose UK Visa Help Consultants?</h2>
+              <h2 className="text-2xl font-bold mb-4 text-[#003D6E]">ਕਿਉਂ ਗ੍ਰਾਹਕ UK Visa Help Consultants ਨੂੰ ਚੁਣਦੇ ਹਨ?</h2>
               <div className="h-1 w-20 bg-[#003D6E] mb-6"></div>
               <div className="mb-4 flex justify-center">
                 <div className="bg-gray-200 rounded-lg w-[200px] h-[200px] flex items-center justify-center mb-4">
@@ -130,24 +74,24 @@ export default function Home() {
                 </div>
               </div>
               <p className="mb-4 text-gray-700">
-                Many clients choose UK Visa Help Consultants for our history of excellent service and track record of success. However, we feel our greatest strength, and what makes us truly unique, is our small dedicated team that offers a truly personalised service. We genuinely love what we do, and our team relishes making a difference to the lives of our clients.
+                ਕਈ ਗ੍ਰਾਹਕ ਸਾਡੀ ਸ਼ਾਨਦਾਰ ਸੇਵਾ ਅਤੇ ਕਾਮਯਾਬੀ ਦੇ ਇਤਿਹਾਸ ਕਾਰਨ ਸਾਨੂੰ ਚੁਣਦੇ ਹਨ। ਹਾਲਾਂਕਿ, ਸਾਡੀ ਸਭ ਤੋਂ ਵੱਡੀ ਤਾਕਤ ਅਤੇ ਜੋ ਸਾਨੂੰ ਵਿਲੱਖਣ ਬਣਾਉਂਦਾ ਹੈ, ਉਹ ਹੈ ਸਾਡੀ ਛੋਟੀ ਪਰ ਸਮਰਪਿਤ ਟੀਮ ਜੋ ਵਿਅਕਤੀਗਤ ਸੇਵਾ ਦਿੰਦੀ ਹੈ। ਅਸੀਂ ਜੋ ਕਰਦੇ ਹਾਂ ਉਹ ਸੱਚਮੁੱਚ ਪਸੰਦ ਕਰਦੇ ਹਾਂ ਅਤੇ ਸਾਡੀ ਟੀਮ ਗ੍ਰਾਹਕਾਂ ਦੀ ਜ਼ਿੰਦਗੀ ਵਿੱਚ ਫਰਕ ਪਾਉਣ ਨੂੰ ਲੈ ਕੇ ਉਤਸ਼ਾਹਿਤ ਹੈ।
               </p>
               <div className="grid grid-cols-2 gap-4 mt-6">
                 <div className="flex items-center gap-2">
                   <div className="text-[#003D6E] font-bold">✓</div>
-                  <div>Expert Advisors</div>
+                  <div>ਮਾਹਰ ਸਲਾਹਕਾਰ</div>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="text-[#003D6E] font-bold">✓</div>
-                  <div>Personalized Service</div>
+                  <div>ਵਿਅਕਤੀਗਤ ਸੇਵਾ</div>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="text-[#003D6E] font-bold">✓</div>
-                  <div>High Success Rate</div>
+                  <div>ਉੱਚ ਸਫਲਤਾ ਦਰ</div>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="text-[#003D6E] font-bold">✓</div>
-                  <div>Timely Processing</div>
+                  <div>ਤੇਜ਼ ਪ੍ਰੋਸੈਸਿੰਗ</div>
                 </div>
               </div>
             </FadeIn>
@@ -157,10 +101,10 @@ export default function Home() {
         <section id="services" className="py-16 bg-gray-50">
           <div className="container mx-auto px-6">
             <FadeIn direction="up" className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4 text-[#003D6E]">Our <span className="text-black">Services</span></h2>
+              <h2 className="text-3xl font-bold mb-4 text-[#003D6E]">ਸਾਡੀਆਂ <span className="text-black">ਸੇਵਾਵਾਂ</span></h2>
               <div className="h-1 w-20 bg-[#003D6E] mx-auto mb-6"></div>
               <p className="max-w-2xl mx-auto text-gray-700">
-                We provide a complete set of visa and immigration solutions based on the needs of applicants.
+                ਅਸੀਂ ਅਰਜ਼ੀਕਾਰਾਂ ਦੀ ਲੋੜ ਅਨੁਸਾਰ ਪੂਰਾ ਵੀਜ਼ਾ ਅਤੇ ਇਮੀਗ੍ਰੇਸ਼ਨ ਹੱਲ ਦਿੰਦੇ ਹਾਂ।
               </p>
             </FadeIn>
             
@@ -169,23 +113,23 @@ export default function Home() {
                 <div className="bg-gray-200 w-full h-[120px] rounded-md mb-4 flex items-center justify-center">
                   <p className="text-gray-500">Service Image 1 (120x120px)</p>
                 </div>
-                <h3 className="text-xl font-bold mb-2 text-center">Personal & Family</h3>
+                <h3 className="text-xl font-bold mb-2 text-center">ਨਿੱਜੀ ਅਤੇ ਪਰਿਵਾਰਕ</h3>
                 <ul className="space-y-2 text-gray-700">
                   <li className="flex items-start">
                     <span className="text-[#003D6E] mr-2">•</span>
-                    <span>Spouse & Fiancé Visas</span>
+                    <span>ਜੀਵਨ ਸਾਥੀ ਅਤੇ ਮੰਗਣੀ ਵੀਜ਼ਾ</span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-[#003D6E] mr-2">•</span>
-                    <span>Indefinite Leave to Remain</span>
+                    <span>ਅਣਸ਼ਰਤ ਰਹਿਣ ਦੀ ਇਜਾਜ਼ਤ (ILR)</span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-[#003D6E] mr-2">•</span>
-                    <span>EEA Settled Status</span>
+                    <span>EEA ਸੈਟਲਡ ਸਟੇਟਸ</span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-[#003D6E] mr-2">•</span>
-                    <span>British Passport Applications</span>
+                    <span>ਬ੍ਰਿਟਿਸ਼ ਪਾਸਪੋਰਟ ਅਰਜ਼ੀਆਂ</span>
                   </li>
                 </ul>
               </ScaleIn>
@@ -194,23 +138,23 @@ export default function Home() {
                 <div className="bg-gray-200 w-full h-[120px] rounded-md mb-4 flex items-center justify-center">
                   <p className="text-gray-500">Service Image 2 (120x120px)</p>
                 </div>
-                <h3 className="text-xl font-bold mb-2 text-center">Work & Business</h3>
+                <h3 className="text-xl font-bold mb-2 text-center">ਕੰਮ ਅਤੇ ਕਾਰੋਬਾਰ</h3>
                 <ul className="space-y-2 text-gray-700">
                   <li className="flex items-start">
                     <span className="text-[#003D6E] mr-2">•</span>
-                    <span>Work Visas</span>
+                    <span>ਕੰਮ ਵੀਜ਼ਾ</span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-[#003D6E] mr-2">•</span>
-                    <span>Senior/Specialist Worker</span>
+                    <span>ਸੀਨੀਅਰ/ਵਿਸ਼ੇਸ਼ ਕਾਮੇ</span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-[#003D6E] mr-2">•</span>
-                    <span>Business Visas</span>
+                    <span>ਕਾਰੋਬਾਰੀ ਵੀਜ਼ੇ</span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-[#003D6E] mr-2">•</span>
-                    <span>Visa Extensions</span>
+                    <span>ਵੀਜ਼ਾ ਵਾਧਾ</span>
                   </li>
                 </ul>
               </ScaleIn>
@@ -219,67 +163,67 @@ export default function Home() {
                 <div className="bg-gray-200 w-full h-[120px] rounded-md mb-4 flex items-center justify-center">
                   <p className="text-gray-500">Service Image 3 (120x120px)</p>
                 </div>
-                <h3 className="text-xl font-bold mb-2 text-center">Student & Graduate</h3>
+                <h3 className="text-xl font-bold mb-2 text-center">ਵਿਦਿਆਰਥੀ ਅਤੇ ਗ੍ਰੈਜੂਏਟ</h3>
                 <ul className="space-y-2 text-gray-700">
                   <li className="flex items-start">
                     <span className="text-[#003D6E] mr-2">•</span>
-                    <span>Student Visas</span>
+                    <span>ਵਿਦਿਆਰਥੀ ਵੀਜ਼ਾ</span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-[#003D6E] mr-2">•</span>
-                    <span>Graduate Visas</span>
+                    <span>ਗ੍ਰੈਜੂਏਟ ਵੀਜ਼ਾ</span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-[#003D6E] mr-2">•</span>
-                    <span>Graduate Dependent Visas</span>
+                    <span>ਗ੍ਰੈਜੂਏਟ ਡਿਪੈਂਡੈਂਟ ਵੀਜ਼ਾ</span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-[#003D6E] mr-2">•</span>
-                    <span>Short-term Study Visas</span>
+                    <span>ਛੋਟੀ-ਮਿਆਦ ਦਾ ਸਟੱਡੀ ਵੀਜ਼ਾ</span>
                   </li>
                 </ul>
               </ScaleIn>
             </div>
             
             <FadeIn direction="up" delay={0.2} className="bg-white p-6 rounded-lg shadow">
-              <h3 className="text-xl font-semibold mb-4 text-[#003D6E]">Additional services include:</h3>
+              <h3 className="text-xl font-semibold mb-4 text-[#003D6E]">ਹੋਰ ਸੇਵਾਵਾਂ ਵਿੱਚ ਸ਼ਾਮਲ ਹਨ:</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <ul className="space-y-2 text-gray-700">
                   <li className="flex items-start">
                     <span className="text-[#003D6E] mr-2">•</span>
-                    <span>UK Travel Documents</span>
+                    <span>ਯੂਕੇ ਟ੍ਰੈਵਲ ਡੌਕੂਮੈਂਟ</span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-[#003D6E] mr-2">•</span>
-                    <span>E-Visas</span>
+                    <span>ਈ-ਵੀਜ਼ਾ</span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-[#003D6E] mr-2">•</span>
-                    <span>Marriage Visitor Visas</span>
-                  </li>
-                </ul>
-                <ul className="space-y-2 text-gray-700">
-                  <li className="flex items-start">
-                    <span className="text-[#003D6E] mr-2">•</span>
-                    <span>Dependency Visas</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-[#003D6E] mr-2">•</span>
-                    <span>Appeals and Refusals</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-[#003D6E] mr-2">•</span>
-                    <span>Asylum Applications</span>
+                    <span>ਵਿਆਹ ਯਾਤਰੀ ਵੀਜ਼ਾ</span>
                   </li>
                 </ul>
                 <ul className="space-y-2 text-gray-700">
                   <li className="flex items-start">
                     <span className="text-[#003D6E] mr-2">•</span>
-                    <span>ARAP Scheme Applications</span>
+                    <span>ਡਿਪੈਂਡੈਂਸੀ ਵੀਜ਼ਾ</span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-[#003D6E] mr-2">•</span>
-                    <span>Additional Family Members</span>
+                    <span>ਅਪੀਲਾਂ ਅਤੇ ਇਨਕਾਰ</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-[#003D6E] mr-2">•</span>
+                    <span>ਸ਼ਰਨਾਰਥੀ ਅਰਜ਼ੀ</span>
+                  </li>
+                </ul>
+                <ul className="space-y-2 text-gray-700">
+                  <li className="flex items-start">
+                    <span className="text-[#003D6E] mr-2">•</span>
+                    <span>ARAP ਸਕੀਮ ਅਰਜ਼ੀਆਂ</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-[#003D6E] mr-2">•</span>
+                    <span>ਹੋਰ ਪਰਿਵਾਰਕ ਮੈਂਬਰ</span>
                   </li>
                 </ul>
               </div>
@@ -289,10 +233,10 @@ export default function Home() {
 
         <section id="how-we-work" className="py-16 container mx-auto px-6">
           <FadeIn direction="up" className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4 text-[#003D6E]">How We <span className="text-black">Work</span></h2>
+            <h2 className="text-3xl font-bold mb-4 text-[#003D6E]">ਅਸੀਂ ਕਿਵੇਂ <span className="text-black">ਕੰਮ ਕਰਦੇ ਹਾਂ</span></h2>
             <div className="h-1 w-20 bg-[#003D6E] mx-auto mb-6"></div>
             <p className="max-w-2xl mx-auto text-gray-700">
-              Our streamlined process makes getting visa assistance quick and easy
+              ਸਾਡੀ ਸਰਲ ਪ੍ਰਕਿਰਿਆ ਵੀਜ਼ਾ ਸਹਾਇਤਾ ਪ੍ਰਾਪਤ ਕਰਨਾ ਆਸਾਨ ਬਣਾਉਂਦੀ ਹੈ
             </p>
           </FadeIn>
           
@@ -310,9 +254,9 @@ export default function Home() {
                 transition={{ type: "spring", stiffness: 200, duration: 0.5 }}
               >1</motion.div>
               <div className="pt-6">
-                <h3 className="text-xl font-bold mb-4 text-center mt-4">Submit Details</h3>
+                <h3 className="text-xl font-bold mb-4 text-center mt-4">ਆਪਣੀ ਜਾਣਕਾਰੀ ਭਰੋ</h3>
                 <p className="text-gray-700 text-center">
-                  Fill out our simple online form with your information and visa requirements
+                  ਆਪਣੀ ਜਾਣਕਾਰੀ ਅਤੇ ਵੀਜ਼ਾ ਦੀ ਲੋੜ ਬਾਰੇ ਸਾਡੇ ਆਸਾਨ ਆਨਲਾਈਨ ਫਾਰਮ ਭਰੋ
                 </p>
               </div>
             </motion.div>
@@ -330,9 +274,9 @@ export default function Home() {
                 transition={{ type: "spring", stiffness: 200, duration: 0.5, delay: 0.2 }}
               >2</motion.div>
               <div className="pt-6">
-                <h3 className="text-xl font-bold mb-4 text-center mt-4">Expert Review</h3>
+                <h3 className="text-xl font-bold mb-4 text-center mt-4">ਮਾਹਰ ਸਮੀਖਿਆ</h3>
                 <p className="text-gray-700 text-center">
-                  We review your details carefully and forward them to our specialist consultant
+                  ਅਸੀਂ ਤੁਹਾਡੀ ਜਾਣਕਾਰੀ ਦੀ ਸੰਭਾਲ ਨਾਲ ਸਮੀਖਿਆ ਕਰਾਂਗੇ ਅਤੇ ਆਪਣੇ ਮਾਹਰ ਕੋਲ ਭੇਜਾਂਗੇ
                 </p>
               </div>
             </motion.div>
@@ -350,9 +294,9 @@ export default function Home() {
                 transition={{ type: "spring", stiffness: 200, duration: 0.5, delay: 0.4 }}
               >3</motion.div>
               <div className="pt-6">
-                <h3 className="text-xl font-bold mb-4 text-center mt-4">Personalized Solution</h3>
+                <h3 className="text-xl font-bold mb-4 text-center mt-4">ਵਿਅਕਤੀਗਤ ਹੱਲ</h3>
                 <p className="text-gray-700 text-center">
-                  Our consultant will contact you with a tailored solution for your visa needs
+                  ਸਾਡਾ ਭਰੋਸੇਯੋਗ ਮਾਹਰ ਤੁਹਾਨੂੰ ਸਭ ਤੋਂ ਵਧੀਆ ਹੱਲ ਦੇਣ ਲਈ ਸੰਪਰਕ ਕਰੇਗਾ
                 </p>
               </div>
             </motion.div>
@@ -363,21 +307,26 @@ export default function Home() {
           <div className="container mx-auto px-6">
             <div className="flex flex-col md:flex-row gap-12 items-center">
               <FadeIn direction="right" className="md:w-1/2">
-                <h2 className="text-3xl font-bold mb-4 text-[#003D6E]">Free <span className="text-black">Assessment</span></h2>
+                <h2 className="text-3xl font-bold mb-4 text-[#003D6E]">ਮੁਫ਼ਤ <span className="text-black">ਸਮੀਖਿਆ</span></h2>
                 <div className="h-1 w-20 bg-[#003D6E] mb-6"></div>
                 <div className="bg-gray-200 rounded-lg w-full h-[200px] flex items-center justify-center mb-6">
                   <p className="text-gray-500">Assessment Image (400x300px)</p>
                 </div>
                 <p className="mb-4 text-gray-700">
-                  If you have an immigration-related situation, you can have an assessment with our professional. We will give you all the information you need to make the best decision about your case.
+                  ਜੇ ਤੁਹਾਡੀ ਕੋਈ ਇਮੀਗ੍ਰੇਸ਼ਨ ਸੰਬੰਧੀ ਪਰੇਸ਼ਾਨੀ ਹੈ, ਤਾਂ ਤੁਸੀਂ ਸਾਡੇ ਮਾਹਰ ਨਾਲ ਮੁਫ਼ਤ ਅਸੈੱਸਮੈਂਟ ਲੈ ਸਕਦੇ ਹੋ। ਅਸੀਂ ਤੁਹਾਨੂੰ ਤੁਹਾਡੇ ਕੇਸ ਬਾਰੇ ਸਹੀ ਫੈਸਲਾ ਲੈਣ ਲਈ ਸਾਰੀ ਜ਼ਰੂਰੀ ਜਾਣਕਾਰੀ ਦਿੰਦੇ ਹਾਂ।
                 </p>
                 <p className="mb-4 text-gray-700">
-                  We provide legal advice on immigration matters. Our lawyers have a wealth of experience and are skilled at representing clients before judges and in arbitration and mediation proceedings.
+                  ਅਸੀਂ ਇਮੀਗ੍ਰੇਸ਼ਨ ਮਾਮਲਿਆਂ 'ਤੇ ਕਾਨੂੰਨੀ ਸਲਾਹ ਦਿੰਦੇ ਹਾਂ। ਸਾਡੇ ਵਕੀਲਾਂ ਕੋਲ ਵੱਡਾ ਤਜਰਬਾ ਹੈ ਅਤੇ ਉਹ ਨਿਆਂਧੀਸ਼ਾਂ ਅੱਗੇ, ਜਾਂ ਪਛਲੜਾਂ ਅਤੇ ਮੱਧਸਥਤਾ ਵਿੱਚ ਗ੍ਰਾਹਕਾਂ ਦੀ ਨੁਮਾਇندگی ਕਰਦੇ ਹਨ।
                 </p>
                 <p className="mb-4 text-gray-700">
-                  If you are an undocumented immigrant, the immigration system can make it difficult for you to obtain the legal protection you need. We can help you obtain a work permit. We can also assist you in renewing your work permit.
+                  ਜੇ ਤੁਸੀਂ ਇੱਕ undocumented immigrant ਹੋ, ਤਾਂ ਇਮੀਗ੍ਰੇਸ਼ਨ ਸਿਸਟਮ ਤੁਹਾਨੂੰ ਕਾਨੂੰਨੀ ਸੁਰੱਖਿਆ ਲੈਣ ਵਿੱਚ ਰੁਕਾਵਟ ਪਾ ਸਕਦਾ ਹੈ। ਅਸੀਂ ਤੁਹਾਡੀ ਮਦਦ ਕਰ ਸਕਦੇ ਹਾਂ ਕਿ ਤੁਸੀਂ ਕੰਮ ਕਰਨ ਦੀ ਇਜਾਜ਼ਤ ਲੈ ਸਕੋ ਜਾਂ ਆਪਣੀ ਇਜਾਜ਼ਤ ਨਵੀਨਤਾ ਕਰਵਾ ਸਕੋ।
                 </p>
-                <a href="#contact" className="inline-block bg-[#003D6E] text-white font-bold py-3 px-8 mt-4 rounded hover:bg-[#004d8a] transition-colors">Get Free Assessment</a>
+                <motion.a 
+                  href="#contact" 
+                  className="inline-block bg-[#003D6E] text-white font-bold py-3 px-8 mt-4 rounded hover:bg-[#004d8a] transition-colors"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >ਮੁਫ਼ਤ ਸਮੀਖਿਆ ਲਵੋ</motion.a>
               </FadeIn>
               <div className="md:w-1/2 grid grid-cols-2 gap-4">
                 <ScaleIn delay={0.2} className="bg-white p-5 rounded-lg shadow-md">
@@ -386,8 +335,8 @@ export default function Home() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                   </div>
-                  <h3 className="font-bold mb-2">99% Success Rate</h3>
-                  <p className="text-sm text-gray-600">We have a proven track record of successful visa applications</p>
+                  <h3 className="font-bold mb-2">99% ਸਫਲਤਾ ਦਰ</h3>
+                  <p className="text-sm text-gray-600">ਸਾਡੇ ਕੋਲ ਸਫਲ ਵੀਜ਼ਾ ਅਰਜ਼ੀਆਂ ਦਾ ਸਾਬਤ ਸ਼ੁਦਾ ਰਿਕਾਰਡ ਹੈ</p>
                 </ScaleIn>
                 <ScaleIn delay={0.3} className="bg-white p-5 rounded-lg shadow-md">
                   <div className="w-12 h-12 bg-[#003D6E] rounded-full flex items-center justify-center text-white mb-3">
@@ -395,8 +344,8 @@ export default function Home() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                   </div>
-                  <h3 className="font-bold mb-2">Fast Processing</h3>
-                  <p className="text-sm text-gray-600">We ensure the quickest possible processing of your application</p>
+                  <h3 className="font-bold mb-2">ਤੇਜ਼ ਪ੍ਰੋਸੈਸਿੰਗ</h3>
+                  <p className="text-sm text-gray-600">ਅਸੀਂ ਤੁਹਾਡੀ ਅਰਜ਼ੀ ਦੀ ਜਲਦੀ ਤੋਂ ਜਲਦੀ ਪ੍ਰਕਿਰਿਆ ਦੀ ਯਕੀਨਦਹਾਨੀ ਕਰਦੇ ਹਾਂ</p>
                 </ScaleIn>
                 <ScaleIn delay={0.4} className="bg-white p-5 rounded-lg shadow-md">
                   <div className="w-12 h-12 bg-[#003D6E] rounded-full flex items-center justify-center text-white mb-3">
@@ -404,8 +353,8 @@ export default function Home() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                   </div>
-                  <h3 className="font-bold mb-2">Expert Guidance</h3>
-                  <p className="text-sm text-gray-600">Receive advice from specialists in UK immigration law</p>
+                  <h3 className="font-bold mb-2">ਮਾਹਰ ਮਾਰਗਦਰਸ਼ਨ</h3>
+                  <p className="text-sm text-gray-600">ਯੂਕੇ ਇਮੀਗ੍ਰੇਸ਼ਨ ਕਾਨੂੰਨ ਦੇ ਮਾਹਰਾਂ ਤੋਂ ਸਲਾਹ ਪ੍ਰਾਪਤ ਕਰੋ</p>
                 </ScaleIn>
                 <ScaleIn delay={0.5} className="bg-white p-5 rounded-lg shadow-md">
                   <div className="w-12 h-12 bg-[#003D6E] rounded-full flex items-center justify-center text-white mb-3">
@@ -413,8 +362,8 @@ export default function Home() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
                     </svg>
                   </div>
-                  <h3 className="font-bold mb-2">Personal Support</h3>
-                  <p className="text-sm text-gray-600">Dedicated consultant throughout your entire application process</p>
+                  <h3 className="font-bold mb-2">ਵਿਅਕਤੀਗਤ ਸਹਾਇਤਾ</h3>
+                  <p className="text-sm text-gray-600">ਤੁਹਾਡੀ ਅਰਜ਼ੀ ਪ੍ਰਕਿਰਿਆ ਦੌਰਾਨ ਇੱਕ ਸਮਰਪਿਤ ਮਾਹਰ</p>
                 </ScaleIn>
               </div>
             </div>
@@ -424,12 +373,74 @@ export default function Home() {
         <section id="contact" className="py-16">
           <div className="container mx-auto px-6">
             <FadeIn direction="up" className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4 text-[#003D6E]">Get in <span className="text-black">Touch</span></h2>
+              <h2 className="text-3xl font-bold mb-4 text-[#003D6E]">ਸੰਪਰਕ <span className="text-black">ਕਰੋ</span></h2>
               <div className="h-1 w-20 bg-[#003D6E] mx-auto mb-6"></div>
               <p className="max-w-2xl mx-auto text-gray-700">
-                How can we help you today? Contact us through any of the methods below.
+                ਅਸੀਂ ਤੁਹਾਡੀ ਕਿਵੇਂ ਮਦਦ ਕਰ ਸਕਦੇ ਹਾਂ? ਹੇਠ ਦਿੱਤੇ ਫਾਰਮ ਨੂੰ ਭਰੋ ਅਤੇ ਸਾਡਾ ਕੋਈ ਮਾਹਰ ਤੁਹਾਡੇ ਨਾਲ ਜਲਦੀ ਹੀ ਸੰਪਰਕ ਕਰੇਗਾ।
               </p>
             </FadeIn>
+            
+            <div className="bg-white p-6 rounded-lg shadow-lg mb-12">
+              <div className="mb-4 flex justify-center">
+                <div className="bg-gray-200 rounded-lg w-full max-w-md h-[120px] flex items-center justify-center mb-4">
+                  <p className="text-gray-500">Contact Form Image (400x120px)</p>
+                </div>
+              </div>
+              
+              <form className="max-w-xl mx-auto space-y-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <input 
+                      type="text" 
+                      placeholder="ਤੁਹਾਡਾ ਪਹਿਲਾਂ ਨਾਂ" 
+                      className="w-full p-3 border border-gray-300 rounded-md focus:ring-[#003D6E] focus:border-[#003D6E] outline-none text-gray-700"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <input 
+                      type="text" 
+                      placeholder="ਤੁਹਾਡਾ ਆਖਰੀ ਨਾਂ" 
+                      className="w-full p-3 border border-gray-300 rounded-md focus:ring-[#003D6E] focus:border-[#003D6E] outline-none text-gray-700"
+                      required
+                    />
+                  </div>
+                </div>
+                <div>
+                  <input 
+                    type="email" 
+                    placeholder="ਆਪਣਾ ਈਮੇਲ ਪਤਾ ਦਰਜ ਕਰੋ" 
+                    className="w-full p-3 border border-gray-300 rounded-md focus:ring-[#003D6E] focus:border-[#003D6E] outline-none text-gray-700"
+                    required
+                  />
+                </div>
+                <div>
+                  <input 
+                    type="text" 
+                    placeholder="ਤੁਸੀਂ ਕਿਹੜੇ ਦੇਸ਼ ਵਿੱਚ ਹੋ" 
+                    className="w-full p-3 border border-gray-300 rounded-md focus:ring-[#003D6E] focus:border-[#003D6E] outline-none text-gray-700"
+                    required
+                  />
+                </div>
+                <div>
+                  <textarea 
+                    placeholder="ਹੋਰ ਵੇਰਵਿਆਂ ਵਿੱਚ ਵਰਣਨ ਕਰੋ" 
+                    className="w-full p-3 border border-gray-300 rounded-md h-24 focus:ring-[#003D6E] focus:border-[#003D6E] outline-none text-gray-700"
+                    required
+                  ></textarea>
+                </div>
+                <div className="pt-2">
+                  <motion.button 
+                    type="submit"
+                    className="bg-[#003D6E] text-white py-3 px-8 rounded-md hover:bg-[#004d8a] transition-colors font-medium w-full"
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                  >
+                    ਜਮ੍ਹਾਂ ਕਰੋ
+                  </motion.button>
+                </div>
+              </form>
+            </div>
             
             <StaggerContainer className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
               <motion.div variants={staggerItem(0.2)} className="bg-white p-6 rounded-lg shadow-md text-center" whileHover={{ y: -5 }}>
@@ -438,7 +449,7 @@ export default function Home() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
                 </div>
-                <h3 className="font-bold mb-2">Phone</h3>
+                <h3 className="font-bold mb-2">ਫ਼ੋਨ</h3>
                 <p className="text-gray-600">+44 123 456 7890</p>
               </motion.div>
               
@@ -448,7 +459,7 @@ export default function Home() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
                 </div>
-                <h3 className="font-bold mb-2">Email</h3>
+                <h3 className="font-bold mb-2">ਈਮੇਲ</h3>
                 <p className="text-gray-600">info@ukvisahelp.com</p>
               </motion.div>
               
@@ -459,8 +470,8 @@ export default function Home() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
                 </div>
-                <h3 className="font-bold mb-2">Office</h3>
-                <p className="text-gray-600">London, United Kingdom</p>
+                <h3 className="font-bold mb-2">ਦਫਤਰ</h3>
+                <p className="text-gray-600">ਲੰਡਨ, ਯੂਨਾਈਟਡ ਕਿੰਗਡਮ</p>
               </motion.div>
             </StaggerContainer>
           </div>
@@ -468,52 +479,54 @@ export default function Home() {
       </main>
       
       <footer className="bg-[#003D6E] text-white py-12">
-        <FadeIn direction="up" className="container mx-auto px-6">
+        <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             <div>
               <div className="bg-gray-700 w-[150px] h-[80px] rounded flex items-center justify-center mb-4">
                 <p className="text-gray-300">Logo (150x80px)</p>
               </div>
-              <h3 className="font-bold text-lg mb-4">UK Visa Help Consultants</h3>
+              <h3 className="font-bold text-lg mb-4">ਯੂਕੇ ਵੀਜ਼ਾ ਹੈਲਪ ਕਨਸਲਟੈਂਟਸ</h3>
               <p className="text-gray-300 text-sm">
-                One of the leading UK Visa Consultancies with a panel of specialist consultants for UK Visa and settlement applications.
+                ਯੂਕੇ ਵਿੱਚ ਵੀਜ਼ਾ ਅਤੇ ਸੈਟਲਮੈਂਟ ਅਰਜ਼ੀਆਂ ਲਈ ਮਾਹਰ ਸਲਾਹਕਾਰਾਂ ਦੇ ਪੈਨਲ ਨਾਲ ਪ੍ਰਮੁੱਖ ਯੂਕੇ ਵੀਜ਼ਾ ਕੰਸਲਟੈਂਸੀ।
               </p>
             </div>
             
             <div>
-              <h3 className="font-bold text-lg mb-4">Quick Links</h3>
+              <h3 className="font-bold text-lg mb-4">ਤੇਜ਼ ਲਿੰਕਸ</h3>
               <ul className="space-y-2 text-gray-300 text-sm">
-                <li><a href="#" className="hover:text-white">Home</a></li>
-                <li><a href="#services" className="hover:text-white">Services</a></li>
-                <li><a href="#how-we-work" className="hover:text-white">How We Work</a></li>
-                <li><a href="#contact" className="hover:text-white">Contact</a></li>
+                <li><a href="/" className="hover:text-white">ਇੰਗਲਿਸ਼</a></li>
+                <li><a href="/bengali" className="hover:text-white">ਬੰਗਾਲੀ</a></li>
+                <li><a href="/urdu" className="hover:text-white">ਉਰਦੂ</a></li>
+                <li><a href="#services" className="hover:text-white">ਸੇਵਾਵਾਂ</a></li>
+                <li><a href="#how-we-work" className="hover:text-white">ਕੰਮ ਦੀ ਪ੍ਰਕਿਰਿਆ</a></li>
+                <li><a href="#contact" className="hover:text-white">ਸੰਪਰਕ</a></li>
               </ul>
             </div>
             
             <div>
-              <h3 className="font-bold text-lg mb-4">Services</h3>
+              <h3 className="font-bold text-lg mb-4">ਸੇਵਾਵਾਂ</h3>
               <ul className="space-y-2 text-gray-300 text-sm">
-                <li><a href="#services" className="hover:text-white">Family Visas</a></li>
-                <li><a href="#services" className="hover:text-white">Work Visas</a></li>
-                <li><a href="#services" className="hover:text-white">Student Visas</a></li>
-                <li><a href="#services" className="hover:text-white">Settlement Applications</a></li>
+                <li><a href="#services" className="hover:text-white">ਪਰਿਵਾਰਕ ਵੀਜ਼ਾ</a></li>
+                <li><a href="#services" className="hover:text-white">ਕੰਮ ਵੀਜ਼ਾ</a></li>
+                <li><a href="#services" className="hover:text-white">ਵਿਦਿਆਰਥੀ ਵੀਜ਼ਾ</a></li>
+                <li><a href="#services" className="hover:text-white">ਸੈਟਲਮੈਂਟ ਅਰਜ਼ੀਆਂ</a></li>
               </ul>
             </div>
             
             <div>
-              <h3 className="font-bold text-lg mb-4">Contact Us</h3>
+              <h3 className="font-bold text-lg mb-4">ਸੰਪਰਕ ਕਰੋ</h3>
               <ul className="space-y-2 text-gray-300 text-sm">
-                <li>London, United Kingdom</li>
-                <li>Phone: +44 123 456 7890</li>
-                <li>Email: info@ukvisahelp.com</li>
+                <li>ਲੰਡਨ, ਯੂਨਾਈਟਡ ਕਿੰਗਡਮ</li>
+                <li>ਫ਼ੋਨ: +44 123 456 7890</li>
+                <li>ਈਮੇਲ: info@ukvisahelp.com</li>
               </ul>
             </div>
           </div>
           
           <div className="pt-8 border-t border-gray-700 text-center text-gray-300 text-sm">
-            <p>&copy; {new Date().getFullYear()} UK Visa Help Consultants. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} ਯੂਕੇ ਵੀਜ਼ਾ ਹੈਲਪ ਕਨਸਲਟੈਂਟਸ। ਸਾਰੇ ਹੱਕ ਰਾਖਵੇਂ ਹਨ।</p>
           </div>
-        </FadeIn>
+        </div>
       </footer>
     </div>
   );
