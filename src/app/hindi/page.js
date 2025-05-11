@@ -10,60 +10,137 @@ import Footer from "@/components/Footer";
 export default function HindiPage() {
   return (
     <div className="min-h-screen font-[family-name:var(--font-geist-sans)]">
-      <Navigation 
+      <Navigation
         title="यूके वीज़ा हेल्प कंसल्टेंट्स"
         menuItems={[
           { href: "#services", label: "सेवाएं" },
           { href: "#how-we-work", label: "कार्यप्रणाली" },
-          { href: "#contact", label: "संपर्क" }
+          { href: "#contact", label: "संपर्क" },
         ]}
       />
-      
+
       <div className="primary-bg text-white py-16">
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row gap-8 items-center">
             <FadeIn direction="right" className="md:w-1/2">
-              <h1 className="text-4xl sm:text-5xl font-bold mb-6">यूके वीज़ा और आव्रजन विशेषज्ञ</h1>
-              <p className="text-xl mb-8">यूके वीज़ा और बसने के आवेदनों के लिए विशेषज्ञ सेवाएं</p>
-              <motion.a 
-                href="#services" 
+              <h1 className="text-4xl sm:text-5xl font-bold mb-6">
+                यूके वीज़ा और आव्रजन विशेषज्ञ
+              </h1>
+              <p className="text-xl mb-8">
+                यूके वीज़ा और बसने के आवेदनों के लिए विशेषज्ञ सेवाएं
+              </p>
+              <motion.a
+                href="#services"
                 className="inline-block bg-white text-[#003D6E] font-bold py-3 px-8 rounded-full hover:bg-gray-100 transition-colors"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-              >हमारी सेवाएं</motion.a>
+              >
+                हमारी सेवाएं
+              </motion.a>
             </FadeIn>
-            
-            {/* Hero Image Placeholder */}
-            <div className="md:w-1/2">
-              <div className="bg-gray-200 rounded-lg w-full h-[350px] flex items-center justify-center">
-                <p className="text-gray-500">Hero Image (600x400px)</p>
-              </div>
-            </div>
+
+            <FadeIn
+              direction="left"
+              className="md:w-1/2 bg-white rounded-lg shadow-lg p-6"
+            >
+              <h2 className="text-[#003D6E] text-2xl font-bold mb-4">
+                नि:शुल्क परामर्श प्राप्त करें
+              </h2>
+              <form className="space-y-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <input
+                      type="text"
+                      placeholder="आपका पहला नाम"
+                      className="w-full p-3 border border-gray-300 rounded-md focus:ring-[#003D6E] focus:border-[#003D6E] outline-none text-gray-700"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <input
+                      type="text"
+                      placeholder="आपका अंतिम नाम"
+                      className="w-full p-3 border border-gray-300 rounded-md focus:ring-[#003D6E] focus:border-[#003D6E] outline-none text-gray-700"
+                      required
+                    />
+                  </div>
+                </div>
+                <div>
+                  <input
+                    type="email"
+                    placeholder="अपना ईमेल पता दर्ज करें"
+                    className="w-full p-3 border border-gray-300 rounded-md focus:ring-[#003D6E] focus:border-[#003D6E] outline-none text-gray-700"
+                    required
+                  />
+                </div>
+                <div>
+                  <input
+                    type="text"
+                    placeholder="आप किस देश में हैं"
+                    className="w-full p-3 border border-gray-300 rounded-md focus:ring-[#003D6E] focus:border-[#003D6E] outline-none text-gray-700"
+                    required
+                  />
+                </div>
+                <div>
+                  <textarea
+                    placeholder="अधिक विस्तार से बताएं"
+                    className="w-full p-3 border border-gray-300 rounded-md h-24 focus:ring-[#003D6E] focus:border-[#003D6E] outline-none text-gray-700"
+                    required
+                  ></textarea>
+                </div>
+                <div className="pt-2">
+                  <button
+                    type="submit"
+                    className="bg-[#003D6E] text-white py-3 px-8 rounded-md hover:bg-[#004d8a] transition-colors font-medium w-full"
+                  >
+                    अनुरोध जमा करें
+                  </button>
+                </div>
+              </form>
+            </FadeIn>
           </div>
         </div>
       </div>
-      
+
       <main>
         <section className="py-16 container mx-auto px-6">
           <div className="flex flex-col md:flex-row gap-12">
             <FadeIn direction="up" delay={0.2} className="md:w-1/2">
-              <h2 className="text-3xl font-bold mb-6 text-[#003D6E]">हमारे <span className="text-black">बारे में</span></h2>
+              <h2 className="text-3xl font-bold mb-6 text-[#003D6E]">
+                हमारे <span className="text-black">बारे में</span>
+              </h2>
               <div className="h-1 w-20 bg-[#003D6E] mb-6"></div>
               <p className="mb-4 text-gray-700">
-                यूके वीज़ा हेल्प कंसल्टेंट्स यूनाइटेड किंगडम के आव्रजन और बसने के आवेदनों के लिए विशेषज्ञ सलाहकारों की टीम के साथ अग्रणी यूके वीज़ा कंसल्टेंसियों में से एक है। हमारी टीम में विशेष रूप से प्रशिक्षित सलाहकार, परामर्शदाता और अनुभवी प्रोसेसिंग टीमें शामिल हैं जो ग्राहक देखभाल पर जोर देती हैं।
+                यूके वीज़ा हेल्प कंसल्टेंट्स यूनाइटेड किंगडम के आव्रजन और बसने
+                के आवेदनों के लिए विशेषज्ञ सलाहकारों की टीम के साथ अग्रणी यूके
+                वीज़ा कंसल्टेंसियों में से एक है। हमारी टीम में विशेष रूप से
+                प्रशिक्षित सलाहकार, परामर्शदाता और अनुभवी प्रोसेसिंग टीमें शामिल
+                हैं जो ग्राहक देखभाल पर जोर देती हैं।
               </p>
               <p className="mb-6 text-gray-700">
-                यूके वीज़ा हेल्प कंसल्टेंट्स को आव्रजन के हर स्तर पर विशेषज्ञता है और हमारा फोकस आपको सर्वोत्तम सहायता प्रदान करने पर है। यदि आप यूके में यात्रा करने, रहने या अपने प्रवास का विस्तार करने की योजना बना रहे हैं, तो हमारे विशेषज्ञ सलाहकार आपकी और आपके परिवार की मदद के लिए तैयार हैं।
+                यूके वीज़ा हेल्प कंसल्टेंट्स को आव्रजन के हर स्तर पर विशेषज्ञता
+                है और हमारा फोकस आपको सर्वोत्तम सहायता प्रदान करने पर है। यदि आप
+                यूके में यात्रा करने, रहने या अपने प्रवास का विस्तार करने की
+                योजना बना रहे हैं, तो हमारे विशेषज्ञ सलाहकार आपकी और आपके परिवार
+                की मदद के लिए तैयार हैं।
               </p>
-              <motion.a 
-                href="#contact" 
+              <motion.a
+                href="#contact"
                 className="inline-block bg-[#003D6E] text-white font-bold py-2 px-6 rounded hover:bg-[#004d8a] transition-colors"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-              >संपर्क करें</motion.a>
+              >
+                संपर्क करें
+              </motion.a>
             </FadeIn>
-            <FadeIn direction="up" delay={0.4} className="md:w-1/2 bg-gray-100 rounded-lg p-8">
-              <h2 className="text-2xl font-bold mb-4 text-[#003D6E]">ग्राहक हमें क्यों चुनते हैं?</h2>
+            <FadeIn
+              direction="up"
+              delay={0.4}
+              className="md:w-1/2 bg-gray-100 rounded-lg p-8"
+            >
+              <h2 className="text-2xl font-bold mb-4 text-[#003D6E]">
+                ग्राहक हमें क्यों चुनते हैं?
+              </h2>
               <div className="h-1 w-20 bg-[#003D6E] mb-6"></div>
               <div className="mb-4 flex justify-center">
                 <div className="bg-gray-200 rounded-lg w-[200px] h-[200px] flex items-center justify-center mb-4">
@@ -71,7 +148,11 @@ export default function HindiPage() {
                 </div>
               </div>
               <p className="mb-4 text-gray-700">
-                कई ग्राहक हमारी उत्कृष्ट सेवा और सफलता के इतिहास के कारण हमें चुनते हैं। हालांकि, हम मानते हैं कि हमारी सबसे बड़ी ताकत और जो हमें अद्वितीय बनाती है, वह है हमारी छोटी लेकिन समर्पित टीम जो व्यक्तिगत सेवा प्रदान करती है। हम अपने काम से प्यार करते हैं और हमारी टीम ग्राहकों के जीवन में बदलाव लाने में आनंद लेती है।
+                कई ग्राहक हमारी उत्कृष्ट सेवा और सफलता के इतिहास के कारण हमें
+                चुनते हैं। हालांकि, हम मानते हैं कि हमारी सबसे बड़ी ताकत और जो
+                हमें अद्वितीय बनाती है, वह है हमारी छोटी लेकिन समर्पित टीम जो
+                व्यक्तिगत सेवा प्रदान करती है। हम अपने काम से प्यार करते हैं और
+                हमारी टीम ग्राहकों के जीवन में बदलाव लाने में आनंद लेती है।
               </p>
               <div className="grid grid-cols-2 gap-4 mt-6">
                 <div className="flex items-center gap-2">
@@ -98,19 +179,27 @@ export default function HindiPage() {
         <section id="services" className="py-16 bg-gray-50">
           <div className="container mx-auto px-6">
             <FadeIn direction="up" className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4 text-[#003D6E]">हमारी <span className="text-black">सेवाएं</span></h2>
+              <h2 className="text-3xl font-bold mb-4 text-[#003D6E]">
+                हमारी <span className="text-black">सेवाएं</span>
+              </h2>
               <div className="h-1 w-20 bg-[#003D6E] mx-auto mb-6"></div>
               <p className="max-w-2xl mx-auto text-gray-700">
-                हम आवेदकों की आवश्यकताओं के अनुसार वीज़ा और आव्रजन समाधानों का एक पूरा सेट प्रदान करते हैं।
+                हम आवेदकों की आवश्यकताओं के अनुसार वीज़ा और आव्रजन समाधानों का
+                एक पूरा सेट प्रदान करते हैं।
               </p>
             </FadeIn>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-              <ScaleIn delay={0.2} className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+              <ScaleIn
+                delay={0.2}
+                className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
+              >
                 <div className="bg-gray-200 w-full h-[120px] rounded-md mb-4 flex items-center justify-center">
                   <p className="text-gray-500">Service Image 1 (120x120px)</p>
                 </div>
-                <h3 className="text-xl font-bold mb-2 text-center">व्यक्तिगत और पारिवारिक</h3>
+                <h3 className="text-xl font-bold mb-2 text-center">
+                  व्यक्तिगत और पारिवारिक
+                </h3>
                 <ul className="space-y-2 text-gray-700">
                   <li className="flex items-start">
                     <span className="text-[#003D6E] mr-2">•</span>
@@ -130,12 +219,17 @@ export default function HindiPage() {
                   </li>
                 </ul>
               </ScaleIn>
-              
-              <ScaleIn delay={0.4} className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+
+              <ScaleIn
+                delay={0.4}
+                className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
+              >
                 <div className="bg-gray-200 w-full h-[120px] rounded-md mb-4 flex items-center justify-center">
                   <p className="text-gray-500">Service Image 2 (120x120px)</p>
                 </div>
-                <h3 className="text-xl font-bold mb-2 text-center">कार्य और व्यापार</h3>
+                <h3 className="text-xl font-bold mb-2 text-center">
+                  कार्य और व्यापार
+                </h3>
                 <ul className="space-y-2 text-gray-700">
                   <li className="flex items-start">
                     <span className="text-[#003D6E] mr-2">•</span>
@@ -155,12 +249,17 @@ export default function HindiPage() {
                   </li>
                 </ul>
               </ScaleIn>
-              
-              <ScaleIn delay={0.6} className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+
+              <ScaleIn
+                delay={0.6}
+                className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
+              >
                 <div className="bg-gray-200 w-full h-[120px] rounded-md mb-4 flex items-center justify-center">
                   <p className="text-gray-500">Service Image 3 (120x120px)</p>
                 </div>
-                <h3 className="text-xl font-bold mb-2 text-center">छात्र और स्नातक</h3>
+                <h3 className="text-xl font-bold mb-2 text-center">
+                  छात्र और स्नातक
+                </h3>
                 <ul className="space-y-2 text-gray-700">
                   <li className="flex items-start">
                     <span className="text-[#003D6E] mr-2">•</span>
@@ -181,9 +280,15 @@ export default function HindiPage() {
                 </ul>
               </ScaleIn>
             </div>
-            
-            <FadeIn direction="up" delay={0.2} className="bg-white p-6 rounded-lg shadow">
-              <h3 className="text-xl font-semibold mb-4 text-[#003D6E]">अन्य सेवाओं में शामिल हैं:</h3>
+
+            <FadeIn
+              direction="up"
+              delay={0.2}
+              className="bg-white p-6 rounded-lg shadow"
+            >
+              <h3 className="text-xl font-semibold mb-4 text-[#003D6E]">
+                अन्य सेवाओं में शामिल हैं:
+              </h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <ul className="space-y-2 text-gray-700">
                   <li className="flex items-start">
@@ -230,70 +335,96 @@ export default function HindiPage() {
 
         <section id="how-we-work" className="py-16 container mx-auto px-6">
           <FadeIn direction="up" className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4 text-[#003D6E]">हमारी <span className="text-black">कार्यप्रणाली</span></h2>
+            <h2 className="text-3xl font-bold mb-4 text-[#003D6E]">
+              हमारी <span className="text-black">कार्यप्रणाली</span>
+            </h2>
             <div className="h-1 w-20 bg-[#003D6E] mx-auto mb-6"></div>
             <p className="max-w-2xl mx-auto text-gray-700">
               हमारी सरल प्रक्रिया - केवल 3 आसान चरण
             </p>
           </FadeIn>
-          
+
           <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <motion.div 
+            <motion.div
               variants={staggerItem(0.2)}
               className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow relative"
               whileHover={{ y: -5 }}
             >
-              <motion.div 
+              <motion.div
                 className="bg-[#003D6E] text-white rounded-full w-16 h-16 flex items-center justify-center mb-6 text-2xl font-bold absolute -top-8 left-1/2 transform -translate-x-1/2"
                 initial={{ scale: 0, rotate: 0 }}
                 whileInView={{ scale: 1, rotate: 10 }}
                 viewport={{ once: true }}
                 transition={{ type: "spring", stiffness: 200, duration: 0.5 }}
-              >1</motion.div>
+              >
+                1
+              </motion.div>
               <div className="pt-6">
-                <h3 className="text-xl font-bold mb-4 text-center mt-4">ऑनलाइन विवरण भरें</h3>
+                <h3 className="text-xl font-bold mb-4 text-center mt-4">
+                  ऑनलाइन विवरण भरें
+                </h3>
                 <p className="text-gray-700 text-center">
                   अपनी जानकारी हमारे ऑनलाइन फॉर्म में भरें
                 </p>
               </div>
             </motion.div>
-            
-            <motion.div 
+
+            <motion.div
               variants={staggerItem(0.4)}
               className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow relative"
               whileHover={{ y: -5 }}
             >
-              <motion.div 
+              <motion.div
                 className="bg-[#003D6E] text-white rounded-full w-16 h-16 flex items-center justify-center mb-6 text-2xl font-bold absolute -top-8 left-1/2 transform -translate-x-1/2"
                 initial={{ scale: 0, rotate: 0 }}
                 whileInView={{ scale: 1, rotate: 10 }}
                 viewport={{ once: true }}
-                transition={{ type: "spring", stiffness: 200, duration: 0.5, delay: 0.2 }}
-              >2</motion.div>
+                transition={{
+                  type: "spring",
+                  stiffness: 200,
+                  duration: 0.5,
+                  delay: 0.2,
+                }}
+              >
+                2
+              </motion.div>
               <div className="pt-6">
-                <h3 className="text-xl font-bold mb-4 text-center mt-4">विशेषज्ञ समीक्षा</h3>
+                <h3 className="text-xl font-bold mb-4 text-center mt-4">
+                  विशेषज्ञ समीक्षा
+                </h3>
                 <p className="text-gray-700 text-center">
-                  हम आपकी जानकारी की ध्यानपूर्वक समीक्षा करेंगे और अपने किसी विशेषज्ञ को भेजेंगे
+                  हम आपकी जानकारी की ध्यानपूर्वक समीक्षा करेंगे और अपने किसी
+                  विशेषज्ञ को भेजेंगे
                 </p>
               </div>
             </motion.div>
-            
-            <motion.div 
+
+            <motion.div
               variants={staggerItem(0.6)}
               className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow relative"
               whileHover={{ y: -5 }}
             >
-              <motion.div 
+              <motion.div
                 className="bg-[#003D6E] text-white rounded-full w-16 h-16 flex items-center justify-center mb-6 text-2xl font-bold absolute -top-8 left-1/2 transform -translate-x-1/2"
                 initial={{ scale: 0, rotate: 0 }}
                 whileInView={{ scale: 1, rotate: 10 }}
                 viewport={{ once: true }}
-                transition={{ type: "spring", stiffness: 200, duration: 0.5, delay: 0.4 }}
-              >3</motion.div>
+                transition={{
+                  type: "spring",
+                  stiffness: 200,
+                  duration: 0.5,
+                  delay: 0.4,
+                }}
+              >
+                3
+              </motion.div>
               <div className="pt-6">
-                <h3 className="text-xl font-bold mb-4 text-center mt-4">व्यक्तिगत समाधान</h3>
+                <h3 className="text-xl font-bold mb-4 text-center mt-4">
+                  व्यक्तिगत समाधान
+                </h3>
                 <p className="text-gray-700 text-center">
-                  हमारे अनुशंसित परामर्शदाता द्वारा आपको सर्वोत्तम समाधान दिया जाएगा
+                  हमारे अनुशंसित परामर्शदाता द्वारा आपको सर्वोत्तम समाधान दिया
+                  जाएगा
                 </p>
               </div>
             </motion.div>
@@ -304,90 +435,168 @@ export default function HindiPage() {
           <div className="container mx-auto px-6">
             <div className="flex flex-col md:flex-row gap-12 items-center">
               <FadeIn direction="right" className="md:w-1/2">
-                <h2 className="text-3xl font-bold mb-4 text-[#003D6E]">निःशुल्क <span className="text-black">समीक्षा</span></h2>
+                <h2 className="text-3xl font-bold mb-4 text-[#003D6E]">
+                  निःशुल्क <span className="text-black">समीक्षा</span>
+                </h2>
                 <div className="h-1 w-20 bg-[#003D6E] mb-6"></div>
                 <div className="bg-gray-200 rounded-lg w-full h-[200px] flex items-center justify-center mb-6">
                   <p className="text-gray-500">Assessment Image (400x300px)</p>
                 </div>
                 <p className="mb-4 text-gray-700">
-                  यदि आपके पास कोई आव्रजन संबंधी समस्या है, तो आप हमारे विशेषज्ञ के साथ एक मुफ्त मूल्यांकन करा सकते हैं। हम आपको अपने मामले के बारे में सही निर्णय लेने के लिए सभी आवश्यक जानकारी प्रदान करेंगे।
+                  यदि आपके पास कोई आव्रजन संबंधी समस्या है, तो आप हमारे विशेषज्ञ
+                  के साथ एक मुफ्त मूल्यांकन करा सकते हैं। हम आपको अपने मामले के
+                  बारे में सही निर्णय लेने के लिए सभी आवश्यक जानकारी प्रदान
+                  करेंगे।
                 </p>
                 <p className="mb-4 text-gray-700">
-                  हम आव्रजन मामलों पर कानूनी सलाह प्रदान करते हैं। हमारे वकीलों के पास व्यापक अनुभव है और वे न्यायाधीशों के सामने या मध्यस्थता और पंचाट कार्यवाही में आपका प्रतिनिधित्व कर सकते हैं।
+                  हम आव्रजन मामलों पर कानूनी सलाह प्रदान करते हैं। हमारे वकीलों
+                  के पास व्यापक अनुभव है और वे न्यायाधीशों के सामने या मध्यस्थता
+                  और पंचाट कार्यवाही में आपका प्रतिनिधित्व कर सकते हैं।
                 </p>
                 <p className="mb-4 text-gray-700">
-                  यदि आप एक बिना दस्तावेज़ के प्रवासी हैं, तो आव्रजन प्रणाली आपके लिए कानूनी सुरक्षा प्राप्त करना कठिन बना सकती है। हम आपके कार्य परमिट प्राप्त करने में मदद कर सकते हैं या आपके मौजूदा कार्य परमिट का नवीनीकरण करा सकते हैं।
+                  यदि आप एक बिना दस्तावेज़ के प्रवासी हैं, तो आव्रजन प्रणाली
+                  आपके लिए कानूनी सुरक्षा प्राप्त करना कठिन बना सकती है। हम आपके
+                  कार्य परमिट प्राप्त करने में मदद कर सकते हैं या आपके मौजूदा
+                  कार्य परमिट का नवीनीकरण करा सकते हैं।
                 </p>
-                <motion.a 
-                  href="#contact" 
+                <motion.a
+                  href="#contact"
                   className="inline-block bg-[#003D6E] text-white font-bold py-3 px-8 mt-4 rounded hover:bg-[#004d8a] transition-colors"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                >मुफ्त समीक्षा प्राप्त करें</motion.a>
+                >
+                  मुफ्त समीक्षा प्राप्त करें
+                </motion.a>
               </FadeIn>
               <div className="md:w-1/2 grid grid-cols-2 gap-4">
-                <ScaleIn delay={0.2} className="bg-white p-5 rounded-lg shadow-md">
+                <ScaleIn
+                  delay={0.2}
+                  className="bg-white p-5 rounded-lg shadow-md"
+                >
                   <div className="w-12 h-12 bg-[#003D6E] rounded-full flex items-center justify-center text-white mb-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-6 w-6"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
                     </svg>
                   </div>
                   <h3 className="font-bold mb-2">99% सफलता दर</h3>
-                  <p className="text-sm text-gray-600">हमारे पास सफल वीज़ा आवेदनों का एक सिद्ध ट्रैक रिकॉर्ड है</p>
+                  <p className="text-sm text-gray-600">
+                    हमारे पास सफल वीज़ा आवेदनों का एक सिद्ध ट्रैक रिकॉर्ड है
+                  </p>
                 </ScaleIn>
-                <ScaleIn delay={0.3} className="bg-white p-5 rounded-lg shadow-md">
+                <ScaleIn
+                  delay={0.3}
+                  className="bg-white p-5 rounded-lg shadow-md"
+                >
                   <div className="w-12 h-12 bg-[#003D6E] rounded-full flex items-center justify-center text-white mb-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-6 w-6"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
                     </svg>
                   </div>
                   <h3 className="font-bold mb-2">तेज़ प्रोसेसिंग</h3>
-                  <p className="text-sm text-gray-600">हम आपके आवेदन को जल्द से जल्द प्रोसेस करने की गारंटी देते हैं</p>
+                  <p className="text-sm text-gray-600">
+                    हम आपके आवेदन को जल्द से जल्द प्रोसेस करने की गारंटी देते
+                    हैं
+                  </p>
                 </ScaleIn>
-                <ScaleIn delay={0.4} className="bg-white p-5 rounded-lg shadow-md">
+                <ScaleIn
+                  delay={0.4}
+                  className="bg-white p-5 rounded-lg shadow-md"
+                >
                   <div className="w-12 h-12 bg-[#003D6E] rounded-full flex items-center justify-center text-white mb-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-6 w-6"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
                     </svg>
                   </div>
                   <h3 className="font-bold mb-2">विशेषज्ञ मार्गदर्शन</h3>
-                  <p className="text-sm text-gray-600">यूके आव्रजन कानून के विशेषज्ञों से सलाह प्राप्त करें</p>
+                  <p className="text-sm text-gray-600">
+                    यूके आव्रजन कानून के विशेषज्ञों से सलाह प्राप्त करें
+                  </p>
                 </ScaleIn>
-                <ScaleIn delay={0.5} className="bg-white p-5 rounded-lg shadow-md">
+                <ScaleIn
+                  delay={0.5}
+                  className="bg-white p-5 rounded-lg shadow-md"
+                >
                   <div className="w-12 h-12 bg-[#003D6E] rounded-full flex items-center justify-center text-white mb-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-6 w-6"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"
+                      />
                     </svg>
                   </div>
                   <h3 className="font-bold mb-2">व्यक्तिगत सहायता</h3>
-                  <p className="text-sm text-gray-600">आपके आवेदन प्रक्रिया के दौरान एक समर्पित विशेषज्ञ</p>
+                  <p className="text-sm text-gray-600">
+                    आपके आवेदन प्रक्रिया के दौरान एक समर्पित विशेषज्ञ
+                  </p>
                 </ScaleIn>
               </div>
             </div>
           </div>
         </section>
 
-        <ContactForm 
+        <ContactForm
           labels={{
             heading: "संपर्क करें",
-            subheading: "हम आज आपकी कैसे सहायता कर सकते हैं? नीचे दिया गया फॉर्म भरें और हमारा कोई विशेषज्ञ जल्द ही आपसे संपर्क करेगा।",
+            subheading:
+              "हम आज आपकी कैसे सहायता कर सकते हैं? नीचे दिया गया फॉर्म भरें और हमारा कोई विशेषज्ञ जल्द ही आपसे संपर्क करेगा।",
             firstName: "आपका पहला नाम",
             lastName: "आपका अंतिम नाम",
             email: "अपना ईमेल पता दर्ज करें",
             country: "आप किस देश में हैं",
             details: "अधिक विवरण में वर्णन करें",
-            submit: "जमा करें"
+            submit: "जमा करें",
           }}
         />
       </main>
-      
-      <Footer 
+
+      <Footer
         logoText="यूके वीज़ा हेल्प कंसल्टेंट्स"
-        logoTextStyle={{ direction: 'ltr' }}
+        logoTextStyle={{ direction: "ltr" }}
         tagline="यूके में वीज़ा और बसने के आवेदनों के लिए विशेषज्ञ सलाहकारों के पैनल के साथ अग्रणी यूके वीज़ा कंसल्टेंसी।"
-        taglineStyle={{ direction: 'ltr' }}
+        taglineStyle={{ direction: "ltr" }}
         quickLinksTitle="त्वरित लिंक"
-        quickLinksTitleStyle={{ direction: 'ltr' }}
+        quickLinksTitleStyle={{ direction: "ltr" }}
         quickLinks={[
           { href: "/", label: "इंग्लिश" },
           { href: "/bengali", label: "बंगाली" },
@@ -395,25 +604,25 @@ export default function HindiPage() {
           { href: "/punjabi", label: "पंजाबी" },
           { href: "/farsi", label: "फारसी" },
           { href: "/dari", label: "दरी" },
-          { href: "/arabic", label: "अरबी" }
+          { href: "/arabic", label: "अरबी" },
         ]}
         servicesTitle="सेवाएं"
-        servicesTitleStyle={{ direction: 'ltr' }}
+        servicesTitleStyle={{ direction: "ltr" }}
         serviceLinks={[
           { href: "#services", label: "पारिवारिक वीज़ा" },
           { href: "#services", label: "कार्य वीज़ा" },
           { href: "#services", label: "छात्र वीज़ा" },
-          { href: "#services", label: "बसने के आवेदन" }
+          { href: "#services", label: "बसने के आवेदन" },
         ]}
         contactTitle="संपर्क करें"
-        contactTitleStyle={{ direction: 'ltr' }}
+        contactTitleStyle={{ direction: "ltr" }}
         contactInfo={[
           "लंदन, यूनाइटेड किंगडम",
           "फोन: +44 123 456 7890",
-          "ईमेल: info@ukvisahelp.com"
+          "ईमेल: info@ukvisahelp.com",
         ]}
         copyright="यूके वीज़ा हेल्प कंसल्टेंट्स। सर्वाधिकार सुरक्षित।"
-        copyrightStyle={{ direction: 'ltr' }}
+        copyrightStyle={{ direction: "ltr" }}
       />
     </div>
   );
