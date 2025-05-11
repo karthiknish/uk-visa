@@ -1,6 +1,5 @@
 import { createClient } from 'contentful-management';
 
-const SPACE_ID = 'nql3d04airsl';
 const ENVIRONMENT_ID = 'master'; // Change this if you're using a different environment
 
 export async function POST(request) {
@@ -40,7 +39,7 @@ export async function POST(request) {
     });
 
     // Get space and environment
-    const space = await client.getSpace(SPACE_ID);
+    const space = await client.getSpace(process.env.CONTENTFUL_SPACE_ID);
     const environment = await space.getEnvironment(ENVIRONMENT_ID);
 
     // Create an entry in Contentful

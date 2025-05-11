@@ -1,9 +1,10 @@
 import { createClient } from 'contentful';
 import { createClient as createManagementClient } from 'contentful-management';
 
-const SPACE_ID = 'nql3d04airsl';
-const DELIVERY_API_KEY = '9Kcr9YOi4y2_Eh11dLbPZcHimYVyMhKD-M-SlJPFMuM';
-const PREVIEW_API_KEY = 'eXxryyNz07fe8vm5OWZCnHxY4k8o9W5TsGNMeiaPSfk';
+// Use environment variables for all keys
+const SPACE_ID = process.env.CONTENTFUL_SPACE_ID;
+const DELIVERY_API_KEY = process.env.CONTENTFUL_DELIVERY_API_KEY;
+const PREVIEW_API_KEY = process.env.CONTENTFUL_PREVIEW_API_KEY;
 
 // Regular client for delivery API (published content)
 export const contentfulClient = createClient({

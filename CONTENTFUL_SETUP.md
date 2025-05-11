@@ -4,9 +4,9 @@ This document outlines how to set up and use the Contentful integration for the 
 
 ## Prerequisites
 
-- Contentful account with access to the space ID: `nql3d04airsl`
-- Contentful Delivery API key: `9Kcr9YOi4y2_Eh11dLbPZcHimYVyMhKD-M-SlJPFMuM`
-- Contentful Preview API key: `eXxryyNz07fe8vm5OWZCnHxY4k8o9W5TsGNMeiaPSfk`
+- Contentful account with access to your space
+- Contentful Delivery API key
+- Contentful Preview API key
 - Contentful Management Token (to be created in Contentful)
 
 ## Setup
@@ -18,8 +18,11 @@ This document outlines how to set up and use the Contentful integration for the 
    - Copy this token
 
 2. **Set up Environment Variables**:
-   - Add your management token to the `.env.local` file:
+   - Add your API keys and management token to the `.env.local` file:
    ```
+   CONTENTFUL_SPACE_ID=your_space_id_here
+   CONTENTFUL_DELIVERY_API_KEY=your_delivery_api_key_here
+   CONTENTFUL_PREVIEW_API_KEY=your_preview_api_key_here
    CONTENTFUL_MANAGEMENT_TOKEN=your_management_token_here
    ```
 
@@ -63,5 +66,9 @@ To customize the form fields or add additional ones:
 ## Security Considerations
 
 - The Management Token has write access to your Contentful space, so keep it secure
-- Never expose your API keys in client-side code
+- Never expose your API keys in client-side code or commit them to version control
+- Always use environment variables to store sensitive information
 - Consider adding rate limiting to the API endpoint to prevent abuse
+- Regularly rotate your API keys for enhanced security
+- Use environment-specific API keys (development, staging, production)
+- Set appropriate access permissions in Contentful for each API key

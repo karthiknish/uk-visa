@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 export default function Footer({ 
@@ -56,7 +57,7 @@ export default function Footer({
             <ul className="space-y-2 text-gray-300 text-sm">
               {quickLinks.map((link, index) => (
                 <li key={index}>
-                  <a href={link.href} className="hover:text-white">{link.label}</a>
+                  <Link href={link.href} className="hover:text-white">{link.label}</Link>
                 </li>
               ))}
             </ul>
@@ -67,7 +68,7 @@ export default function Footer({
             <ul className="space-y-2 text-gray-300 text-sm">
               {serviceLinks.map((link, index) => (
                 <li key={index}>
-                  <a href={link.href} className="hover:text-white">{link.label}</a>
+                  <Link href={link.href} className="hover:text-white">{link.label}</Link>
                 </li>
               ))}
             </ul>
