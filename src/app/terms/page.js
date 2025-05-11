@@ -31,14 +31,15 @@ export default function TermsPage() {
                 <h2 className="text-2xl font-semibold mb-4">1. Introduction</h2>
                 <p className="text-gray-700 mb-4">
                   These terms and conditions outline the rules and regulations
-                  for the use of UK Visa Help Consultants' services and website.
+                  for the use of UK Visa Help Consultants&apos; services and
+                  website.
                 </p>
                 <p className="text-gray-700 mb-4">
                   By accessing this website and using our services, we assume
                   you accept these terms and conditions in full. Do not continue
-                  to use UK Visa Help Consultants' website or services if you do
-                  not accept all of the terms and conditions stated on this
-                  page.
+                  to use UK Visa Help Consultants&apos; website or services if
+                  you do not accept all of the terms and conditions stated on
+                  this page.
                 </p>
               </section>
 
@@ -134,3 +135,4 @@ export default function TermsPage() {
     </div>
   );
 }
+

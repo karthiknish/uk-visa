@@ -213,13 +213,18 @@ export default function ArabicPage() {
               <ScaleIn
                 delay={0.2}
                 className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
-                style={{ direction: "rtl", textAlign: "right" }}
               >
-                <div className="bg-gray-200 w-full h-[120px] rounded-md mb-4 flex items-center justify-center">
-                  <p className="text-gray-500">Service Image 1 (120x120px)</p>
+                <div className="w-full h-[120px] relative rounded-md mb-4 overflow-hidden">
+                  <Image
+                    src="https://images.pexels.com/photos/1914982/pexels-photo-1914982.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                    alt="خدمات الأسرة والأفراد"
+                    fill
+                    className="object-cover"
+                    priority
+                  />
                 </div>
                 <h3 className="text-xl font-bold mb-2 text-center">
-                  الخدمات الشخصية والعائلية
+                  الأسرة والأفراد
                 </h3>
                 <ul className="space-y-2 text-gray-700">
                   <li className="flex items-start">

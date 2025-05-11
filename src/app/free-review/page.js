@@ -46,7 +46,7 @@ export default function FreeReviewPage() {
             <div className="grid md:grid-cols-2 gap-12 mb-16">
               <div className="bg-white rounded-lg shadow-lg p-8">
                 <h3 className="text-xl font-semibold mb-4 text-[#003D6E]">
-                  What You'll Get
+                  What You&apos;ll Get
                 </h3>
                 <ul className="space-y-4">
                   <li className="flex items-start">
@@ -174,7 +174,7 @@ export default function FreeReviewPage() {
                 labels={{
                   heading: "Get Your Free Review",
                   subheading:
-                    "Fill out the form below and we'll get back to you within 24 hours with our initial assessment.",
+                    "Fill out the form below and we&apos;ll get back to you within 24 hours with our initial assessment.",
                   firstName: "Your First Name",
                   lastName: "Your Last Name",
                   email: "Your Email Address",
