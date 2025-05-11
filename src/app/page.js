@@ -97,7 +97,7 @@ export default function Home() {
                 advice services.
               </p>
               <motion.a
-                href="#contact"
+                href="/contact"
                 className="inline-block bg-[#003D6E] text-white font-bold py-2 px-6 rounded hover:bg-[#004d8a] transition-colors"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -209,8 +209,14 @@ export default function Home() {
                 delay={0.4}
                 className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
               >
-                <div className="bg-gray-200 w-full h-[120px] rounded-md mb-4 flex items-center justify-center">
-                  <p className="text-gray-500">Service Image 2 (120x120px)</p>
+                <div className="w-full h-[120px] relative rounded-md mb-4 overflow-hidden">
+                  <Image
+                    src="https://images.pexels.com/photos/5717325/pexels-photo-5717325.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                    alt="Business travel and corporate visa services"
+                    fill
+                    className="object-cover"
+                    priority
+                  />
                 </div>
                 <h3 className="text-xl font-bold mb-2 text-center">
                   Work & Business
@@ -239,8 +245,14 @@ export default function Home() {
                 delay={0.6}
                 className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
               >
-                <div className="bg-gray-200 w-full h-[120px] rounded-md mb-4 flex items-center justify-center">
-                  <p className="text-gray-500">Service Image 3 (120x120px)</p>
+                <div className="w-full h-[120px] relative rounded-md mb-4 overflow-hidden">
+                  <Image
+                    src="https://images.pexels.com/photos/3799832/pexels-photo-3799832.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                    alt="Student and graduate visa services"
+                    fill
+                    className="object-cover"
+                    priority
+                  />
                 </div>
                 <h3 className="text-xl font-bold mb-2 text-center">
                   Student & Graduate

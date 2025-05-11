@@ -113,8 +113,8 @@ export default function UrduPage() {
               >
                 <div className="w-full h-[120px] relative rounded-md mb-4 overflow-hidden">
                   <Image
-                    src="https://images.pexels.com/photos/1914982/pexels-photo-1914982.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                    alt="ذاتی اور خاندانی ویزا خدمات"
+                    src="https://images.pexels.com/photos/5717325/pexels-photo-5717325.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                    alt="کاروباری سفر اور کارپوریٹ ویزا خدمات"
                     fill
                     className="object-cover"
                     priority
@@ -127,6 +127,42 @@ export default function UrduPage() {
                   <li className="flex items-start">
                     <span className="text-[#003D6E] mr-2">•</span>
                     <span>شریک حیات اور منگیتر ویزا</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-[#003D6E] mr-2">•</span>
+                    <span>غیر معینہ مدت کی رہائش</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-[#003D6E] mr-2">•</span>
+                    <span>EEA سیٹلڈ سٹیٹس</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-[#003D6E] mr-2">•</span>
+                    <span>برطانوی پاسپورٹ کی درخواستیں</span>
+                  </li>
+                </ul>
+              </ScaleIn>
+
+              <ScaleIn
+                delay={0.6}
+                className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
+              >
+                <div className="w-full h-[120px] relative rounded-md mb-4 overflow-hidden">
+                  <Image
+                    src="https://images.pexels.com/photos/3799832/pexels-photo-3799832.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                    alt="طلبہ اور گریجویٹ ویزا خدمات"
+                    fill
+                    className="object-cover"
+                    priority
+                  />
+                </div>
+                <h3 className="text-xl font-bold mb-2 text-center">
+                  طلبہ اور گریجویٹس
+                </h3>
+                <ul className="space-y-2 text-gray-700">
+                  <li className="flex items-start">
+                    <span className="text-[#003D6E] mr-2">•</span>
+                    <span>طلبہ اور گریجویٹ ویزا</span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-[#003D6E] mr-2">•</span>

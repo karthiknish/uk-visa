@@ -251,8 +251,14 @@ export default function ArabicPage() {
                 className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
                 style={{ direction: "rtl", textAlign: "right" }}
               >
-                <div className="bg-gray-200 w-full h-[120px] rounded-md mb-4 flex items-center justify-center">
-                  <p className="text-gray-500">Service Image 2 (120x120px)</p>
+                <div className="w-full h-[120px] relative rounded-md mb-4 overflow-hidden">
+                  <Image
+                    src="https://images.pexels.com/photos/5717325/pexels-photo-5717325.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                    alt="خدمات تأشيرات السفر التجاري والشركات"
+                    fill
+                    className="object-cover"
+                    priority
+                  />
                 </div>
                 <h3 className="text-xl font-bold mb-2 text-center">
                   العمل والأعمال
@@ -282,8 +288,14 @@ export default function ArabicPage() {
                 className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
                 style={{ direction: "rtl", textAlign: "right" }}
               >
-                <div className="bg-gray-200 w-full h-[120px] rounded-md mb-4 flex items-center justify-center">
-                  <p className="text-gray-500">Service Image 3 (120x120px)</p>
+                <div className="w-full h-[120px] relative rounded-md mb-4 overflow-hidden">
+                  <Image
+                    src="https://images.pexels.com/photos/3799832/pexels-photo-3799832.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                    alt="خدمات تأشيرات الطلاب والخريجين"
+                    fill
+                    className="object-cover"
+                    priority
+                  />
                 </div>
                 <h3 className="text-xl font-bold mb-2 text-center">
                   الطلاب والخريجين
