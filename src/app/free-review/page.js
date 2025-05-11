@@ -2,10 +2,12 @@
 
 import { useEffect, useRef } from "react";
 import { useSearchParams } from "next/navigation";
-import { FadeIn } from "@/components/animations";
+import { FadeIn, ScaleIn } from "@/components/animations";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ContactForm from "@/components/ContactForm";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function FreeReviewPage() {
   const formRef = useRef(null);
@@ -28,164 +30,71 @@ export default function FreeReviewPage() {
         ]}
       />
 
-      <main className="py-16 md:py-24">
-        <div className="container mx-auto px-6">
-          <FadeIn direction="up">
-            <div className="text-center mb-16">
-              <h1 className="text-3xl md:text-4xl font-bold mb-6 text-[#003D6E]">
-                Free UK Visa Application Review
+      <main className="min-h-screen bg-gray-50">
+        {/* Hero Section */}
+        <section className="relative bg-[#003D6E] text-white py-20">
+          <div className="container mx-auto px-4">
+            <FadeIn>
+              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-center">
+                Free Review
               </h1>
-              <div className="h-1 w-20 bg-[#003D6E] mx-auto mb-8"></div>
-              <p className="max-w-2xl mx-auto text-lg text-gray-700">
-                Get a free professional review of your UK visa application. Our
-                expert consultants will assess your situation and provide
-                valuable insights to increase your chances of success.
-              </p>
-            </div>
+              <div className="h-1 w-20 bg-white mx-auto mb-8"></div>
+            </FadeIn>
+          </div>
+        </section>
 
-            <div className="grid md:grid-cols-2 gap-12 mb-16">
-              <div className="bg-white rounded-lg shadow-lg p-8">
-                <h3 className="text-xl font-semibold mb-4 text-[#003D6E]">
-                  What You&apos;ll Get
-                </h3>
-                <ul className="space-y-4">
-                  <li className="flex items-start">
-                    <svg
-                      className="w-6 h-6 text-green-500 mr-3 flex-shrink-0"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M5 13l4 4L19 7"
-                      />
-                    </svg>
-                    <span className="text-gray-700">
-                      Expert evaluation of your visa eligibility
-                    </span>
-                  </li>
-                  <li className="flex items-start">
-                    <svg
-                      className="w-6 h-6 text-green-500 mr-3 flex-shrink-0"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M5 13l4 4L19 7"
-                      />
-                    </svg>
-                    <span className="text-gray-700">
-                      Document checklist tailored to your case
-                    </span>
-                  </li>
-                  <li className="flex items-start">
-                    <svg
-                      className="w-6 h-6 text-green-500 mr-3 flex-shrink-0"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M5 13l4 4L19 7"
-                      />
-                    </svg>
-                    <span className="text-gray-700">
-                      Initial consultation with a visa specialist
-                    </span>
-                  </li>
-                </ul>
-              </div>
+        {/* Main Content */}
+        <section className="py-16">
+          <div className="container mx-auto px-4 max-w-4xl">
+            <div className="bg-white rounded-lg shadow-lg p-8">
+              <div className="mb-12">
+                <ScaleIn>
+                  <div className="w-full h-[300px] relative rounded-lg overflow-hidden mb-8">
+                    <Image
+                      src="https://images.pexels.com/photos/1008155/pexels-photo-1008155.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                      alt="Professional visa consultation and assessment"
+                      fill
+                      className="object-cover"
+                      priority
+                    />
+                  </div>
+                </ScaleIn>
 
-              <div className="bg-white rounded-lg shadow-lg p-8">
-                <h3 className="text-xl font-semibold mb-4 text-[#003D6E]">
-                  Why Choose Us
-                </h3>
-                <ul className="space-y-4">
-                  <li className="flex items-start">
-                    <svg
-                      className="w-6 h-6 text-green-500 mr-3 flex-shrink-0"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
+                <FadeIn>
+                  <p className="text-lg mb-6">
+                    If you have an immigration-related situation, you can have
+                    an assessment with our professional. We will give you all
+                    the information you need to make the best decision about
+                    your case.
+                  </p>
+
+                  <p className="text-lg mb-6">
+                    We provide legal advice on immigration matters. Our lawyers
+                    have a wealth of experience and are skilled at representing
+                    clients before judges and in arbitration and mediation
+                    proceedings.
+                  </p>
+
+                  <p className="text-lg mb-6">
+                    If you are an undocumented immigrant, the immigration system
+                    can make it difficult for you to obtain the legal protection
+                    you need. We can help you obtain a work permit. We can also
+                    assist you in renewing your work permit.
+                  </p>
+
+                  <div className="mt-12 text-center">
+                    <Link
+                      href="/contact"
+                      className="inline-block bg-[#003D6E] text-white px-8 py-3 rounded-lg hover:bg-[#002D4E] transition-colors"
                     >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M5 13l4 4L19 7"
-                      />
-                    </svg>
-                    <span className="text-gray-700">
-                      Experienced UK immigration specialists
-                    </span>
-                  </li>
-                  <li className="flex items-start">
-                    <svg
-                      className="w-6 h-6 text-green-500 mr-3 flex-shrink-0"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M5 13l4 4L19 7"
-                      />
-                    </svg>
-                    <span className="text-gray-700">
-                      High success rate in visa applications
-                    </span>
-                  </li>
-                  <li className="flex items-start">
-                    <svg
-                      className="w-6 h-6 text-green-500 mr-3 flex-shrink-0"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M5 13l4 4L19 7"
-                      />
-                    </svg>
-                    <span className="text-gray-700">
-                      Personalized attention to your case
-                    </span>
-                  </li>
-                </ul>
+                      Get Your Free Assessment
+                    </Link>
+                  </div>
+                </FadeIn>
               </div>
             </div>
-
-            <div ref={formRef} className="max-w-2xl mx-auto">
-              <ContactForm
-                labels={{
-                  heading: "Get Your Free Review",
-                  subheading:
-                    "Fill out the form below and we&apos;ll get back to you within 24 hours with our initial assessment.",
-                  firstName: "Your First Name",
-                  lastName: "Your Last Name",
-                  email: "Your Email Address",
-                  country: "Your Current Country",
-                  details: "Tell us about your visa requirements",
-                  submit: "Request Free Review",
-                }}
-              />
-            </div>
-          </FadeIn>
-        </div>
+          </div>
+        </section>
       </main>
 
       <Footer

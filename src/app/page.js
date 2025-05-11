@@ -438,8 +438,14 @@ export default function Home() {
                   Free <span className="text-black">Assessment</span>
                 </h2>
                 <div className="h-1 w-20 bg-[#003D6E] mb-6"></div>
-                <div className="bg-gray-200 rounded-lg w-full h-[200px] flex items-center justify-center mb-6">
-                  <p className="text-gray-500">Assessment Image (400x300px)</p>
+                <div className="w-full h-[200px] relative rounded-lg overflow-hidden mb-6">
+                  <Image
+                    src="https://images.pexels.com/photos/1008155/pexels-photo-1008155.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                    alt="Professional visa consultation and assessment"
+                    fill
+                    className="object-cover"
+                    priority
+                  />
                 </div>
                 <p className="mb-4 text-gray-700">
                   If you have an immigration-related situation, you can have an

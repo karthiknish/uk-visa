@@ -12,7 +12,7 @@ export default function Navigation({
   menuItems = [
     { href: "#services", label: "Services" },
     { href: "#how-we-work", label: "How We Work" },
-    { href: "#contact", label: "Contact" },
+    { href: "/contact", label: "Contact" },
     { href: "/terms", label: "Terms & Conditions" },
     { href: "/privacy", label: "Privacy Policy" },
   ],

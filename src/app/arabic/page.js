@@ -9,31 +9,40 @@ import Footer from "@/components/Footer";
 
 export default function ArabicPage() {
   return (
-    <div className="min-h-screen font-[family-name:var(--font-geist-sans)]">
+    <div
+      className="min-h-screen font-[family-name:var(--font-geist-sans)]"
+      dir="rtl"
+    >
       <Navigation
-        title="UK Visa Help Consultants"
-        titleStyle={{ direction: "rtl", textAlign: "right" }}
+        title="مستشارو تأشيرات المملكة المتحدة"
         menuItems={[
-          { href: "#services", label: "الخدمات" },
-          { href: "#how-we-work", label: "طريقة عملنا" },
-          { href: "#contact", label: "اتصل بنا" },
+          { href: "/arabic", label: "الرئيسية" },
+          { href: "/arabic/#services", label: "خدماتنا" },
+          { href: "/arabic/#how-we-work", label: "كيف نعمل" },
+          { href: "/arabic/free-review?scroll=form", label: "مراجعة مجانية" },
+          { href: "/arabic/#contact", label: "اتصل بنا" },
         ]}
-        menuItemStyle={{ direction: "rtl", textAlign: "right" }}
       />
 
-      <div className="primary-bg text-white py-16">
-        <div className="container mx-auto px-6">
+      <div
+        className="relative min-h-[90vh] flex items-center"
+        style={{
+          backgroundImage:
+            'url("https://images.pexels.com/photos/672532/pexels-photo-672532.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2")',
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+        <div className="absolute inset-0 bg-black opacity-50"></div>
+        <div className="container mx-auto px-6 relative">
           <div className="flex flex-col md:flex-row gap-8 items-center">
-            <FadeIn
-              direction="right"
-              className="md:w-1/2"
-              style={{ direction: "rtl", textAlign: "right" }}
-            >
-              <h1 className="text-4xl sm:text-5xl font-bold mb-6">
-                خبراء التأشيرات والهجرة إلى المملكة المتحدة
+            <FadeIn direction="right" className="md:w-1/2">
+              <h1 className="text-4xl sm:text-5xl font-bold mb-6 text-white">
+                متخصصون في التأشيرات والهجرة إلى المملكة المتحدة
               </h1>
-              <p className="text-xl mb-8">
-                استشارات متخصصة لجميع أنواع طلبات التأشيرات والهجرة إلى المملكة
+              <p className="text-xl mb-8 text-gray-200">
+                استشارات متخصصة لجميع أنواع التأشيرات وطلبات الهجرة إلى المملكة
                 المتحدة
               </p>
               <motion.a
@@ -45,66 +54,22 @@ export default function ArabicPage() {
                 خدماتنا
               </motion.a>
             </FadeIn>
-
-            <FadeIn
-              direction="left"
-              className="md:w-1/2 bg-white rounded-lg shadow-lg p-6"
-              style={{ direction: "rtl", textAlign: "right" }}
-            >
-              <h2 className="text-[#003D6E] text-2xl font-bold mb-4">
-                احصل على استشارة مجانية
-              </h2>
-              <form className="space-y-4">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div>
-                    <input
-                      type="text"
-                      placeholder="الاسم الأول"
-                      className="w-full p-3 border border-gray-300 rounded-md focus:ring-[#003D6E] focus:border-[#003D6E] outline-none text-gray-700"
-                      required
-                    />
-                  </div>
-                  <div>
-                    <input
-                      type="text"
-                      placeholder="اسم العائلة"
-                      className="w-full p-3 border border-gray-300 rounded-md focus:ring-[#003D6E] focus:border-[#003D6E] outline-none text-gray-700"
-                      required
-                    />
-                  </div>
-                </div>
-                <div>
-                  <input
-                    type="email"
-                    placeholder="البريد الإلكتروني"
-                    className="w-full p-3 border border-gray-300 rounded-md focus:ring-[#003D6E] focus:border-[#003D6E] outline-none text-gray-700"
-                    required
-                  />
-                </div>
-                <div>
-                  <input
-                    type="text"
-                    placeholder="في أي بلد أنت متواجد"
-                    className="w-full p-3 border border-gray-300 rounded-md focus:ring-[#003D6E] focus:border-[#003D6E] outline-none text-gray-700"
-                    required
-                  />
-                </div>
-                <div>
-                  <textarea
-                    placeholder="اشرح بمزيد من التفاصيل"
-                    className="w-full p-3 border border-gray-300 rounded-md h-24 focus:ring-[#003D6E] focus:border-[#003D6E] outline-none text-gray-700"
-                    required
-                  ></textarea>
-                </div>
-                <div className="pt-2">
-                  <button
-                    type="submit"
-                    className="bg-[#003D6E] text-white py-3 px-8 rounded-md hover:bg-[#004d8a] transition-colors font-medium w-full"
-                  >
-                    إرسال الطلب
-                  </button>
-                </div>
-              </form>
+            <FadeIn direction="left" className="md:w-1/2">
+              <div className="bg-white bg-opacity-95 p-8 rounded-lg shadow-lg">
+                <ContactForm
+                  labels={{
+                    heading: "احصل على استشارة مجانية",
+                    firstName: "الاسم الأول",
+                    lastName: "اسم العائلة",
+                    email: "البريد الإلكتروني",
+                    country: "في أي بلد أنت متواجد",
+                    details: "اشرح بمزيد من التفصيل",
+                    submit: "إرسال الطلب",
+                    success: "شكراً لك! تم إرسال رسالتك بنجاح.",
+                    error: "فشل في إرسال النموذج. يرجى المحاولة مرة أخرى.",
+                  }}
+                />
+              </div>
             </FadeIn>
           </div>
         </div>
@@ -157,8 +122,14 @@ export default function ArabicPage() {
               </h2>
               <div className="h-1 w-20 bg-[#003D6E] mb-6 mr-0"></div>
               <div className="mb-4 flex justify-center">
-                <div className="bg-gray-200 rounded-lg w-[200px] h-[200px] flex items-center justify-center mb-4">
-                  <p className="text-gray-500">Team Image (200x200px)</p>
+                <div className="w-full h-[300px] relative rounded-lg overflow-hidden">
+                  <Image
+                    src="https://images.pexels.com/photos/31946118/pexels-photo-31946118/free-photo-of-bustling-london-city-street-with-historic-architecture.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                    alt="شارع مدينة لندن التاريخي مع العمارة الجميلة"
+                    fill
+                    className="object-cover"
+                    priority
+                  />
                 </div>
               </div>
               <p className="mb-4 text-gray-700">
@@ -491,8 +462,14 @@ export default function ArabicPage() {
                   مراجعة <span className="text-black">مجانية</span>
                 </h2>
                 <div className="h-1 w-20 bg-[#003D6E] mb-6 mr-0"></div>
-                <div className="bg-gray-200 rounded-lg w-full h-[200px] flex items-center justify-center mb-6">
-                  <p className="text-gray-500">Assessment Image (400x300px)</p>
+                <div className="w-full h-[200px] relative rounded-lg overflow-hidden mb-6">
+                  <Image
+                    src="https://images.pexels.com/photos/1008155/pexels-photo-1008155.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                    alt="استشارة وتقييم مهني للتأشيرات"
+                    fill
+                    className="object-cover"
+                    priority
+                  />
                 </div>
                 <p className="mb-4 text-gray-700">
                   إذا كانت لديك أي مشكلة متعلقة بالهجرة، يمكنك الحصول على تقييم
@@ -627,21 +604,6 @@ export default function ArabicPage() {
             </div>
           </div>
         </section>
-
-        <div id="contact">
-          <ContactForm
-            labels={{
-              heading: "تواصل معنا",
-              subheading: "كيف يمكننا مساعدتك اليوم؟",
-              firstName: "اسمك الأول",
-              lastName: "اسم عائلتك",
-              email: "أدخل بريدك الإلكتروني",
-              country: "في أي بلد تقيم؟",
-              details: "صف حالتك بمزيد من التفاصيل",
-              submit: "أرسل",
-            }}
-          />
-        </div>
       </main>
 
       <Footer

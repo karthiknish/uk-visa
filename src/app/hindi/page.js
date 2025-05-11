@@ -13,21 +13,34 @@ export default function HindiPage() {
       <Navigation
         title="यूके वीज़ा हेल्प कंसल्टेंट्स"
         menuItems={[
-          { href: "#services", label: "सेवाएं" },
-          { href: "#how-we-work", label: "कार्यप्रणाली" },
-          { href: "#contact", label: "संपर्क" },
+          { href: "/hindi", label: "होम" },
+          { href: "/hindi/#services", label: "सेवाएं" },
+          { href: "/hindi/#how-we-work", label: "हम कैसे काम करते हैं" },
+          { href: "/hindi/free-review?scroll=form", label: "निःशुल्क समीक्षा" },
+          { href: "/hindi/#contact", label: "संपर्क करें" },
         ]}
       />
 
-      <div className="primary-bg text-white py-16">
-        <div className="container mx-auto px-6">
+      <div
+        className="relative min-h-[90vh] flex items-center"
+        style={{
+          backgroundImage:
+            'url("https://images.pexels.com/photos/672532/pexels-photo-672532.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2")',
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+        <div className="absolute inset-0 bg-black opacity-50"></div>
+        <div className="container mx-auto px-6 relative">
           <div className="flex flex-col md:flex-row gap-8 items-center">
             <FadeIn direction="right" className="md:w-1/2">
-              <h1 className="text-4xl sm:text-5xl font-bold mb-6">
-                यूके वीज़ा और आव्रजन विशेषज्ञ
+              <h1 className="text-4xl sm:text-5xl font-bold mb-6 text-white">
+                यूके वीज़ा और इमिग्रेशन विशेषज्ञ
               </h1>
-              <p className="text-xl mb-8">
-                यूके वीज़ा और बसने के आवेदनों के लिए विशेषज्ञ सेवाएं
+              <p className="text-xl mb-8 text-gray-200">
+                सभी प्रकार के यूके वीज़ा और इमिग्रेशन आवेदनों के लिए विशेषज्ञ
+                परामर्श
               </p>
               <motion.a
                 href="#services"
@@ -38,65 +51,23 @@ export default function HindiPage() {
                 हमारी सेवाएं
               </motion.a>
             </FadeIn>
-
-            <FadeIn
-              direction="left"
-              className="md:w-1/2 bg-white rounded-lg shadow-lg p-6"
-            >
-              <h2 className="text-[#003D6E] text-2xl font-bold mb-4">
-                नि:शुल्क परामर्श प्राप्त करें
-              </h2>
-              <form className="space-y-4">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div>
-                    <input
-                      type="text"
-                      placeholder="आपका पहला नाम"
-                      className="w-full p-3 border border-gray-300 rounded-md focus:ring-[#003D6E] focus:border-[#003D6E] outline-none text-gray-700"
-                      required
-                    />
-                  </div>
-                  <div>
-                    <input
-                      type="text"
-                      placeholder="आपका अंतिम नाम"
-                      className="w-full p-3 border border-gray-300 rounded-md focus:ring-[#003D6E] focus:border-[#003D6E] outline-none text-gray-700"
-                      required
-                    />
-                  </div>
-                </div>
-                <div>
-                  <input
-                    type="email"
-                    placeholder="अपना ईमेल पता दर्ज करें"
-                    className="w-full p-3 border border-gray-300 rounded-md focus:ring-[#003D6E] focus:border-[#003D6E] outline-none text-gray-700"
-                    required
-                  />
-                </div>
-                <div>
-                  <input
-                    type="text"
-                    placeholder="आप किस देश में हैं"
-                    className="w-full p-3 border border-gray-300 rounded-md focus:ring-[#003D6E] focus:border-[#003D6E] outline-none text-gray-700"
-                    required
-                  />
-                </div>
-                <div>
-                  <textarea
-                    placeholder="अधिक विस्तार से बताएं"
-                    className="w-full p-3 border border-gray-300 rounded-md h-24 focus:ring-[#003D6E] focus:border-[#003D6E] outline-none text-gray-700"
-                    required
-                  ></textarea>
-                </div>
-                <div className="pt-2">
-                  <button
-                    type="submit"
-                    className="bg-[#003D6E] text-white py-3 px-8 rounded-md hover:bg-[#004d8a] transition-colors font-medium w-full"
-                  >
-                    अनुरोध जमा करें
-                  </button>
-                </div>
-              </form>
+            <FadeIn direction="left" className="md:w-1/2">
+              <div className="bg-white bg-opacity-95 p-8 rounded-lg shadow-lg">
+                <ContactForm
+                  labels={{
+                    heading: "निःशुल्क परामर्श प्राप्त करें",
+                    firstName: "आपका पहला नाम",
+                    lastName: "आपका अंतिम नाम",
+                    email: "आपका ईमेल पता",
+                    country: "आप किस देश में हैं",
+                    details: "अधिक विस्तार से बताएं",
+                    submit: "अनुरोध जमा करें",
+                    success:
+                      "धन्यवाद! आपका संदेश सफलतापूर्वक जमा कर दिया गया है।",
+                    error: "फॉर्म जमा करने में विफल। कृपया पुनः प्रयास करें।",
+                  }}
+                />
+              </div>
             </FadeIn>
           </div>
         </div>
@@ -143,8 +114,14 @@ export default function HindiPage() {
               </h2>
               <div className="h-1 w-20 bg-[#003D6E] mb-6"></div>
               <div className="mb-4 flex justify-center">
-                <div className="bg-gray-200 rounded-lg w-[200px] h-[200px] flex items-center justify-center mb-4">
-                  <p className="text-gray-500">Team Image (200x200px)</p>
+                <div className="w-full h-[300px] relative rounded-lg overflow-hidden">
+                  <Image
+                    src="https://images.pexels.com/photos/31946118/pexels-photo-31946118/free-photo-of-bustling-london-city-street-with-historic-architecture.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                    alt="ऐतिहासिक वास्तुकला के साथ लंदन शहर की सड़क"
+                    fill
+                    className="object-cover"
+                    priority
+                  />
                 </div>
               </div>
               <p className="mb-4 text-gray-700">
@@ -457,8 +434,14 @@ export default function HindiPage() {
                   निःशुल्क <span className="text-black">समीक्षा</span>
                 </h2>
                 <div className="h-1 w-20 bg-[#003D6E] mb-6"></div>
-                <div className="bg-gray-200 rounded-lg w-full h-[200px] flex items-center justify-center mb-6">
-                  <p className="text-gray-500">Assessment Image (400x300px)</p>
+                <div className="w-full h-[200px] relative rounded-lg overflow-hidden mb-6">
+                  <Image
+                    src="https://images.pexels.com/photos/1008155/pexels-photo-1008155.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                    alt="पेशेवर वीज़ा परामर्श और मूल्यांकन"
+                    fill
+                    className="object-cover"
+                    priority
+                  />
                 </div>
                 <p className="mb-4 text-gray-700">
                   यदि आपके पास कोई आव्रजन संबंधी समस्या है, तो आप हमारे विशेषज्ञ
@@ -592,20 +575,6 @@ export default function HindiPage() {
             </div>
           </div>
         </section>
-
-        <ContactForm
-          labels={{
-            heading: "संपर्क करें",
-            subheading:
-              "हम आज आपकी कैसे सहायता कर सकते हैं? नीचे दिया गया फॉर्म भरें और हमारा कोई विशेषज्ञ जल्द ही आपसे संपर्क करेगा।",
-            firstName: "आपका पहला नाम",
-            lastName: "आपका अंतिम नाम",
-            email: "अपना ईमेल पता दर्ज करें",
-            country: "आप किस देश में हैं",
-            details: "अधिक विवरण में वर्णन करें",
-            submit: "जमा करें",
-          }}
-        />
       </main>
 
       <Footer
