@@ -15,6 +15,8 @@ export default function FarsiPage() {
             <a href="/bengali" className="hover:text-gray-300">Bengali</a>
             <a href="/urdu" className="hover:text-gray-300">Urdu</a>
             <a href="/punjabi" className="hover:text-gray-300">Punjabi</a>
+            <a href="/hindi" className="hover:text-gray-300">Hindi</a>
+            <a href="/dari" className="hover:text-gray-300">دری</a>
             <a href="/free-review" className="hover:text-gray-300">Free Review</a>
             <a href="#services" className="hover:text-gray-300" style={{ direction: 'rtl', textAlign: 'right' }}>خدمات</a>
             <a href="#how-we-work" className="hover:text-gray-300" style={{ direction: 'rtl', textAlign: 'right' }}>روش کار</a>

@@ -16,7 +16,9 @@ export default function UrduPage() {
             <a href="/" className="hover:text-gray-300">English</a>
             <a href="/bengali" className="hover:text-gray-300">Bengali</a>
             <a href="/punjabi" className="hover:text-gray-300">Punjabi</a>
+            <a href="/hindi" className="hover:text-gray-300">Hindi</a>
             <a href="/farsi" className="hover:text-gray-300">Farsi</a>
+            <a href="/dari" className="hover:text-gray-300">Dari</a>
             <a href="/free-review" className="hover:text-gray-300">Free Review</a>
             <a href="#services" className="hover:text-gray-300" style={{ fontFamily: 'Jameel Noori Nastaleeq, Arial, sans-serif' }}>خدمات</a>
             <a href="#how-we-work" className="hover:text-gray-300" style={{ fontFamily: 'Jameel Noori Nastaleeq, Arial, sans-serif' }}>ہم کیسے کام کرتے ہیں</a>

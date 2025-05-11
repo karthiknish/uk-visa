@@ -14,7 +14,9 @@ export default function PunjabiPage() {
             <a href="/" className="hover:text-gray-300">English</a>
             <a href="/bengali" className="hover:text-gray-300">Bengali</a>
             <a href="/urdu" className="hover:text-gray-300">Urdu</a>
+            <a href="/hindi" className="hover:text-gray-300">Hindi</a>
             <a href="/farsi" className="hover:text-gray-300">Farsi</a>
+            <a href="/dari" className="hover:text-gray-300">Dari</a>
             <a href="#services" className="hover:text-gray-300">ਸੇਵਾਵਾਂ</a>
             <a href="#how-we-work" className="hover:text-gray-300">ਕੰਮ ਦੀ ਪ੍ਰਕਿਰਿਆ</a>
             <a href="#contact" className="hover:text-gray-300">ਸੰਪਰਕ</a>

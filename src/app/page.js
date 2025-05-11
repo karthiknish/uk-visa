@@ -3,27 +3,22 @@
 import Image from "next/image";
 import { FadeIn, ScaleIn, StaggerContainer, staggerItem } from "@/components/animations";
 import { motion } from "framer-motion";
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
     <div className="min-h-screen font-[family-name:var(--font-geist-sans)]">
-      <header className="primary-bg text-white py-4">
-        <div className="container mx-auto px-6 flex justify-between items-center">
-          <div className="font-bold text-2xl">UK Visa Help Consultants</div>
-          <nav className="hidden md:flex space-x-6">
-            <a href="#" className="hover:text-gray-300">Home</a>
-            <a href="#services" className="hover:text-gray-300">Services</a>
-            <a href="#how-we-work" className="hover:text-gray-300">How We Work</a>
-            <a href="/free-review" className="hover:text-gray-300">Free Review</a>
-            <a href="#contact" className="hover:text-gray-300">Contact</a>
-            <div className="border-l border-gray-500 h-6 self-center mx-2"></div>
-            <a href="/bengali" className="hover:text-gray-300">Bengali</a>
-            <a href="/urdu" className="hover:text-gray-300">Urdu</a>
-            <a href="/punjabi" className="hover:text-gray-300">Punjabi</a>
-            <a href="/farsi" className="hover:text-gray-300">Farsi</a>
-          </nav>
-        </div>
-      </header>
+      <Navigation 
+        title="UK Visa Help Consultants"
+        menuItems={[
+          { href: "#", label: "Home" },
+          { href: "#services", label: "Services" },
+          { href: "#how-we-work", label: "How We Work" },
+          { href: "/free-review", label: "Free Review" },
+          { href: "#contact", label: "Contact" }
+        ]}
+      />
       
       <div className="primary-bg text-white py-16">
         <div className="container mx-auto px-6">
@@ -467,54 +462,32 @@ export default function Home() {
         </section>
       </main>
       
-      <footer className="bg-[#003D6E] text-white py-12">
-        <FadeIn direction="up" className="container mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-            <div>
-              <div className="bg-gray-700 w-[150px] h-[80px] rounded flex items-center justify-center mb-4">
-                <p className="text-gray-300">Logo (150x80px)</p>
-              </div>
-              <h3 className="font-bold text-lg mb-4">UK Visa Help Consultants</h3>
-              <p className="text-gray-300 text-sm">
-                One of the leading UK Visa Consultancies with a panel of specialist consultants for UK Visa and settlement applications.
-              </p>
-            </div>
-            
-            <div>
-              <h3 className="font-bold text-lg mb-4">Quick Links</h3>
-              <ul className="space-y-2 text-gray-300 text-sm">
-                <li><a href="#" className="hover:text-white">Home</a></li>
-                <li><a href="#services" className="hover:text-white">Services</a></li>
-                <li><a href="#how-we-work" className="hover:text-white">How We Work</a></li>
-                <li><a href="#contact" className="hover:text-white">Contact</a></li>
-              </ul>
-            </div>
-            
-            <div>
-              <h3 className="font-bold text-lg mb-4">Services</h3>
-              <ul className="space-y-2 text-gray-300 text-sm">
-                <li><a href="#services" className="hover:text-white">Family Visas</a></li>
-                <li><a href="#services" className="hover:text-white">Work Visas</a></li>
-                <li><a href="#services" className="hover:text-white">Student Visas</a></li>
-                <li><a href="#services" className="hover:text-white">Settlement Applications</a></li>
-              </ul>
-            </div>
-            
-            <div>
-              <h3 className="font-bold text-lg mb-4">Contact Us</h3>
-              <ul className="space-y-2 text-gray-300 text-sm">
-                <li>London, United Kingdom</li>
-                <li>Phone: +44 123 456 7890</li>
-                <li>Email: info@ukvisahelp.com</li>
-              </ul>
-            </div>
-          </div>
-          
-          <div className="pt-8 border-t border-gray-700 text-center text-gray-300 text-sm">
-            <p>&copy; {new Date().getFullYear()} UK Visa Help Consultants. All rights reserved.</p>
-          </div>
-        </FadeIn>
-      </footer>
+      <Footer 
+        logoText="UK Visa Help Consultants"
+        tagline="Leading UK visa consultancy with a panel of expert advisors for visa and settlement applications."
+        quickLinksTitle="Quick Links"
+        quickLinks={[
+          { href: "/", label: "Home" },
+          { href: "#services", label: "Services" },
+          { href: "#how-we-work", label: "How We Work" },
+          { href: "/free-review", label: "Free Review" },
+          { href: "#contact", label: "Contact" },
+          { href: "/bengali", label: "Bengali" },
+          { href: "/urdu", label: "Urdu" },
+          { href: "/punjabi", label: "Punjabi" },
+          { href: "/hindi", label: "Hindi" },
+          { href: "/farsi", label: "Farsi" },
+          { href: "/dari", label: "Dari" },
+          { href: "/arabic", label: "Arabic" }
+        ]}
+        serviceLinks={[
+          { href: "#services", label: "Family Visas" },
+          { href: "#services", label: "Work Visas" },
+          { href: "#services", label: "Student Visas" },
+          { href: "#services", label: "Settlement Applications" }
+        ]}
+        copyright="UK Visa Help Consultants. All rights reserved."
+      />
     </div>
   );
 }
