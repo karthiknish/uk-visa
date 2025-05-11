@@ -27,8 +27,8 @@ export default function ContactPage() {
               </h1>
               <div className="h-1 w-20 bg-[#003D6E] mx-auto mb-8"></div>
               <p className="max-w-2xl mx-auto text-lg text-gray-700">
-                Get in touch with our team of visa specialists. We're here to
-                help you with your UK visa and immigration needs.
+                Get in touch with our team of visa specialists. We&apos;re here
+                to help you with your UK visa and immigration needs.
               </p>
             </div>
 
@@ -167,7 +167,7 @@ export default function ContactPage() {
                   labels={{
                     heading: "Send Us a Message",
                     subheading:
-                      "Fill out the form below and we'll get back to you within 24 hours.",
+                      "Fill out the form below and we&apos;ll get back to you within 24 hours.",
                     firstName: "Your First Name",
                     lastName: "Your Last Name",
                     email: "Your Email Address",
