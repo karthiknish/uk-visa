@@ -481,7 +481,12 @@ export default function PunjabiPage() {
                     </svg>
                   </div>
                   <h3 className="font-bold mb-2">ਫ਼ੋਨ</h3>
-                  <p className="text-gray-600">02035761165</p>
+                  <a
+                    href="tel:02035761165"
+                    className="text-gray-600 hover:text-[#003D6E] hover:underline"
+                  >
+                    02035761165
+                  </a>
                 </ScaleIn>
                 <ScaleIn
                   delay={0.3}
@@ -504,9 +509,12 @@ export default function PunjabiPage() {
                     </svg>
                   </div>
                   <h3 className="font-bold mb-2">ਈਮੇਲ</h3>
-                  <p className="text-gray-600">
+                  <a
+                    href="mailto:info@ukvisahelpconsultants.co.uk"
+                    className="text-gray-600 hover:text-[#003D6E] hover:underline"
+                  >
                     info@ukvisahelpconsultants.co.uk
-                  </p>
+                  </a>
                 </ScaleIn>
                 <ScaleIn
                   delay={0.4}
@@ -599,7 +607,12 @@ export default function PunjabiPage() {
                   </svg>
                 </div>
                 <h3 className="font-bold mb-2">ਫ਼ੋਨ</h3>
-                <p className="text-gray-600">02035761165</p>
+                <a
+                  href="tel:02035761165"
+                  className="text-gray-600 hover:text-[#003D6E] hover:underline"
+                >
+                  02035761165
+                </a>
               </motion.div>
 
               <motion.div
@@ -624,9 +637,12 @@ export default function PunjabiPage() {
                   </svg>
                 </div>
                 <h3 className="font-bold mb-2">ਈਮੇਲ</h3>
-                <p className="text-gray-600">
+                <a
+                  href="mailto:info@ukvisahelpconsultants.co.uk"
+                  className="text-gray-600 hover:text-[#003D6E] hover:underline"
+                >
                   info@ukvisahelpconsultants.co.uk
-                </p>
+                </a>
               </motion.div>
 
               <motion.div
