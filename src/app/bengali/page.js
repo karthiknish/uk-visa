@@ -32,18 +32,18 @@ export default function BengaliPage() {
           }}
         >
           <div className="absolute inset-0 bg-black opacity-50"></div>
-          <div className="container mx-auto px-6 relative">
-            <div className="flex flex-col md:flex-row gap-8 items-center">
+          <div className="container mx-auto px-4 sm:px-6 relative">
+            <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-center">
               <FadeIn direction="right" className="md:w-1/2">
-                <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 text-white">
                   <span>ইউকে ভিসা</span> পরামর্শ
                 </h1>
-                <p className="text-xl text-gray-200 mb-8">
+                <p className="text-lg sm:text-xl mb-6 sm:mb-8 text-gray-200">
                   আপনার ইউকে ভিসা আবেদনের জন্য বিশেষজ্ঞ পরামর্শ এবং সহায়তা।
                 </p>
                 <motion.a
                   href="#services"
-                  className="inline-block bg-white text-[#003D6E] font-bold py-3 px-8 rounded-full hover:bg-gray-100 transition-colors"
+                  className="inline-block bg-white text-[#003D6E] font-bold py-2 px-6 sm:py-3 sm:px-8 rounded-full hover:bg-gray-100 transition-colors"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -51,8 +51,8 @@ export default function BengaliPage() {
                 </motion.a>
               </FadeIn>
 
-              <FadeIn direction="left" className="md:w-1/2">
-                <div className="bg-white bg-opacity-95 p-8 rounded-lg shadow-lg">
+              <FadeIn direction="left" className="md:w-1/2 w-full">
+                <div className="bg-white bg-opacity-95 p-4 md:p-6 rounded-lg shadow-lg">
                   <ContactForm
                     labels={{
                       heading: "বিনামূল্যে পরামর্শ নিন",

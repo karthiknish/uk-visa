@@ -41,29 +41,29 @@ export default function PashtoPage() {
         }}
       >
         <div className="absolute inset-0 bg-black opacity-50"></div>
-        <div className="container mx-auto px-6 relative">
-          <div className="flex flex-col md:flex-row gap-8 items-center">
+        <div className="container mx-auto px-4 sm:px-6 relative">
+          <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-center">
             <FadeIn
               direction="right"
               className="md:w-1/2 text-center md:text-right"
             >
-              <h1 className="text-4xl sm:text-5xl font-bold mb-6 text-white">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 text-white">
                 د برېتانیا ویزې او مهاجرت متخصصین
               </h1>
-              <p className="text-xl mb-8 text-gray-200">
+              <p className="text-lg sm:text-xl mb-6 sm:mb-8 text-gray-200">
                 د برېتانیا د هر ډول ویزو او مهاجرت غوښتنلیکونو لپاره مسلکي مشوره
               </p>
               <motion.a
                 href="#services"
-                className="inline-block bg-white text-[#003D6E] font-bold py-3 px-8 rounded-full hover:bg-gray-100 transition-colors"
+                className="inline-block bg-white text-[#003D6E] font-bold py-2 px-6 sm:py-3 sm:px-8 rounded-full hover:bg-gray-100 transition-colors"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
                 زموږ خدمتونه
               </motion.a>
             </FadeIn>
-            <FadeIn direction="left" className="md:w-1/2">
-              <div className="bg-white bg-opacity-95 p-6 md:p-8 rounded-lg shadow-lg">
+            <FadeIn direction="left" className="md:w-1/2 w-full">
+              <div className="bg-white bg-opacity-95 p-4 md:p-6 rounded-lg shadow-lg">
                 <ContactForm
                   labels={{
                     heading: "وړیا مشوره ترلاسه کړئ",

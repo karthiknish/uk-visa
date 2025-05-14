@@ -61,7 +61,7 @@ export default function Navigation({
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-500 hover:text-gray-600 focus:outline-none focus:text-gray-600"
+              className="text-white hover:text-gray-300 focus:outline-none focus:text-gray-300"
               aria-label="toggle menu"
             >
               <svg viewBox="0 0 24 24" className="h-6 w-6 fill-current">
@@ -120,41 +120,77 @@ export default function Navigation({
         </div>
 
         {/* Mobile menu */}
-        {isOpen && (
-          <FadeIn className="md:hidden mt-4">
-            <div className="flex flex-col space-y-4">
-              {filteredMenuItems.map((item, index) => (
+        <AnimatePresence>
+          {isOpen && (
+            <motion.div
+              initial={{ opacity: 0, x: "100%" }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: "100%" }}
+              transition={{ duration: 0.3 }}
+              className="fixed inset-0 bg-[#003D6E] z-50 p-6 md:hidden flex flex-col"
+            >
+              <div className="flex justify-between items-center mb-8">
                 <Link
-                  key={`mobile-menu-${index}`}
-                  href={item.href}
-                  className="text-gray-700 hover:text-[#003D6E] transition-colors"
+                  href="/"
+                  className="font-bold text-xl text-white"
+                  style={titleStyle}
                   onClick={() => setIsOpen(false)}
                 >
-                  {item.label}
+                  {title}
                 </Link>
-              ))}
-
-              <div className="border-t border-white/20 pt-4">
-                <p className="text-sm text-gray-300 mb-2" style={menuItemStyle}>
-                  Languages
-                </p>
-                <div className="grid grid-cols-2 gap-2">
-                  {languageLinks.map((link, index) => (
-                    <Link
-                      key={`mobile-lang-${index}`}
-                      href={link.href}
-                      className="text-sm hover:text-gray-300 transition-colors"
-                      style={menuItemStyle}
-                      onClick={() => setIsOpen(false)}
-                    >
-                      {link.label}
-                    </Link>
-                  ))}
-                </div>
+                <button
+                  onClick={() => setIsOpen(false)}
+                  className="text-white hover:text-gray-300"
+                  aria-label="close menu"
+                >
+                  <svg viewBox="0 0 24 24" className="h-8 w-8 fill-current">
+                    <path
+                      fillRule="evenodd"
+                      clipRule="evenodd"
+                      d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"
+                    />
+                  </svg>
+                </button>
               </div>
-            </div>
-          </FadeIn>
-        )}
+
+              <nav className="flex flex-col space-y-6 text-center flex-grow justify-center">
+                {filteredMenuItems.map((item, index) => (
+                  <Link
+                    key={`mobile-menu-${index}`}
+                    href={item.href}
+                    className="text-2xl text-white hover:text-gray-300 transition-colors py-2"
+                    style={menuItemStyle}
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+
+                <div className="border-t border-white/30 pt-6 mt-6">
+                  <p
+                    className="text-xl text-gray-200 mb-4"
+                    style={menuItemStyle}
+                  >
+                    Languages
+                  </p>
+                  <div className="flex flex-col space-y-4 items-center">
+                    {languageLinks.map((link, index) => (
+                      <Link
+                        key={`mobile-lang-${index}`}
+                        href={link.href}
+                        className="text-lg text-white hover:text-gray-300 transition-colors"
+                        style={menuItemStyle}
+                        onClick={() => setIsOpen(false)}
+                      >
+                        {link.label}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </nav>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </header>
   );

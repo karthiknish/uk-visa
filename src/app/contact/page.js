@@ -167,7 +167,7 @@ export default function ContactPage() {
                   labels={{
                     heading: "Send Us a Message",
                     subheading:
-                      "Fill out the form below and we&apos;ll get back to you within 24 hours.",
+                      "Fill out the form below and we will get back to you within 24 hours.",
                     firstName: "Your First Name",
                     lastName: "Your Last Name",
                     email: "Your Email Address",

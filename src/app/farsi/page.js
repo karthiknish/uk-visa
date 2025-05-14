@@ -35,23 +35,23 @@ export default function FarsiPage() {
         }}
       >
         <div className="absolute inset-0 bg-black opacity-50"></div>
-        <div className="container mx-auto px-6 relative">
-          <div className="flex flex-col md:flex-row gap-8 items-center">
+        <div className="container mx-auto px-4 sm:px-6 relative">
+          <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-center">
             <FadeIn
               direction="right"
               className="md:w-1/2"
               style={{ direction: "rtl", textAlign: "right" }}
             >
-              <h1 className="text-4xl sm:text-5xl font-bold mb-6 text-white">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 text-white">
                 متخصصان ویزا و مهاجرت به انگلستان
               </h1>
-              <p className="text-xl mb-8 text-gray-200">
+              <p className="text-lg sm:text-xl mb-6 sm:mb-8 text-gray-200">
                 مشاوره تخصصی برای تمام انواع ویزا و درخواست‌های مهاجرت به
                 انگلستان
               </p>
               <motion.a
                 href="#services"
-                className="inline-block bg-white text-[#003D6E] font-bold py-3 px-8 rounded-full hover:bg-gray-100 transition-colors"
+                className="inline-block bg-white text-[#003D6E] font-bold py-2 px-6 sm:py-3 sm:px-8 rounded-full hover:bg-gray-100 transition-colors"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -60,26 +60,28 @@ export default function FarsiPage() {
             </FadeIn>
             <FadeIn
               direction="left"
-              className="md:w-1/2"
+              className="md:w-1/2 w-full"
               style={{ direction: "rtl", textAlign: "right" }}
             >
-              <ContactForm
-                labels={{
-                  heading: "مشاوره رایگان دریافت کنید",
-                  subheading: "چگونه می‌توانیم امروز به شما کمک کنیم؟",
-                  firstName: "نام",
-                  lastName: "نام خانوادگی",
-                  email: "آدرس ایمیل خود را وارد کنید",
-                  phone: "شماره موبایل خود را وارد کنید",
-                  country: "در کدام کشور هستید",
-                  details: "با جزئیات بیشتر توضیح دهید",
-                  submit: "ارسال درخواست",
-                  success: "با تشکر! درخواست شما با موفقیت ثبت شد.",
-                  error: "خطا در ارسال فرم. لطفاً دوباره تلاش کنید.",
-                }}
-                endpoint="/api/contact"
-                thankYouPage="/thank-you"
-              />
+              <div className="bg-white bg-opacity-95 p-4 md:p-6 rounded-lg shadow-lg">
+                <ContactForm
+                  labels={{
+                    heading: "مشاوره رایگان دریافت کنید",
+                    subheading: "چگونه می‌توانیم امروز به شما کمک کنیم؟",
+                    firstName: "نام",
+                    lastName: "نام خانوادگی",
+                    email: "آدرس ایمیل خود را وارد کنید",
+                    phone: "شماره موبایل خود را وارد کنید",
+                    country: "در کدام کشور هستید",
+                    details: "با جزئیات بیشتر توضیح دهید",
+                    submit: "ارسال درخواست",
+                    success: "با تشکر! درخواست شما با موفقیت ثبت شد.",
+                    error: "خطا در ارسال فرم. لطفاً دوباره تلاش کنید.",
+                  }}
+                  endpoint="/api/contact"
+                  thankYouPage="/thank-you"
+                />
+              </div>
             </FadeIn>
           </div>
         </div>

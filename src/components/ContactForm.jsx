@@ -112,19 +112,23 @@ export default function ContactForm({
   };
 
   return (
-    <section id="contact" className="py-4 md:py-8 bg-gray-50" style={formStyle}>
-      <div className="container mx-auto px-3 md:px-4">
-        <div className="text-center mb-4 md:mb-6">
-          <h2 className="text-xl md:text-2xl font-bold mb-2 text-[#003D6E]">
+    <section id="contact-form-section" className="py-2" style={formStyle}>
+      <div className="container mx-auto px-2 md:px-3">
+        <div className="text-center mb-3 md:mb-4">
+          <h2 className="text-lg md:text-xl font-bold mb-1 text-[#003D6E]">
             {labels.heading}
           </h2>
-          <div className="h-0.5 w-16 bg-[#003D6E] mx-auto mb-2"></div>
-          <p className="max-w-xl mx-auto text-gray-700 text-sm">
-            {labels.subheading}
-          </p>
+          {labels.subheading && (
+            <>
+              <div className="h-0.5 w-12 md:w-16 bg-[#003D6E] mx-auto mb-1 md:mb-2"></div>
+              <p className="max-w-xl mx-auto text-gray-700 text-xs md:text-sm">
+                {labels.subheading}
+              </p>
+            </>
+          )}
         </div>
 
-        <div className="bg-white p-3 md:p-4 rounded-lg shadow-md mb-4">
+        <div className="bg-transparent p-2 md:p-3 rounded-lg mb-2">
           <form
             className="max-w-lg mx-auto space-y-2 md:space-y-3"
             onSubmit={handleSubmit}
