@@ -59,7 +59,7 @@ export default function Home() {
                     firstName: "Your First Name",
                     lastName: "Your Last Name",
                     email: "Enter Your Email Address",
-                    phone: "Mobile Number",
+                    phone: "Enter Your Mobile Number",
                     country: "What country are you in",
                     details: "Describe In More Detail",
                     submit: "Submit Request",
@@ -754,8 +754,11 @@ export default function Home() {
                     />
                   </svg>
                 </div>
-                <h3 className="font-bold mb-2">Office</h3>
-                <p className="text-gray-600">London, United Kingdom</p>
+                <h3 className="font-bold mb-2">Address</h3>
+                <p className="text-gray-600">
+                  Tower Bridge Business Centre, 46-48 East Smithfield, London
+                  E1W 1AW
+                </p>
               </motion.div>
             </StaggerContainer>
           </div>

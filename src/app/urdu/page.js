@@ -308,151 +308,6 @@ export default function UrduPage() {
           </div>
         </section>
 
-        <section className="py-16 bg-gray-50">
-          <div className="container mx-auto px-6">
-            <div className="flex flex-col md:flex-row gap-12 items-center">
-              <FadeIn direction="right" className="md:w-1/2">
-                <h2 className="text-3xl font-bold mb-4 text-[#003D6E]">
-                  مفت <span className="text-black">جائزہ</span>
-                </h2>
-                <div className="h-1 w-20 bg-[#003D6E] mb-6"></div>
-                <div className="w-full h-[200px] relative rounded-lg overflow-hidden mb-6">
-                  <Image
-                    src="https://images.pexels.com/photos/1008155/pexels-photo-1008155.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                    alt="پیشہ ورانہ ویزا مشاورت اور تشخیص"
-                    fill
-                    className="object-cover"
-                    priority
-                  />
-                </div>
-                <p className="mb-4 text-gray-700">
-                  اگر آپ کو کوئی امیگریشن مسئلہ درپیش ہے، تو آپ ہمارے ماہر سے
-                  مفت تشخیص کروا سکتے ہیں۔ ہم آپ کو اپنے معاملے کے بارے میں درست
-                  فیصلہ کرنے کے لیے تمام ضروری معلومات فراہم کریں گے۔
-                </p>
-              </FadeIn>
-              <div className="md:w-1/2 grid grid-cols-2 gap-4">
-                <ScaleIn
-                  delay={0.2}
-                  className="bg-white p-5 rounded-lg shadow-md"
-                >
-                  <div className="w-12 h-12 bg-[#003D6E] rounded-full flex items-center justify-center text-white mb-3">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-6 w-6"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                      />
-                    </svg>
-                  </div>
-                  <h3 className="font-bold mb-2">99% کامیابی کی شرح</h3>
-                  <p className="text-sm text-gray-600">
-                    ہمارے پاس کامیاب ویزا درخواستوں کا ثابت شدہ ٹریک ریکارڈ ہے
-                  </p>
-                </ScaleIn>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="py-16 bg-gray-50">
-          <div className="container mx-auto px-6">
-            <FadeIn direction="up" className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4 text-[#003D6E]">
-                افغان شہریوں کے لیے <span className="text-black">معاونت</span>
-              </h2>
-              <div className="h-1 w-20 bg-[#003D6E] mx-auto mb-6"></div>
-              <p className="max-w-2xl mx-auto text-gray-700">
-                ہم درج ذیل درخواستوں کو مکمل کرنے میں مدد فراہم کرتے ہیں:
-              </p>
-            </FadeIn>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold mb-4 text-[#003D6E]">
-                  ویزا خدمات
-                </h3>
-                <ul className="space-y-3 text-gray-700">
-                  <li className="flex items-start">
-                    <span className="text-[#003D6E] mr-2">•</span>
-                    <span>افغان ریلوکیشن اینڈ اسسٹنس پالیسی (ARAP) اسکیم</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-[#003D6E] mr-2">•</span>
-                    <span>برازیل ہیومینٹیرین ویزا</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-[#003D6E] mr-2">•</span>
-                    <span>
-                      پاکستان ETA ویزا (افغان اور غیر ملکی پاسپورٹ دونوں کے لیے)
-                    </span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-[#003D6E] mr-2">•</span>
-                    <span>3 ماہ اور 6 ماہ کے سیاحتی اور طبی ویزا</span>
-                  </li>
-                </ul>
-
-                <h4 className="text-lg font-bold mt-6 mb-3 text-[#003D6E]">
-                  فعال سیاحتی ویزا خدمات:
-                </h4>
-                <ul className="space-y-3 text-gray-700">
-                  <li className="flex items-start">
-                    <span className="text-[#003D6E] mr-2">•</span>
-                    <span>ایران - سیاحتی ویزا</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-[#003D6E] mr-2">•</span>
-                    <span>ملائیشیا - سیاحتی ویزا اور رجسٹریشن</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-[#003D6E] mr-2">•</span>
-                    <span>ویتنام - سیاحتی ویزا</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-[#003D6E] mr-2">•</span>
-                    <span>مراکش - سیاحتی ویزا</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-[#003D6E] mr-2">•</span>
-                    <span>
-                      متحدہ عرب امارات (دبئی) - وزٹ ویزا، توسیع، اور رہنمائی
-                    </span>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-bold mb-4 text-[#003D6E]">
-                  تعلیمی مواقع
-                </h3>
-                <p className="text-gray-700 mb-4">
-                  یوکے ویزا ہیلپ کنسلٹنٹس برطانیہ، امریکہ، جرمنی، فرانس، آسٹریا،
-                  آسٹریلیا، اور دیگر ممالک کی یونیورسٹیوں کے ساتھ فعال طور پر
-                  بات چیت میں مصروف ہے تاکہ افغان طلباء کے لیے بیرون ملک اعلیٰ
-                  تعلیم کے قانونی اور قابل رسائی راستے تیار کیے جا سکیں۔
-                </p>
-                <div className="w-full h-[200px] relative rounded-lg overflow-hidden">
-                  <Image
-                    src="https://images.pexels.com/photos/267885/pexels-photo-267885.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                    alt="تعلیمی مواقع"
-                    fill
-                    className="object-cover"
-                    priority
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
         <section id="how-we-work" className="py-16 container mx-auto px-6">
           <FadeIn direction="up" className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4 text-[#003D6E]">
@@ -686,6 +541,107 @@ export default function UrduPage() {
                 </ScaleIn>
               </div>
             </div>
+          </div>
+        </section>
+
+        <section id="contact" className="py-16">
+          <div className="container mx-auto px-6">
+            <FadeIn direction="up" className="text-center mb-12">
+              <h2 className="text-3xl font-bold mb-4 text-[#003D6E]">
+                رابطہ <span className="text-black">کریں</span>
+              </h2>
+              <div className="h-1 w-20 bg-[#003D6E] mx-auto mb-6"></div>
+              <p className="max-w-2xl mx-auto text-gray-700">
+                آج ہم آپ کی کیسے مدد کر سکتے ہیں؟ نیچے دیے گئے طریقوں میں سے کسی
+                کے ذریعے ہم سے رابطہ کریں۔
+              </p>
+            </FadeIn>
+
+            <StaggerContainer className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+              <motion.div
+                variants={staggerItem(0.2)}
+                className="bg-white p-6 rounded-lg shadow-md text-center"
+                whileHover={{ y: -5 }}
+              >
+                <div className="w-12 h-12 bg-[#003D6E] rounded-full flex items-center justify-center text-white mb-4 mx-auto">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                    />
+                  </svg>
+                </div>
+                <h3 className="font-bold mb-2">فون</h3>
+                <p className="text-gray-600">+44 123 456 7890</p>
+              </motion.div>
+
+              <motion.div
+                variants={staggerItem(0.4)}
+                className="bg-white p-6 rounded-lg shadow-md text-center"
+                whileHover={{ y: -5 }}
+              >
+                <div className="w-12 h-12 bg-[#003D6E] rounded-full flex items-center justify-center text-white mb-4 mx-auto">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                    />
+                  </svg>
+                </div>
+                <h3 className="font-bold mb-2">ای میل</h3>
+                <p className="text-gray-600">info@ukvisahelp.com</p>
+              </motion.div>
+
+              <motion.div
+                variants={staggerItem(0.6)}
+                className="bg-white p-6 rounded-lg shadow-md text-center"
+                whileHover={{ y: -5 }}
+              >
+                <div className="w-12 h-12 bg-[#003D6E] rounded-full flex items-center justify-center text-white mb-4 mx-auto">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                    />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                    />
+                  </svg>
+                </div>
+                <h3 className="font-bold mb-2">دفتر</h3>
+                <p className="text-gray-600">
+                  Tower Bridge Business Centre, 46-48 East Smithfield, London
+                  E1W 1AW
+                </p>
+              </motion.div>
+            </StaggerContainer>
           </div>
         </section>
       </main>
