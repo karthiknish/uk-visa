@@ -336,6 +336,104 @@ export default function DariPage() {
           </div>
         </section>
 
+        <section className="py-16 bg-gray-50 text-right">
+          <div className="container mx-auto px-6">
+            <FadeIn direction="up" className="text-center mb-12">
+              <h2 className="text-3xl font-bold mb-4 text-[#003D6E]">
+                حمایت از <span className="text-black">شهروندان افغانستان</span>
+              </h2>
+              <div className="h-1 w-20 bg-[#003D6E] mx-auto mb-6"></div>
+              <p className="max-w-2xl mx-auto text-gray-700">
+                ما خدمات مشاوره و کمک در تکمیل درخواست‌ها برای موارد زیر را
+                ارائه می‌دهیم:
+              </p>
+            </FadeIn>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h3 className="text-xl font-bold mb-4 text-[#003D6E]">
+                  خدمات ویزا
+                </h3>
+                <ul className="space-y-3 text-gray-700">
+                  <li className="flex items-start">
+                    <span className="text-[#003D6E] ml-2">•</span>
+                    <span>
+                      برنامه جابجایی و کمک به شهروندان افغانستان (ARAP)
+                    </span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-[#003D6E] ml-2">•</span>
+                    <span>ویزای بشردوستانه برازیل</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-[#003D6E] ml-2">•</span>
+                    <span>
+                      ویزای ETA پاکستان (برای دارندگان پاسپورت افغانستان و
+                      خارجی)
+                    </span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-[#003D6E] ml-2">•</span>
+                    <span>
+                      ویزاهای گردشگری (توریستی) و درمانی (مدیکل) ۳ ماهه و ۶ ماهه
+                    </span>
+                  </li>
+                </ul>
+
+                <h4 className="text-lg font-bold mt-6 mb-3 text-[#003D6E]">
+                  خدمات فعال ویزای گردشگری (توریستی):
+                </h4>
+                <ul className="space-y-3 text-gray-700">
+                  <li className="flex items-start">
+                    <span className="text-[#003D6E] ml-2">•</span>
+                    <span>ایران – ویزای گردشگری(تورستی)</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-[#003D6E] ml-2">•</span>
+                    <span>مالزیا – ویزای گردشگری(تورستی)</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-[#003D6E] ml-2">•</span>
+                    <span>ویتنام – ویزای گردشگری(تورستی)</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-[#003D6E] ml-2">•</span>
+                    <span>مراکش – ویزای گردشگری(تورستی)</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-[#003D6E] ml-2">•</span>
+                    <span>
+                      امارات متحده عربی (دبی) – ویزای بازدید، تمدید ومشاوره
+                    </span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h3 className="text-xl font-bold mb-4 text-[#003D6E]">
+                  فرصت‌های آموزشی
+                </h3>
+                <p className="text-gray-700 mb-4">
+                  مشاوران ویزای بریتانیا (UK Visa Help Consultants) در حال
+                  همکاری و گفت‌وگو با دانشگاه‌های بریتانیا، ایالات متحده آمریکا،
+                  آلمان، فرانسه، اتریش، استرالیا و دیگر کشورها هستند تا مسیرهای
+                  قانونی و قابل دسترسی برای دانشجویان افغانستان جهت ادامه تحصیل
+                  در خارج از کشور فراهم سازند.
+                </p>
+                <div className="w-full h-[200px] relative rounded-lg overflow-hidden">
+                  <Image
+                    src="https://images.pexels.com/photos/267885/pexels-photo-267885.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                    alt="فرصت‌های آموزشی برای دانشجویان بین‌المللی"
+                    fill
+                    className="object-cover"
+                    priority
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section
           id="how-we-work"
           className="py-16 container mx-auto px-6 text-right"
@@ -571,81 +669,6 @@ export default function DariPage() {
                 </ScaleIn>
               </div>
             </div>
-
-            <FadeIn
-              direction="up"
-              delay={0.3}
-              className="bg-white p-6 rounded-lg shadow text-right mt-8"
-            >
-              <h3 className="text-xl font-semibold mb-4 text-[#003D6E]">
-                حمایت از شهروندان افغانستان
-              </h3>
-              <p className="mb-4 text-gray-700">
-                ما خدمات مشاوره و کمک در تکمیل درخواست‌ها برای موارد زیر را
-                ارائه می‌دهیم:
-              </p>
-              <ul className="space-y-2 text-gray-700 mb-6">
-                <li className="flex items-start">
-                  <span className="text-[#003D6E] ml-2">•</span>
-                  <span>برنامه جابجایی و کمک به شهروندان افغانستان (ARAP)</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-[#003D6E] ml-2">•</span>
-                  <span>ویزای بشردوستانه برازیل</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-[#003D6E] ml-2">•</span>
-                  <span>
-                    ویزای ETA پاکستان (برای دارندگان پاسپورت افغانستان و خارجی)
-                  </span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-[#003D6E] ml-2">•</span>
-                  <span>
-                    ویزاهای گردشگری (توریستی) و درمانی (مدیکل) ۳ ماهه و ۶ ماهه
-                  </span>
-                </li>
-              </ul>
-
-              <h4 className="text-lg font-semibold mb-3 text-[#003D6E]">
-                خدمات فعال ویزای گردشگری (توریستی):
-              </h4>
-              <ul className="space-y-2 text-gray-700 mb-6">
-                <li className="flex items-start">
-                  <span className="text-[#003D6E] ml-2">•</span>
-                  <span>ایران – ویزای گردشگری(تورستی)</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-[#003D6E] ml-2">•</span>
-                  <span>مالزیا – ویزای گردشگری(تورستی)</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-[#003D6E] ml-2">•</span>
-                  <span>ویتنام – ویزای گردشگری(تورستی)</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-[#003D6E] ml-2">•</span>
-                  <span>مراکش – ویزای گردشگری(تورستی)</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-[#003D6E] ml-2">•</span>
-                  <span>
-                    امارات متحده عربی (دبی) – ویزای بازدید، تمدید ومشاوره
-                  </span>
-                </li>
-              </ul>
-
-              <h4 className="text-lg font-semibold mb-3 text-[#003D6E]">
-                فرصت‌های آموزشی
-              </h4>
-              <p className="text-gray-700">
-                مشاوران ویزای بریتانیا (UK Visa Help Consultants) در حال همکاری
-                و گفت‌وگو با دانشگاه‌های بریتانیا، ایالات متحده آمریکا، آلمان،
-                فرانسه، اتریش، استرالیا و دیگر کشورها هستند تا مسیرهای قانونی و
-                قابل دسترسی برای دانشجویان افغانستان جهت ادامه تحصیل در خارج از
-                کشور فراهم سازند.
-              </p>
-            </FadeIn>
           </div>
         </section>
       </main>
