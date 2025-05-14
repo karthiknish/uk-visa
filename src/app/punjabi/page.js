@@ -19,19 +19,29 @@ export default function PunjabiPage() {
         ]}
       />
 
-      <div className="bg-gray-50 py-12 md:py-16">
-        <div className="container mx-auto px-6">
+      <div
+        className="relative min-h-[90vh] flex items-center"
+        style={{
+          backgroundImage:
+            'url("https://images.pexels.com/photos/672532/pexels-photo-672532.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2")',
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+        <div className="absolute inset-0 bg-black opacity-50"></div>
+        <div className="container mx-auto px-6 relative">
           <div className="flex flex-col md:flex-row gap-8 items-center">
             <FadeIn direction="right" className="md:w-1/2">
-              <h1 className="text-4xl sm:text-5xl font-bold mb-6">
+              <h1 className="text-4xl sm:text-5xl font-bold mb-6 text-white">
                 ਯੂਕੇ ਵੀਜ਼ਾ ਅਤੇ ਇਮੀਗ੍ਰੇਸ਼ਨ ਮਾਹਿਰ
               </h1>
-              <p className="text-xl mb-8">
+              <p className="text-xl mb-8 text-gray-200">
                 ਸਾਰੇ ਪ੍ਰਕਾਰ ਦੇ ਯੂਕੇ ਵੀਜ਼ਾ ਅਤੇ ਇਮੀਗ੍ਰੇਸ਼ਨ ਅਰਜ਼ੀਆਂ ਲਈ ਮਾਹਿਰ ਸਲਾਹ
               </p>
               <motion.a
                 href="#services"
-                className="inline-block bg-[#003D6E] text-white font-bold py-3 px-8 rounded-full hover:bg-[#004d8a] transition-colors"
+                className="inline-block bg-white text-[#003D6E] font-bold py-3 px-8 rounded-full hover:bg-gray-100 transition-colors"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -39,23 +49,28 @@ export default function PunjabiPage() {
               </motion.a>
             </FadeIn>
             <FadeIn direction="left" className="md:w-1/2">
-              <ContactForm
-                labels={{
-                  heading: "ਮੁਫ਼ਤ ਸਲਾਹ ਪ੍ਰਾਪਤ ਕਰੋ",
-                  subheading:
-                    "ਅਸੀਂ ਅੱਜ ਤੁਹਾਡੀ ਕਿਵੇਂ ਮਦਦ ਕਰ ਸਕਦੇ ਹਾਂ? ਹੇਠਾਂ ਦਿੱਤਾ ਫਾਰਮ ਭਰੋ ਅਤੇ ਸਾਡਾ ਕੋਈ ਮਾਹਿਰ ਜਲਦੀ ਹੀ ਤੁਹਾਡੇ ਨਾਲ ਸੰਪਰਕ ਕਰੇਗਾ।",
-                  firstName: "ਤੁਹਾਡਾ ਪਹਿਲਾਂ ਨਾਂ",
-                  lastName: "ਤੁਹਾਡਾ ਆਖਰੀ ਨਾਮ",
-                  email: "ਆਪਣਾ ਈਮੇਲ ਪਤਾ ਦਰਜ ਕਰੋ",
-                  country: "ਤੁਸੀਂ ਕਿਸ ਦੇਸ਼ ਵਿੱਚ ਹੋ",
-                  details: "ਵਧੇਰੇ ਵੇਰਵੇ ਨਾਲ ਦੱਸੋ",
-                  submit: "ਬੇਨਤੀ ਭੇਜੋ",
-                  success:
-                    "ਧੰਨਵਾਦ! ਤੁਹਾਡੀ ਬੇਨਤੀ ਸਫਲਤਾਪੂਰਵਕ ਜਮ੍ਹਾਂ ਕਰ ਦਿੱਤੀ ਗਈ ਹੈ।",
-                  error:
-                    "ਫਾਰਮ ਜਮ੍ਹਾਂ ਕਰਨ ਵਿੱਚ ਅਸਫਲ। ਕਿਰਪਾ ਕਰਕੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।",
-                }}
-              />
+              <div className="bg-white bg-opacity-95 p-8 rounded-lg shadow-lg">
+                <ContactForm
+                  labels={{
+                    heading: "ਮੁਫ਼ਤ ਸਲਾਹ ਪ੍ਰਾਪਤ ਕਰੋ",
+                    subheading:
+                      "ਅਸੀਂ ਅੱਜ ਤੁਹਾਡੀ ਕਿਵੇਂ ਮਦਦ ਕਰ ਸਕਦੇ ਹਾਂ? ਹੇਠਾਂ ਦਿੱਤਾ ਫਾਰਮ ਭਰੋ ਅਤੇ ਸਾਡਾ ਕੋਈ ਮਾਹਿਰ ਜਲਦੀ ਹੀ ਤੁਹਾਡੇ ਨਾਲ ਸੰਪਰਕ ਕਰੇਗਾ।",
+                    firstName: "ਤੁਹਾਡਾ ਪਹਿਲਾਂ ਨਾਂ",
+                    lastName: "ਤੁਹਾਡਾ ਆਖਰੀ ਨਾਮ",
+                    email: "ਆਪਣਾ ਈਮੇਲ ਪਤਾ ਦਰਜ ਕਰੋ",
+                    phone: "ਆਪਣਾ ਮੋਬਾਈਲ ਨੰਬਰ ਦਰਜ ਕਰੋ",
+                    country: "ਤੁਸੀਂ ਕਿਸ ਦੇਸ਼ ਵਿੱਚ ਹੋ",
+                    details: "ਵਧੇਰੇ ਵੇਰਵੇ ਨਾਲ ਦੱਸੋ",
+                    submit: "ਬੇਨਤੀ ਭੇਜੋ",
+                    success:
+                      "ਧੰਨਵਾਦ! ਤੁਹਾਡੀ ਬੇਨਤੀ ਸਫਲਤਾਪੂਰਵਕ ਜਮ੍ਹਾਂ ਕਰ ਦਿੱਤੀ ਗਈ ਹੈ।",
+                    error:
+                      "ਫਾਰਮ ਜਮ੍ਹਾਂ ਕਰਨ ਵਿੱਚ ਅਸਫਲ। ਕਿਰਪਾ ਕਰਕੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।",
+                  }}
+                  endpoint="/api/contact"
+                  thankYouPage="/thank-you"
+                />
+              </div>
             </FadeIn>
           </div>
         </div>
@@ -72,16 +87,16 @@ export default function PunjabiPage() {
               <p className="mb-4 text-gray-700">
                 UK Visa Help Consultants ਯੂਕੇ ਵਿੱਚ ਵੀਜ਼ਾ ਅਤੇ ਸੈਟਲਮੈਂਟ ਅਰਜ਼ੀਆਂ ਲਈ
                 ਮਾਹਰ ਸਲਾਹਕਾਰਾਂ ਦੇ ਪੈਨਲ ਨਾਲ ਇੱਕ ਪ੍ਰਮੁੱਖ ਯੂਕੇ ਵੀਜ਼ਾ ਕੰਸਲਟੈਂਸੀ ਹੈ।
-                ਟੀਮ ਵਿੱਚ ਵਿਸ਼ੇਸ਼ ਤੌਰ &apos;ਤੇ ਪ੍ਰਸ਼ਿਕ੍਷ਤ ਸਲਾਹਕਾਰ, ਕਨਸਲਟੈਂਟ ਅਤੇ
-                ਅਨੁਭਵੀ ਪ੍ਰੋਸੈਸਿੰਗ ਟੀਮਾਂ ਸ਼ਾਮਲ ਹਨ ਜੋ ਗ੍ਰਾਹਕ ਦੀ ਦੇਖਭਾਲ &apos;ਤੇ
-                ਜ਼ੋਰ ਦਿੰਦੀਆਂ ਹਨ।
+                ਟੀਮ ਵਿੱਚ ਵਿਸ਼ੇਸ਼ ਤੌਰ 'ਤੇ ਪ੍ਰਸ਼ਿਕ੍਷ਤ ਸਲਾਹਕਾਰ, ਕਨਸਲਟੈਂਟ ਅਤੇ ਅਨੁਭਵੀ
+                ਪ੍ਰੋਸੈਸਿੰਗ ਟੀਮਾਂ ਸ਼ਾਮਲ ਹਨ ਜੋ ਗ੍ਰਾਹਕ ਦੀ ਦੇਖਭਾਲ 'ਤੇ ਜ਼ੋਰ ਦਿੰਦੀਆਂ
+                ਹਨ।
               </p>
               <p className="mb-6 text-gray-700">
-                UK Visa Help Consultants ਨੂੰ ਇਮੀਗ੍ਰੇਸ਼ਨ ਦੇ ਹਰ ਪੱਧਰ &apos;ਤੇ
-                ਮਹਾਰਤ ਹਾਸਲ ਹੈ ਅਤੇ ਸਾਡਾ ਧਿਆਨ ਤੁਹਾਨੂੰ ਸਭ ਤੋਂ ਵਧੀਆ ਮਦਦ ਪ੍ਰਦਾਨ ਕਰਨ
-                &apos;ਤੇ ਹੈ। ਜੇ ਤੁਸੀਂ ਯੂਕੇ ਯਾਤਰਾ ਕਰਨ, ਰਹਿਣ ਜਾਂ ਆਪਣੇ ਰਹਿਣ ਦੀ ਮਿਆਦ
-                ਵਧਾਉਣ ਦੀ ਯੋਜਨਾ ਬਣਾ ਰਹੇ ਹੋ, ਤਾਂ ਸਾਡੇ ਮਾਹਰ ਸਲਾਹਕਾਰ ਤੁਹਾਡੇ ਅਤੇ
-                ਤੁਹਾਡੇ ਪਰਿਵਾਰ ਦੀ ਮਦਦ ਕਰਨ ਲਈ ਹਮੇਸ਼ਾਂ ਤਿਆਰ ਹਨ।
+                UK Visa Help Consultants ਨੂੰ ਇਮੀਗ੍ਰੇਸ਼ਨ ਦੇ ਹਰ ਪੱਧਰ 'ਤੇ ਮਹਾਰਤ
+                ਹਾਸਲ ਹੈ ਅਤੇ ਸਾਡਾ ਧਿਆਨ ਤੁਹਾਨੂੰ ਸਭ ਤੋਂ ਵਧੀਆ ਮਦਦ ਪ੍ਰਦਾਨ ਕਰਨ 'ਤੇ ਹੈ।
+                ਜੇ ਤੁਸੀਂ ਯੂਕੇ ਯਾਤਰਾ ਕਰਨ, ਰਹਿਣ ਜਾਂ ਆਪਣੇ ਰਹਿਣ ਦੀ ਮਿਆਦ ਵਧਾਉਣ ਦੀ
+                ਯੋਜਨਾ ਬਣਾ ਰਹੇ ਹੋ, ਤਾਂ ਸਾਡੇ ਮਾਹਰ ਸਲਾਹਕਾਰ ਤੁਹਾਡੇ ਅਤੇ ਤੁਹਾਡੇ ਪਰਿਵਾਰ
+                ਦੀ ਮਦਦ ਕਰਨ ਲਈ ਹਮੇਸ਼ਾਂ ਤਿਆਰ ਹਨ।
               </p>
               <motion.a
                 href="#contact"
@@ -102,8 +117,14 @@ export default function PunjabiPage() {
               </h2>
               <div className="h-1 w-20 bg-[#003D6E] mb-6"></div>
               <div className="mb-4 flex justify-center">
-                <div className="bg-gray-200 rounded-lg w-[200px] h-[200px] flex items-center justify-center mb-4">
-                  <p className="text-gray-500">Team Image (200x200px)</p>
+                <div className="w-full h-[300px] relative rounded-lg overflow-hidden">
+                  <Image
+                    src="https://images.pexels.com/photos/31946118/pexels-photo-31946118/free-photo-of-bustling-london-city-street-with-historic-architecture.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                    alt="ਲੰਡਨ ਦੀ ਇਤਿਹਾਸਕ ਆਰਕੀਟੈਕਚਰ"
+                    fill
+                    className="object-cover"
+                    priority
+                  />
                 </div>
               </div>
               <p className="mb-4 text-gray-700">
@@ -153,8 +174,14 @@ export default function PunjabiPage() {
                 delay={0.2}
                 className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
               >
-                <div className="bg-gray-200 w-full h-[120px] rounded-md mb-4 flex items-center justify-center">
-                  <p className="text-gray-500">Service Image 1 (120x120px)</p>
+                <div className="w-full h-[120px] relative rounded-md mb-4 overflow-hidden">
+                  <Image
+                    src="https://images.pexels.com/photos/1914982/pexels-photo-1914982.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                    alt="ਨਿੱਜੀ ਅਤੇ ਪਰਿਵਾਰਕ ਵੀਜ਼ਾ ਸੇਵਾਵਾਂ"
+                    fill
+                    className="object-cover"
+                    priority
+                  />
                 </div>
                 <h3 className="text-xl font-bold mb-2 text-center">
                   ਨਿੱਜੀ ਅਤੇ ਪਰਿਵਾਰਕ
@@ -183,8 +210,14 @@ export default function PunjabiPage() {
                 delay={0.4}
                 className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
               >
-                <div className="bg-gray-200 w-full h-[120px] rounded-md mb-4 flex items-center justify-center">
-                  <p className="text-gray-500">Service Image 2 (120x120px)</p>
+                <div className="w-full h-[120px] relative rounded-md mb-4 overflow-hidden">
+                  <Image
+                    src="https://images.pexels.com/photos/5717325/pexels-photo-5717325.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                    alt="ਕੰਮ ਅਤੇ ਕਾਰੋਬਾਰ ਵੀਜ਼ਾ ਸੇਵਾਵਾਂ"
+                    fill
+                    className="object-cover"
+                    priority
+                  />
                 </div>
                 <h3 className="text-xl font-bold mb-2 text-center">
                   ਕੰਮ ਅਤੇ ਕਾਰੋਬਾਰ
@@ -213,8 +246,14 @@ export default function PunjabiPage() {
                 delay={0.6}
                 className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
               >
-                <div className="bg-gray-200 w-full h-[120px] rounded-md mb-4 flex items-center justify-center">
-                  <p className="text-gray-500">Service Image 3 (120x120px)</p>
+                <div className="w-full h-[120px] relative rounded-md mb-4 overflow-hidden">
+                  <Image
+                    src="https://images.pexels.com/photos/3799832/pexels-photo-3799832.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                    alt="ਵਿਦਿਆਰਥੀ ਅਤੇ ਗ੍ਰੈਜੂਏਟ ਵੀਜ਼ਾ ਸੇਵਾਵਾਂ"
+                    fill
+                    className="object-cover"
+                    priority
+                  />
                 </div>
                 <h3 className="text-xl font-bold mb-2 text-center">
                   ਵਿਦਿਆਰਥੀ ਅਤੇ ਗ੍ਰੈਜੂਏਟ
@@ -397,16 +436,22 @@ export default function PunjabiPage() {
                   ਮੁਫ਼ਤ <span className="text-black">ਸਮੀਖਿਆ</span>
                 </h2>
                 <div className="h-1 w-20 bg-[#003D6E] mb-6"></div>
-                <div className="bg-gray-200 rounded-lg w-full h-[200px] flex items-center justify-center mb-6">
-                  <p className="text-gray-500">Assessment Image (400x300px)</p>
+                <div className="w-full h-[200px] relative rounded-lg overflow-hidden mb-6">
+                  <Image
+                    src="https://images.pexels.com/photos/1008155/pexels-photo-1008155.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                    alt="ਪੇਸ਼ੇਵਰ ਵੀਜ਼ਾ ਸਲਾਹ ਅਤੇ ਮੁਲਾਂਕਣ"
+                    fill
+                    className="object-cover"
+                    priority
+                  />
                 </div>
                 <p className="mb-4 text-gray-700">
-                  ਜੇ ਤੁਹਾਡੀ ਕੋਈ ਇਮੀਗ੍ਰੇਸ਼ਨ ਸੰਬੰਧੀ ਪਰੇਸ਼ਾਨੀ ਹੈ, ਤਾਂ ਤੁਸੀਂ ਸਾਡੇ
-                  ਮਾਹਰ ਨਾਲ ਮੁਫ਼ਤ ਅਸੈੱਸਮੈਂਟ ਲੈ ਸਕਦੇ ਹੋ। ਅਸੀਂ ਤੁਹਾਨੂੰ ਤੁਹਾਡੇ ਕੇਸ
-                  ਬਾਰੇ ਸਹੀ ਫੈਸਲਾ ਲੈਣ ਲਈ ਸਾਰੀ ਜ਼ਰੂਰੀ ਜਾਣਕਾਰੀ ਦਿੰਦੇ ਹਾਂ।
+                  ਜੇ ਤੁਹਾਡੇ ਕੋਲ ਕੋਈ ਇਮੀਗ੍ਰੇਸ਼ਨ-ਸਬੰਧਤ ਸਥਿਤੀ ਹੈ, ਤਾਂ ਤੁਸੀਂ ਸਾਡੇ
+                  ਪੇਸ਼ੇਵਰ ਨਾਲ ਮੁਲਾਂਕਣ ਕਰਵਾ ਸਕਦੇ ਹੋ। ਅਸੀਂ ਤੁਹਾਨੂੰ ਤੁਹਾਡੇ ਮਾਮਲੇ
+                  ਬਾਰੇ ਸਭ ਤੋਂ ਵਧੀਆ ਫੈਸਲਾ ਲੈਣ ਲਈ ਲੋੜੀਂਦੀ ਸਾਰੀ ਜਾਣਕਾਰੀ ਦੇਵਾਂਗੇ।
                 </p>
                 <p className="mb-4 text-gray-700">
-                  ਅਸੀਂ ਇਮੀਗ੍ਰੇਸ਼ਨ ਮਾਮਲਿਆਂ &apos;ਤੇ ਕਾਨੂੰਨੀ ਸਲਾਹ ਦਿੰਦੇ ਹਾਂ। ਸਾਡੇ
+                  ਅਸੀਂ ਇਮੀਗ੍ਰੇਸ਼ਨ ਮਾਮਲਿਆਂ 'ਤੇ ਕਾਨੂੰਨੀ ਸਲਾਹ ਦਿੰਦੇ ਹਾਂ। ਸਾਡੇ
                   ਵਕੀਲਾਂ ਕੋਲ ਵੱਡਾ ਤਜਰਬਾ ਹੈ ਅਤੇ ਉਹ ਨਿਆਂਧੀਸ਼ਾਂ ਅੱਗੇ, ਜਾਂ ਪਛਲੜਾਂ
                   ਅਤੇ ਮੱਧਸਥਤਾ ਵਿੱਚ ਗ੍ਰਾਹਕਾਂ ਦੀ ਨੁਮਾਇਨਦਗੀ ਕਰਦੇ ਹਨ।
                 </p>

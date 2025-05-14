@@ -171,6 +171,7 @@ export default function ContactPage() {
                     firstName: "Your First Name",
                     lastName: "Your Last Name",
                     email: "Your Email Address",
+                    phone: "Mobile Number",
                     country: "Your Current Country",
                     details: "How can we help you?",
                     submit: "Send Message",

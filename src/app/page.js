@@ -59,6 +59,7 @@ export default function Home() {
                     firstName: "Your First Name",
                     lastName: "Your Last Name",
                     email: "Enter Your Email Address",
+                    phone: "Mobile Number",
                     country: "What country are you in",
                     details: "Describe In More Detail",
                     submit: "Submit Request",
@@ -453,18 +454,6 @@ export default function Home() {
                   information you need to make the best decision about your
                   case.
                 </p>
-                <p className="mb-4 text-gray-700">
-                  We provide legal advice on immigration matters. Our lawyers
-                  have a wealth of experience and are skilled at representing
-                  clients before judges and in arbitration and mediation
-                  proceedings.
-                </p>
-                <p className="mb-4 text-gray-700">
-                  If you are an undocumented immigrant, the immigration system
-                  can make it difficult for you to obtain the legal protection
-                  you need. We can help you obtain a work permit. We can also
-                  assist you in renewing your work permit.
-                </p>
                 <a
                   href="#contact"
                   className="inline-block bg-[#003D6E] text-white font-bold py-3 px-8 mt-4 rounded hover:bg-[#004d8a] transition-colors"
@@ -576,6 +565,99 @@ export default function Home() {
                     process
                   </p>
                 </ScaleIn>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-16 bg-gray-50">
+          <div className="container mx-auto px-6">
+            <FadeIn direction="up" className="text-center mb-12">
+              <h2 className="text-3xl font-bold mb-4 text-[#003D6E]">
+                Support for <span className="text-black">Afghan Nationals</span>
+              </h2>
+              <div className="h-1 w-20 bg-[#003D6E] mx-auto mb-6"></div>
+              <p className="max-w-2xl mx-auto text-gray-700">
+                We provide help with completing applications for the following:
+              </p>
+            </FadeIn>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h3 className="text-xl font-bold mb-4 text-[#003D6E]">
+                  Visa Services
+                </h3>
+                <ul className="space-y-3 text-gray-700">
+                  <li className="flex items-start">
+                    <span className="text-[#003D6E] mr-2">•</span>
+                    <span>
+                      Afghan Relocations and Assistance Policy (ARAP) Scheme
+                    </span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-[#003D6E] mr-2">•</span>
+                    <span>Brazil Humanitarian Visa</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-[#003D6E] mr-2">•</span>
+                    <span>
+                      Pakistan ETA Visas (for both Afghan and Foreign Passports)
+                    </span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-[#003D6E] mr-2">•</span>
+                    <span>3-month and 6-month tourist & medical visas</span>
+                  </li>
+                </ul>
+
+                <h4 className="text-lg font-bold mt-6 mb-3 text-[#003D6E]">
+                  Active Tourist Visa Services:
+                </h4>
+                <ul className="space-y-3 text-gray-700">
+                  <li className="flex items-start">
+                    <span className="text-[#003D6E] mr-2">•</span>
+                    <span>Iran – Tourist visa</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-[#003D6E] mr-2">•</span>
+                    <span>Malaysia – Tourist visa & registration</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-[#003D6E] mr-2">•</span>
+                    <span>Vietnam – Tourist visa</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-[#003D6E] mr-2">•</span>
+                    <span>Morocco – Tourist visa</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-[#003D6E] mr-2">•</span>
+                    <span>
+                      UAE (Dubai) – Visit visa, extension, and guidance
+                    </span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h3 className="text-xl font-bold mb-4 text-[#003D6E]">
+                  Educational Opportunities
+                </h3>
+                <p className="text-gray-700 mb-4">
+                  UK Visa Help Consultants is actively engaged in discussions
+                  with universities in UK, US, Germany, France, Austria,
+                  Australia, and other countries to create legal and accessible
+                  pathways for Afghan students seeking higher education abroad.
+                </p>
+                <div className="w-full h-[200px] relative rounded-lg overflow-hidden">
+                  <Image
+                    src="https://images.pexels.com/photos/267885/pexels-photo-267885.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                    alt="Educational opportunities for international students"
+                    fill
+                    className="object-cover"
+                    priority
+                  />
+                </div>
               </div>
             </div>
           </div>

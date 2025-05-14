@@ -11,6 +11,7 @@ export default function ContactForm({
     firstName: "Your First Name",
     lastName: "Your Last Name",
     email: "Enter Your Email Address",
+    phone: "Enter your mobile number",
     country: "What country are you in",
     details: "Describe In More Detail",
     submit: "Submit",
@@ -18,12 +19,15 @@ export default function ContactForm({
     error: "Failed to submit form. Please try again.",
   },
   formStyle = {},
+  endpoint = "/api/contact",
+  thankYouPage = "/thank-you",
 }) {
   const router = useRouter();
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
     email: "",
+    phone: "",
     country: "",
     message: "",
   });
@@ -45,8 +49,37 @@ export default function ContactForm({
     setSubmitStatus(null);
     setError("");
 
+    if (
+      !formData.firstName ||
+      !formData.lastName ||
+      !formData.email ||
+      !formData.country ||
+      !formData.message ||
+      (labels.phone && !formData.phone)
+    ) {
+      setError("Please fill in all required fields.");
+      setIsSubmitting(false);
+      return;
+    }
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      setError("Please enter a valid email address.");
+      setIsSubmitting(false);
+      return;
+    }
+
+    if (labels.phone && formData.phone) {
+      const phoneRegex =
+        /^[+]?[(]?[0-9]{3}[)]?[-\s.]?[0-9]{3}[-\s.]?[0-9]{4,6}$/;
+      if (!phoneRegex.test(formData.phone)) {
+        setError("Please enter a valid phone number.");
+        setIsSubmitting(false);
+        return;
+      }
+    }
+
     try {
-      const response = await fetch("/api/contact", {
+      const response = await fetch(endpoint, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -54,23 +87,26 @@ export default function ContactForm({
         body: JSON.stringify(formData),
       });
 
+      const responseData = await response.json();
+
       if (!response.ok) {
-        const data = await response.json();
-        throw new Error(data.error || "Failed to submit form");
+        throw new Error(responseData.error || "Failed to submit form");
       }
 
-      // Clear form and redirect to thank you page
+      setSubmitStatus({ type: "success", message: labels.success });
       setFormData({
         firstName: "",
         lastName: "",
         email: "",
+        phone: "",
         country: "",
         message: "",
       });
-      router.push("/thank-you");
+      setTimeout(() => router.push(thankYouPage), 2000);
     } catch (err) {
-      setError(err.message);
-      setSubmitStatus({ type: "error", message: labels.error });
+      setError(err.message || labels.error);
+      setSubmitStatus({ type: "error", message: err.message || labels.error });
+    } finally {
       setIsSubmitting(false);
     }
   };
@@ -106,7 +142,7 @@ export default function ContactForm({
                 {submitStatus.message}
               </div>
             )}
-            {error && (
+            {error && !submitStatus && (
               <div className="bg-red-50 text-red-600 p-2 rounded-md text-sm">
                 {error}
               </div>
@@ -146,6 +182,19 @@ export default function ContactForm({
                 required
               />
             </div>
+            {labels.phone && (
+              <div>
+                <input
+                  type="tel"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  placeholder={labels.phone}
+                  className="w-full p-2 text-sm border border-gray-300 rounded-md focus:ring-[#003D6E] focus:border-[#003D6E] outline-none text-gray-700"
+                  required
+                />
+              </div>
+            )}
             <div>
               <input
                 type="text"

@@ -201,6 +201,12 @@ export default function AdminPage() {
                       scope="col"
                       className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
                     >
+                      Date
+                    </th>
+                    <th
+                      scope="col"
+                      className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                    >
                       Name
                     </th>
                     <th
@@ -213,7 +219,7 @@ export default function AdminPage() {
                       scope="col"
                       className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
                     >
-                      Message
+                      Phone
                     </th>
                     <th
                       scope="col"
@@ -225,7 +231,7 @@ export default function AdminPage() {
                       scope="col"
                       className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
                     >
-                      Submitted At
+                      View
                     </th>
                   </tr>
                 </thead>
@@ -234,22 +240,25 @@ export default function AdminPage() {
                     <tr
                       key={submission.id}
                       onClick={() => handleRowClick(submission)}
-                      className="hover:bg-gray-100 cursor-pointer"
+                      className="hover:bg-gray-50 cursor-pointer"
                     >
-                      <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                        {new Date(submission.submittedAt).toLocaleDateString()}
+                      </td>
+                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
                         {submission.name}
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                         {submission.email}
                       </td>
-                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 truncate max-w-xs">
-                        {submission.message}
+                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                        {submission.phone}
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                         {submission.country}
                       </td>
-                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                        {new Date(submission.submittedAt).toLocaleString()}
+                      <td className="px-6 py-4 whitespace-nowrap text-sm text-blue-500 hover:underline">
+                        View Details
                       </td>
                     </tr>
                   ))}
@@ -263,74 +272,71 @@ export default function AdminPage() {
 
       {/* Modal for displaying submission details */}
       {isModalOpen && selectedSubmission && (
-        <div className="fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full flex items-center justify-center z-50 px-4">
-          <div className="bg-white p-8 rounded-lg shadow-xl w-full max-w-2xl transform transition-all">
-            <div className="flex justify-between items-center mb-6">
-              <h3 className="text-2xl font-semibold text-gray-900">
-                Submission Details
-              </h3>
-              <button
-                onClick={closeModal}
-                className="text-gray-400 hover:text-gray-600 transition-colors"
-                aria-label="Close modal"
-              >
-                <svg
-                  className="w-6 h-6"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
+        <div className="fixed z-10 inset-0 overflow-y-auto">
+          <div className="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+            {/* Background overlay */}
+            <div
+              className="fixed inset-0 transition-opacity"
+              aria-hidden="true"
+              onClick={closeModal}
+            >
+              <div className="absolute inset-0 bg-gray-500 opacity-75"></div>
+            </div>
+
+            {/* Modal panel */}
+            <span
+              className="hidden sm:inline-block sm:align-middle sm:h-screen"
+              aria-hidden="true"
+            >
+              &#8203;
+            </span>
+            <div className="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
+              <div className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                <div className="sm:flex sm:items-start">
+                  <div className="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left w-full">
+                    <h3
+                      className="text-lg leading-6 font-medium text-gray-900 mb-4"
+                      id="modal-title"
+                    >
+                      Submission Details
+                    </h3>
+                    <div className="mt-2 space-y-3">
+                      <p className="text-sm text-gray-700">
+                        <strong>Date:</strong>{" "}
+                        {new Date(
+                          selectedSubmission.submittedAt
+                        ).toLocaleString()}
+                      </p>
+                      <p className="text-sm text-gray-700">
+                        <strong>Name:</strong> {selectedSubmission.name}
+                      </p>
+                      <p className="text-sm text-gray-700">
+                        <strong>Email:</strong> {selectedSubmission.email}
+                      </p>
+                      <p className="text-sm text-gray-700">
+                        <strong>Phone:</strong> {selectedSubmission.phone}
+                      </p>
+                      <p className="text-sm text-gray-700">
+                        <strong>Country:</strong> {selectedSubmission.country}
+                      </p>
+                      <p className="text-sm text-gray-500 whitespace-pre-wrap">
+                        <strong>Message:</strong>
+                        <br />
+                        {selectedSubmission.message}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+                <button
+                  type="button"
+                  onClick={closeModal}
+                  className="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M6 18L18 6M6 6l12 12"
-                  ></path>
-                </svg>
-              </button>
-            </div>
-
-            <div className="space-y-4 text-sm">
-              <div>
-                <p className="font-medium text-gray-500">ID:</p>
-                <p className="text-gray-800 break-all">
-                  {selectedSubmission.id}
-                </p>
+                  Close
+                </button>
               </div>
-              <div>
-                <p className="font-medium text-gray-500">Name:</p>
-                <p className="text-gray-800">{selectedSubmission.name}</p>
-              </div>
-              <div>
-                <p className="font-medium text-gray-500">Email:</p>
-                <p className="text-gray-800">{selectedSubmission.email}</p>
-              </div>
-              <div>
-                <p className="font-medium text-gray-500">Country:</p>
-                <p className="text-gray-800">{selectedSubmission.country}</p>
-              </div>
-              <div>
-                <p className="font-medium text-gray-500">Submitted At:</p>
-                <p className="text-gray-800">
-                  {new Date(selectedSubmission.submittedAt).toLocaleString()}
-                </p>
-              </div>
-              <div>
-                <p className="font-medium text-gray-500">Message:</p>
-                <p className="text-gray-800 whitespace-pre-wrap">
-                  {selectedSubmission.message}
-                </p>
-              </div>
-            </div>
-
-            <div className="mt-8 text-right">
-              <button
-                onClick={closeModal}
-                className="px-6 py-2 bg-indigo-600 text-white text-sm font-medium rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-              >
-                Close
-              </button>
             </div>
           </div>
         </div>

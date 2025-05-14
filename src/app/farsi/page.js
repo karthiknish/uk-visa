@@ -21,18 +21,28 @@ export default function FarsiPage() {
         menuItemStyle={{ direction: "rtl", textAlign: "right" }}
       />
 
-      <div className="bg-gray-50 py-12 md:py-16">
-        <div className="container mx-auto px-6">
+      <div
+        className="relative min-h-[90vh] flex items-center"
+        style={{
+          backgroundImage:
+            'url("https://images.pexels.com/photos/672532/pexels-photo-672532.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2")',
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+        <div className="absolute inset-0 bg-black opacity-50"></div>
+        <div className="container mx-auto px-6 relative">
           <div className="flex flex-col md:flex-row gap-8 items-center">
             <FadeIn
               direction="right"
               className="md:w-1/2"
               style={{ direction: "rtl", textAlign: "right" }}
             >
-              <h1 className="text-4xl sm:text-5xl font-bold mb-6">
+              <h1 className="text-4xl sm:text-5xl font-bold mb-6 text-white">
                 متخصصان ویزا و مهاجرت به انگلستان
               </h1>
-              <p className="text-xl mb-8">
+              <p className="text-xl mb-8 text-gray-200">
                 مشاوره تخصصی برای تمام انواع ویزا و درخواست‌های مهاجرت به
                 انگلستان
               </p>
@@ -57,17 +67,15 @@ export default function FarsiPage() {
                   firstName: "نام",
                   lastName: "نام خانوادگی",
                   email: "آدرس ایمیل خود را وارد کنید",
+                  phone: "شماره موبایل خود را وارد کنید",
                   country: "در کدام کشور هستید",
                   details: "با جزئیات بیشتر توضیح دهید",
                   submit: "ارسال درخواست",
                   success: "با تشکر! درخواست شما با موفقیت ثبت شد.",
-                  error:
-                    "ثبت درخواست با مشکل مواجه شد. لطفاً دوباره تلاش کنید.",
+                  error: "خطا در ارسال فرم. لطفاً دوباره تلاش کنید.",
                 }}
-                formStyle={{
-                  direction: "rtl",
-                  textAlign: "right",
-                }}
+                endpoint="/api/contact"
+                thankYouPage="/thank-you"
               />
             </FadeIn>
           </div>
@@ -121,8 +129,14 @@ export default function FarsiPage() {
               </h2>
               <div className="h-1 w-20 bg-[#003D6E] mb-6 mr-0"></div>
               <div className="mb-4 flex justify-center">
-                <div className="bg-gray-200 rounded-lg w-[200px] h-[200px] flex items-center justify-center mb-4">
-                  <p className="text-gray-500">Team Image (200x200px)</p>
+                <div className="w-full h-[300px] relative rounded-lg overflow-hidden">
+                  <Image
+                    src="https://images.pexels.com/photos/31946118/pexels-photo-31946118/free-photo-of-bustling-london-city-street-with-historic-architecture.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                    alt="خیابان شلوغ شهر لندن با معماری تاریخی"
+                    fill
+                    className="object-cover"
+                    priority
+                  />
                 </div>
               </div>
               <p className="mb-4 text-gray-700">
@@ -211,8 +225,14 @@ export default function FarsiPage() {
                 delay={0.4}
                 className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
               >
-                <div className="bg-gray-200 w-full h-[120px] rounded-md mb-4 flex items-center justify-center">
-                  <p className="text-gray-500">Service Image 2 (120x120px)</p>
+                <div className="w-full h-[120px] relative rounded-md mb-4 overflow-hidden">
+                  <Image
+                    src="https://images.pexels.com/photos/5717325/pexels-photo-5717325.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                    alt="خدمات ویزای کار و تجارت"
+                    fill
+                    className="object-cover"
+                    priority
+                  />
                 </div>
                 <h3 className="text-xl font-bold mb-2 text-center">
                   کار و تجارت
@@ -241,8 +261,14 @@ export default function FarsiPage() {
                 delay={0.6}
                 className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
               >
-                <div className="bg-gray-200 w-full h-[120px] rounded-md mb-4 flex items-center justify-center">
-                  <p className="text-gray-500">Service Image 3 (120x120px)</p>
+                <div className="w-full h-[120px] relative rounded-md mb-4 overflow-hidden">
+                  <Image
+                    src="https://images.pexels.com/photos/3799832/pexels-photo-3799832.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                    alt="خدمات ویزای دانشجویی و فارغ‌التحصیلی"
+                    fill
+                    className="object-cover"
+                    priority
+                  />
                 </div>
                 <h3 className="text-xl font-bold mb-2 text-center">
                   دانشجویی و فارغ‌التحصیلی
@@ -436,25 +462,20 @@ export default function FarsiPage() {
                   بررسی <span className="text-black">رایگان</span>
                 </h2>
                 <div className="h-1 w-20 bg-[#003D6E] mb-6 mr-0"></div>
-                <div className="bg-gray-200 rounded-lg w-full h-[200px] flex items-center justify-center mb-6">
-                  <p className="text-gray-500">Assessment Image (400x300px)</p>
+                <div className="w-full h-[200px] relative rounded-lg overflow-hidden mb-6">
+                  <Image
+                    src="https://images.pexels.com/photos/1008155/pexels-photo-1008155.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                    alt="مشاوره و ارزیابی تخصصی ویزا"
+                    fill
+                    className="object-cover"
+                    priority
+                  />
                 </div>
                 <p className="mb-4 text-gray-700">
                   اگر با مسئله‌ای مرتبط با مهاجرت مواجه هستید، می‌توانید از یک
                   ارزیابی تخصصی توسط کارشناسان ما بهره‌مند شوید. ما تمام اطلاعات
                   لازم را برای اتخاذ بهترین تصمیم در مورد پرونده شما ارائه
                   می‌دهیم.
-                </p>
-                <p className="mb-4 text-gray-700">
-                  ما <strong>مشاوره حقوقی در امور مهاجرت</strong> ارائه می‌کنیم.
-                  وکلای ما تجربه گسترده‌ای دارند و در نمایندگی از موکلان در
-                  دادگاه‌ها و جلسات داوری و میانجی‌گری مهارت دارند.
-                </p>
-                <p className="mb-6 text-gray-700">
-                  اگر شما یک مهاجر فاقد مدارک هستید، سیستم مهاجرت ممکن است
-                  دریافت حمایت قانونی را برای شما دشوار کند. ما می‌توانیم به شما
-                  در <strong>اخذ مجوز کار</strong> کمک کنیم. همچنین در{" "}
-                  <strong>تمدید مجوز کار</strong> شما را همراهی می‌کنیم.
                 </p>
                 <motion.a
                   href="/free-review"
@@ -573,44 +594,6 @@ export default function FarsiPage() {
                 </ScaleIn>
               </div>
             </div>
-          </div>
-        </section>
-
-        <section id="contact" className="py-16">
-          <div className="container mx-auto px-6">
-            <FadeIn
-              direction="up"
-              className="text-center mb-12"
-              style={{ direction: "rtl", textAlign: "right" }}
-            >
-              <h2 className="text-3xl font-bold mb-4 text-[#003D6E]">
-                با ما <span className="text-black">در تماس باشید</span>
-              </h2>
-              <div className="h-1 w-20 bg-[#003D6E] mx-auto mb-6"></div>
-              <p className="max-w-2xl mx-auto text-gray-700">
-                چگونه می‌توانیم امروز به شما کمک کنیم؟ از طریق فرم زیر با ما
-                تماس بگیرید.
-              </p>
-            </FadeIn>
-
-            <ContactForm
-              labels={{
-                heading: "مشاوره رایگان دریافت کنید",
-                subheading: "چگونه می‌توانیم امروز به شما کمک کنیم؟",
-                firstName: "نام",
-                lastName: "نام خانوادگی",
-                email: "آدرس ایمیل خود را وارد کنید",
-                country: "در کدام کشور هستید",
-                details: "با جزئیات بیشتر توضیح دهید",
-                submit: "ارسال درخواست",
-                success: "با تشکر! درخواست شما با موفقیت ثبت شد.",
-                error: "ثبت درخواست با مشکل مواجه شد. لطفاً دوباره تلاش کنید.",
-              }}
-              formStyle={{
-                direction: "rtl",
-                textAlign: "right",
-              }}
-            />
           </div>
         </section>
       </main>

@@ -21,34 +21,57 @@ export default function BengaliPage() {
 
       <main>
         {/* Hero Section */}
-        <div className="bg-gray-50 py-12 md:py-16">
-          <div className="container mx-auto px-6">
-            <div className="flex flex-col md:flex-row items-center gap-8">
+        <div
+          className="relative min-h-[90vh] flex items-center"
+          style={{
+            backgroundImage:
+              'url("https://images.pexels.com/photos/672532/pexels-photo-672532.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2")',
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+          }}
+        >
+          <div className="absolute inset-0 bg-black opacity-50"></div>
+          <div className="container mx-auto px-6 relative">
+            <div className="flex flex-col md:flex-row gap-8 items-center">
               <FadeIn direction="right" className="md:w-1/2">
-                <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                  <span className="text-[#003D6E]">ইউকে ভিসা</span> পরামর্শ
+                <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+                  <span>ইউকে ভিসা</span> পরামর্শ
                 </h1>
-                <p className="text-lg text-gray-700 mb-8">
+                <p className="text-xl text-gray-200 mb-8">
                   আপনার ইউকে ভিসা আবেদনের জন্য বিশেষজ্ঞ পরামর্শ এবং সহায়তা।
                 </p>
+                <motion.a
+                  href="#services"
+                  className="inline-block bg-white text-[#003D6E] font-bold py-3 px-8 rounded-full hover:bg-gray-100 transition-colors"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  সেবাসমূহ
+                </motion.a>
               </FadeIn>
 
               <FadeIn direction="left" className="md:w-1/2">
-                <ContactForm
-                  labels={{
-                    heading: "বিনামূল্যে পরামর্শ নিন",
-                    subheading: "আমরা আজ কীভাবে আপনাকে সাহায্য করতে পারি?",
-                    firstName: "আপনার প্রথম নাম",
-                    lastName: "আপনার শেষ নাম",
-                    email: "আপনার ইমেইল ঠিকানা",
-                    country: "আপনি কোন দেশে আছেন",
-                    details: "আরও বিস্তারিত বর্ণনা করুন",
-                    submit: "জমা দিন",
-                    success: "ধন্যবাদ! আপনার বার্তা সফলভাবে জমা হয়েছে।",
-                    error:
-                      "ফর্ম জমা দিতে ব্যর্থ হয়েছে। অনুগ্রহ করে আবার চেষ্টা করুন।",
-                  }}
-                />
+                <div className="bg-white bg-opacity-95 p-8 rounded-lg shadow-lg">
+                  <ContactForm
+                    labels={{
+                      heading: "বিনামূল্যে পরামর্শ নিন",
+                      subheading: "আমরা আজ কীভাবে আপনাকে সাহায্য করতে পারি?",
+                      firstName: "আপনার প্রথম নাম",
+                      lastName: "আপনার শেষ নাম",
+                      email: "আপনার ইমেইল ঠিকানা",
+                      phone: "তোমার মোবাইল নম্বর লিখো",
+                      country: "আপনি কোন দেশে আছেন",
+                      details: "আরও বিস্তারিত বর্ণনা করুন",
+                      submit: "জমা দিন",
+                      success: "ধন্যবাদ! আপনার বার্তা সফলভাবে জমা হয়েছে।",
+                      error:
+                        "ফর্ম জমা দিতে ব্যর্থ হয়েছে। অনুগ্রহ করে আবার চেষ্টা করুন।",
+                    }}
+                    endpoint="/api/contact"
+                    thankYouPage="/thank-you"
+                  />
+                </div>
               </FadeIn>
             </div>
           </div>
@@ -95,8 +118,14 @@ export default function BengaliPage() {
               </h2>
               <div className="h-1 w-20 bg-[#003D6E] mb-6"></div>
               <div className="mb-4 flex justify-center">
-                <div className="bg-gray-200 rounded-lg w-[200px] h-[200px] flex items-center justify-center mb-4">
-                  <p className="text-gray-500">Team Image (200x200px)</p>
+                <div className="w-full h-[300px] relative rounded-lg overflow-hidden">
+                  <Image
+                    src="https://images.pexels.com/photos/31946118/pexels-photo-31946118/free-photo-of-bustling-london-city-street-with-historic-architecture.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                    alt="লন্ডনের ঐতিহাসিক স্থাপত্য"
+                    fill
+                    className="object-cover"
+                    priority
+                  />
                 </div>
               </div>
               <p className="mb-4 text-gray-700">
@@ -183,8 +212,14 @@ export default function BengaliPage() {
                 delay={0.4}
                 className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
               >
-                <div className="bg-gray-200 w-full h-[120px] rounded-md mb-4 flex items-center justify-center">
-                  <p className="text-gray-500">Service Image 2 (120x120px)</p>
+                <div className="w-full h-[120px] relative rounded-md mb-4 overflow-hidden">
+                  <Image
+                    src="https://images.pexels.com/photos/5717325/pexels-photo-5717325.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                    alt="কাজ ও ব্যবসা সংক্রান্ত ভিসা সেবা"
+                    fill
+                    className="object-cover"
+                    priority
+                  />
                 </div>
                 <h3 className="text-xl font-bold mb-2 text-center">
                   কাজ ও ব্যবসা
@@ -213,8 +248,14 @@ export default function BengaliPage() {
                 delay={0.6}
                 className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
               >
-                <div className="bg-gray-200 w-full h-[120px] rounded-md mb-4 flex items-center justify-center">
-                  <p className="text-gray-500">Service Image 3 (120x120px)</p>
+                <div className="w-full h-[120px] relative rounded-md mb-4 overflow-hidden">
+                  <Image
+                    src="https://images.pexels.com/photos/3799832/pexels-photo-3799832.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                    alt="শিক্ষার্থী ও স্নাতক ভিসা সেবা"
+                    fill
+                    className="object-cover"
+                    priority
+                  />
                 </div>
                 <h3 className="text-xl font-bold mb-2 text-center">
                   ছাত্র ও গ্র্যাজুয়েট
@@ -399,8 +440,14 @@ export default function BengaliPage() {
                   ফ্রি <span className="text-black">মূল্যায়ন</span>
                 </h2>
                 <div className="h-1 w-20 bg-[#003D6E] mb-6"></div>
-                <div className="bg-gray-200 rounded-lg w-full h-[200px] flex items-center justify-center mb-6">
-                  <p className="text-gray-500">Assessment Image (400x300px)</p>
+                <div className="w-full h-[200px] relative rounded-lg overflow-hidden mb-6">
+                  <Image
+                    src="https://images.pexels.com/photos/1008155/pexels-photo-1008155.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                    alt="পেশাদার ভিসা পরামর্শ ও মূল্যায়ন"
+                    fill
+                    className="object-cover"
+                    priority
+                  />
                 </div>
                 <p className="mb-4 text-gray-700">
                   যদি আপনার কোনো অভিবাসন সম্পর্কিত সমস্যা থাকে, আপনি আমাদের
@@ -626,7 +673,10 @@ export default function BengaliPage() {
                   </svg>
                 </div>
                 <h3 className="font-bold mb-2">অফিস</h3>
-                <p className="text-gray-600">লন্ডন, যুক্তরাজ্য</p>
+                <p className="text-gray-600">
+                  Tower Bridge Business Centre, 46-48 East Smithfield, London
+                  E1W 1AW
+                </p>
               </motion.div>
             </StaggerContainer>
           </div>

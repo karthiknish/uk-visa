@@ -48,7 +48,7 @@ export async function GET(request) {
       message: item.fields.message ? item.fields.message["en-US"] : "N/A",
       // The admin page also expects country and phone, adding them here if available.
       country: item.fields.country ? item.fields.country["en-US"] : "N/A",
-      // Phone field is not in the contactForm model based on /api/contact, so it won't be available here.
+      phone: item.fields.phone ? item.fields.phone["en-US"] : "N/A", // Retrieve phone field
       submittedAt: item.sys.createdAt, // Use Contentful's system createdAt field
     }));
 
