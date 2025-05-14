@@ -51,7 +51,7 @@ export default function FarsiPage() {
               </p>
               <motion.a
                 href="#services"
-                className="inline-block bg-[#003D6E] text-white font-bold py-3 px-8 rounded-full hover:bg-[#004d8a] transition-colors"
+                className="inline-block bg-white text-[#003D6E] font-bold py-3 px-8 rounded-full hover:bg-gray-100 transition-colors"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
