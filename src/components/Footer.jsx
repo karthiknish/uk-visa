@@ -143,7 +143,10 @@ export default function Footer({
                     d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
                   />
                 </svg>
-                <span className="text-gray-300">London, United Kingdom</span>
+                <span className="text-gray-300">
+                  Tower Bridge Business Centre, 46-48 East Smithfield, London
+                  E1W 1AW
+                </span>
               </li>
               <li className="flex items-start space-x-3 text-sm">
                 <svg

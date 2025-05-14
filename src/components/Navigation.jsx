@@ -35,12 +35,13 @@ export default function Navigation({
 
   const languageLinks = [
     { href: "/", label: "English" },
-    { href: "/bengali", label: "Bengali" },
-    { href: "/urdu", label: "Urdu" },
-    { href: "/punjabi", label: "Punjabi" },
     { href: "/hindi", label: "Hindi" },
+    { href: "/urdu", label: "Urdu" },
     { href: "/farsi", label: "Farsi" },
+    { href: "/punjabi", label: "Punjabi" },
     { href: "/dari", label: "Dari" },
+    { href: "/pashto", label: "Pashto" },
+    { href: "/bengali", label: "Bengali" },
     { href: "/arabic", label: "Arabic" },
   ];
 

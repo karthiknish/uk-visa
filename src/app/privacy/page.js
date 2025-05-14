@@ -113,7 +113,6 @@ export default function PrivacyPage() {
                   contact us:
                 </p>
                 <ul className="list-none text-gray-700">
-                  <li>Email: privacy@ukvisahelp.com</li>
                   <li>Phone: +44 123 456 7890</li>
                   <li>Address: London, United Kingdom</li>
                 </ul>
