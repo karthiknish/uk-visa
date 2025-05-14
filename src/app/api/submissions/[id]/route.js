@@ -8,8 +8,10 @@ const client = createClient({
 const CONTENTFUL_SPACE_ID = process.env.CONTENTFUL_SPACE_ID;
 const CONTENTFUL_ENVIRONMENT_ID = "master";
 
-export async function GET(request, { params }) {
-  const { id: submissionId } = params; // Extract ID from route parameters
+export async function GET(request, context) {
+  await Promise.resolve(); // Added micro-delay
+  const resolvedParams = await context.params;
+  const submissionId = resolvedParams.id;
 
   if (!process.env.CONTENTFUL_MANAGEMENT_TOKEN || !CONTENTFUL_SPACE_ID) {
     console.error("Contentful Management Token or Space ID is not configured.");
