@@ -804,8 +804,8 @@ export default function DariPage() {
         contactTitleStyle={{ direction: "rtl", textAlign: "right" }}
         contactInfo={[
           "آدرس: پل برج مرکز تجاری، ۴۶-۴۸ ایست اسمیت‌فیلد، لندن E1W 1AW",
-          "تلفن: +44 123 456 7890",
-          "ایمیل: info@ukvisahelp.com",
+          "تلفن: 02035761165",
+          "ایمیل: info@ukvisahelpconsultants.co.uk",
         ]}
         copyright="© ۲۰۲۴ مشاوران کمک ویزای بریتانیا. تمام حقوق محفوظ است."
         copyrightStyle={{ direction: "rtl", textAlign: "center" }}

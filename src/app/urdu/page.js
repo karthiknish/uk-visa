@@ -676,9 +676,9 @@ export default function UrduPage() {
         contactTitle="رابطہ کریں"
         contactTitleStyle={{ direction: "rtl" }}
         contactInfo={[
-          "لندن، یونائیٹڈ کنگڈم",
-          "فون: +44 123 456 7890",
-          "ای میل: info@ukvisahelp.com",
+          "Tower Bridge Business Centre, 46-48 East Smithfield, London E1W 1AW",
+          "فون: 02035761165",
+          "ای میل: info@ukvisahelpconsultants.co.uk",
         ]}
         copyright="یوکے ویزا ہیلپ کنسلٹنٹس۔ جملہ حقوق محفوظ ہیں۔"
         copyrightStyle={{ direction: "rtl" }}

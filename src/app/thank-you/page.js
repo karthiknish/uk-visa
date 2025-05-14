@@ -35,10 +35,10 @@ export default function ThankYouPage() {
               <p className="text-gray-600 mb-12">
                 If you need immediate assistance, please call us at{" "}
                 <a
-                  href="tel:+441234567890"
+                  href="tel:02035761165"
                   className="text-[#003D6E] font-semibold hover:underline"
                 >
-                  +44 123 456 7890
+                  02035761165
                 </a>
               </p>
               <Link

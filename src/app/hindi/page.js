@@ -697,9 +697,9 @@ export default function HindiPage() {
         contactTitle="संपर्क करें"
         contactTitleStyle={{ direction: "ltr" }}
         contactInfo={[
-          "लंदन, यूनाइटेड किंगडम",
-          "फोन: +44 123 456 7890",
-          "ईमेल: info@ukvisahelp.com",
+          "Tower Bridge Business Centre, 46-48 East Smithfield, London E1W 1AW",
+          "फोन: 02035761165",
+          "ईमेल: info@ukvisahelpconsultants.co.uk",
         ]}
         copyright="यूके वीज़ा हेल्प कंसल्टेंट्स। सर्वाधिकार सुरक्षित।"
         copyrightStyle={{ direction: "ltr" }}

@@ -730,9 +730,9 @@ export default function ArabicPage() {
         contactTitle="اتصل بنا"
         contactTitleStyle={{ direction: "rtl", textAlign: "right" }}
         contactInfo={[
-          "لندن، المملكة المتحدة",
-          "هاتف: 7890 456 123 44+",
-          "بريد إلكتروني: info@ukvisahelp.com",
+          "Tower Bridge Business Centre, 46-48 East Smithfield, London E1W 1AW",
+          "هاتف: 02035761165",
+          "بريد إلكتروني: info@ukvisahelpconsultants.co.uk",
         ]}
         copyright="UK Visa Help Consultants. جميع الحقوق محفوظة."
         copyrightStyle={{ direction: "rtl", textAlign: "center" }}
