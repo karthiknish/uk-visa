@@ -113,8 +113,12 @@ export default function PrivacyPage() {
                   contact us:
                 </p>
                 <ul className="list-none text-gray-700">
-                  <li>Phone: +44 123 456 7890</li>
-                  <li>Address: London, United Kingdom</li>
+                  <li>Email: info@ukvisahelpconsultants.co.uk</li>
+                  <li>Phone: 02035761165</li>
+                  <li>
+                    Address: Tower Bridge Business Centre, 46-48 East
+                    Smithfield, London E1W 1AW
+                  </li>
                 </ul>
               </section>
             </div>
