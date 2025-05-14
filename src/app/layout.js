@@ -1,4 +1,5 @@
 import { Playfair_Display, Plus_Jakarta_Sans } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const playfairDisplay = Playfair_Display({
@@ -29,6 +30,7 @@ export default function RootLayout({ children }) {
         className={`${playfairDisplay.variable} ${plusJakartaSans.variable} font-jakarta antialiased`}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );
