@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
@@ -11,12 +12,8 @@ export default function AdminPage() {
   const [submissions, setSubmissions] = useState([]);
   const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const router = useRouter();
 
-  // New state for selected submission and modal visibility
-  const [selectedSubmission, setSelectedSubmission] = useState(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  // Try to load login state from localStorage on component mount
   useEffect(() => {
     const loggedInStatus = localStorage.getItem("isAdminLoggedIn");
     if (loggedInStatus === "true") {
@@ -40,9 +37,7 @@ export default function AdminPage() {
     try {
       const response = await fetch("/api/admin/login", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username, password }),
       });
       const data = await response.json();
@@ -67,14 +62,11 @@ export default function AdminPage() {
     setUsername("");
     setPassword("");
     setSubmissions([]);
-    setSelectedSubmission(null); // Clear selected submission on logout
-    setIsModalOpen(false);
   };
 
   const fetchSubmissions = async () => {
     setIsLoading(true);
     try {
-      // In a real app, you would pass an auth token here
       const response = await fetch("/api/submissions");
       const data = await response.json();
       if (data.success && Array.isArray(data.submissions)) {
@@ -91,15 +83,8 @@ export default function AdminPage() {
     setIsLoading(false);
   };
 
-  // Handlers for modal
-  const handleRowClick = (submission) => {
-    setSelectedSubmission(submission);
-    setIsModalOpen(true);
-  };
-
-  const closeModal = () => {
-    setIsModalOpen(false);
-    setSelectedSubmission(null);
+  const handleRowClick = (submissionId) => {
+    router.push(`/admin/submissions/${submissionId}`);
   };
 
   if (!isLoggedIn) {
@@ -192,8 +177,6 @@ export default function AdminPage() {
 
           {!isLoading && submissions.length > 0 && (
             <div className="bg-white shadow-md rounded-lg overflow-x-auto">
-              {" "}
-              {/* Added overflow-x-auto for potentially wide tables */}
               <table className="min-w-full divide-y divide-gray-200">
                 <thead className="bg-gray-50">
                   <tr>
@@ -239,7 +222,7 @@ export default function AdminPage() {
                   {submissions.map((submission) => (
                     <tr
                       key={submission.id}
-                      onClick={() => handleRowClick(submission)}
+                      onClick={() => handleRowClick(submission.id)}
                       className="hover:bg-gray-50 cursor-pointer"
                     >
                       <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
@@ -269,78 +252,6 @@ export default function AdminPage() {
         </div>
       </main>
       <Footer />
-
-      {/* Modal for displaying submission details */}
-      {isModalOpen && selectedSubmission && (
-        <div className="fixed z-10 inset-0 overflow-y-auto">
-          <div className="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
-            {/* Background overlay */}
-            <div
-              className="fixed inset-0 transition-opacity"
-              aria-hidden="true"
-              onClick={closeModal}
-            >
-              <div className="absolute inset-0 bg-gray-500 opacity-75"></div>
-            </div>
-
-            {/* Modal panel */}
-            <span
-              className="hidden sm:inline-block sm:align-middle sm:h-screen"
-              aria-hidden="true"
-            >
-              &#8203;
-            </span>
-            <div className="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
-              <div className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
-                <div className="sm:flex sm:items-start">
-                  <div className="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left w-full">
-                    <h3
-                      className="text-lg leading-6 font-medium text-gray-900 mb-4"
-                      id="modal-title"
-                    >
-                      Submission Details
-                    </h3>
-                    <div className="mt-2 space-y-3">
-                      <p className="text-sm text-gray-700">
-                        <strong>Date:</strong>{" "}
-                        {new Date(
-                          selectedSubmission.submittedAt
-                        ).toLocaleString()}
-                      </p>
-                      <p className="text-sm text-gray-700">
-                        <strong>Name:</strong> {selectedSubmission.name}
-                      </p>
-                      <p className="text-sm text-gray-700">
-                        <strong>Email:</strong> {selectedSubmission.email}
-                      </p>
-                      <p className="text-sm text-gray-700">
-                        <strong>Phone:</strong> {selectedSubmission.phone}
-                      </p>
-                      <p className="text-sm text-gray-700">
-                        <strong>Country:</strong> {selectedSubmission.country}
-                      </p>
-                      <p className="text-sm text-gray-500 whitespace-pre-wrap">
-                        <strong>Message:</strong>
-                        <br />
-                        {selectedSubmission.message}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
-                <button
-                  type="button"
-                  onClick={closeModal}
-                  className="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
-                >
-                  Close
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 }
