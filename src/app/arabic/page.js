@@ -634,7 +634,7 @@ export default function ArabicPage() {
                   </svg>
                 </div>
                 <h3 className="font-bold mb-2">الهاتف</h3>
-                <p className="text-gray-600">+44 123 456 7890</p>
+                <p className="text-gray-600">02035761165</p>
               </motion.div>
 
               <motion.div
@@ -659,7 +659,9 @@ export default function ArabicPage() {
                   </svg>
                 </div>
                 <h3 className="font-bold mb-2">البريد الإلكتروني</h3>
-                <p className="text-gray-600">info@ukvisahelp.com</p>
+                <p className="text-gray-600">
+                  info@ukvisahelpconsultants.co.uk
+                </p>
               </motion.div>
 
               <motion.div

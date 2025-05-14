@@ -74,10 +74,10 @@ export default function ContactPage() {
                         <div>
                           <p className="font-semibold text-gray-700">Phone</p>
                           <a
-                            href="tel:+441234567890"
+                            href="tel:02035761165"
                             className="text-[#003D6E] hover:underline"
                           >
-                            +44 123 456 7890
+                            02035761165
                           </a>
                         </div>
                       </div>
@@ -99,10 +99,10 @@ export default function ContactPage() {
                         <div>
                           <p className="font-semibold text-gray-700">Email</p>
                           <a
-                            href="mailto:info@ukvisahelp.com"
+                            href="mailto:info@ukvisahelpconsultants.co.uk"
                             className="text-[#003D6E] hover:underline"
                           >
-                            info@ukvisahelp.com
+                            info@ukvisahelpconsultants.co.uk
                           </a>
                         </div>
                       </div>
@@ -130,9 +130,9 @@ export default function ContactPage() {
                         <div>
                           <p className="font-semibold text-gray-700">Address</p>
                           <p className="text-gray-600">
-                            123 Immigration Street
+                            Tower Bridge Business Centre, 46-48 East Smithfield
                             <br />
-                            London, SW1A 1AA
+                            London E1W 1AW
                             <br />
                             United Kingdom
                           </p>
@@ -153,10 +153,10 @@ export default function ContactPage() {
                       our emergency hotline:
                     </p>
                     <a
-                      href="tel:+441234567899"
+                      href="tel:02035761165"
                       className="text-[#003D6E] font-semibold hover:underline"
                     >
-                      +44 123 456 7899
+                      02035761165
                     </a>
                   </motion.div>
                 </StaggerContainer>

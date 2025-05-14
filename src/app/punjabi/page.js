@@ -480,10 +480,8 @@ export default function PunjabiPage() {
                       />
                     </svg>
                   </div>
-                  <h3 className="font-bold mb-2">99% ਸਫਲਤਾ ਦਰ</h3>
-                  <p className="text-sm text-gray-600">
-                    ਸਾਡੇ ਕੋਲ ਸਫਲ ਵੀਜ਼ਾ ਅਰਜ਼ੀਆਂ ਦਾ ਸਾਬਤ ਸ਼ੁਦਾ ਰਿਕਾਰਡ ਹੈ
-                  </p>
+                  <h3 className="font-bold mb-2">ਫ਼ੋਨ</h3>
+                  <p className="text-gray-600">02035761165</p>
                 </ScaleIn>
                 <ScaleIn
                   delay={0.3}
@@ -505,10 +503,9 @@ export default function PunjabiPage() {
                       />
                     </svg>
                   </div>
-                  <h3 className="font-bold mb-2">ਤੇਜ਼ ਪ੍ਰੋਸੈਸਿੰਗ</h3>
-                  <p className="text-sm text-gray-600">
-                    ਅਸੀਂ ਤੁਹਾਡੀ ਅਰਜ਼ੀ ਦੀ ਜਲਦੀ ਤੋਂ ਜਲਦੀ ਪ੍ਰਕਿਰਿਆ ਦੀ ਯਕੀਨਦਹਾਨੀ
-                    ਕਰਦੇ ਹਾਂ
+                  <h3 className="font-bold mb-2">ਈਮੇਲ</h3>
+                  <p className="text-gray-600">
+                    info@ukvisahelpconsultants.co.uk
                   </p>
                 </ScaleIn>
                 <ScaleIn
@@ -602,7 +599,7 @@ export default function PunjabiPage() {
                   </svg>
                 </div>
                 <h3 className="font-bold mb-2">ਫ਼ੋਨ</h3>
-                <p className="text-gray-600">+44 123 456 7890</p>
+                <p className="text-gray-600">02035761165</p>
               </motion.div>
 
               <motion.div
@@ -627,7 +624,9 @@ export default function PunjabiPage() {
                   </svg>
                 </div>
                 <h3 className="font-bold mb-2">ਈਮੇਲ</h3>
-                <p className="text-gray-600">info@ukvisahelp.com</p>
+                <p className="text-gray-600">
+                  info@ukvisahelpconsultants.co.uk
+                </p>
               </motion.div>
 
               <motion.div

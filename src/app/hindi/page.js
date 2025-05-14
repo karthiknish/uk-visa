@@ -605,7 +605,7 @@ export default function HindiPage() {
                 </svg>
               </div>
               <h3 className="font-bold mb-2">फ़ोन</h3>
-              <p className="text-gray-600">+44 123 456 7890</p>
+              <p className="text-gray-600">02035761165</p>
             </motion.div>
 
             <motion.div
@@ -630,7 +630,7 @@ export default function HindiPage() {
                 </svg>
               </div>
               <h3 className="font-bold mb-2">ईमेल</h3>
-              <p className="text-gray-600">info@ukvisahelp.com</p>
+              <p className="text-gray-600">info@ukvisahelpconsultants.co.uk</p>
             </motion.div>
 
             <motion.div
