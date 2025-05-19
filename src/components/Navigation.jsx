@@ -54,8 +54,8 @@ export default function Navigation({
             <Image
               src="/logo.png"
               alt="UK Visa Help Consultants"
-              width={150}
-              height={150}
+              width={120}
+              height={120}
             />
           </Link>
 
