@@ -6,10 +6,24 @@ import { motion } from "framer-motion";
 import ContactForm from "@/components/ContactForm";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import Head from "next/head";
 
 export default function Home() {
   return (
     <div className="min-h-screen font-jakarta">
+      <Head>
+        <title>
+          UK Visa Help Consultants - UK Visa & Immigration Specialists
+        </title>
+        <meta
+          name="description"
+          content="UK Visa Help Consultants provide expert advice and assistance for all types of UK visas and immigration applications. Contact us for a free consultation."
+        />
+        <meta
+          name="keywords"
+          content="UK visa, immigration, visa consultants, UK immigration services, free visa consultation, UK visa help"
+        />
+      </Head>
       <Navigation
         title="UK Visa Help Consultants"
         menuItems={[

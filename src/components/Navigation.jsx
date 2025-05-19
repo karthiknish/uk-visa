@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { usePathname } from "next/navigation";
 import { FadeIn } from "./animations";
+import Image from "next/image";
 
 export default function Navigation({
   title = "UK Visa Help Consultants",
@@ -49,12 +50,13 @@ export default function Navigation({
     <header className="bg-[#003D6E] text-white py-4 sticky top-0 z-50">
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between">
-          <Link
-            href="/"
-            className="font-bold text-xl md:text-2xl"
-            style={titleStyle}
-          >
-            {title}
+          <Link href="/" className="font-bold text-xl md:text-2xl">
+            <Image
+              src="/logo.png"
+              alt="UK Visa Help Consultants"
+              width={150}
+              height={150}
+            />
           </Link>
 
           {/* Mobile menu button */}

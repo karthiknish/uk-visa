@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ContactForm from "@/components/ContactForm";
+import Head from "next/head";
 
 export default function UrduPage() {
   return (
@@ -13,6 +14,19 @@ export default function UrduPage() {
       className="min-h-screen font-[family-name:var(--font-geist-sans)]"
       dir="rtl"
     >
+      <Head>
+        <title>
+          یوکے ویزا ہیلپ کنسلٹنٹس - یوکے ویزا اور امیگریشن کے ماہرین
+        </title>
+        <meta
+          name="description"
+          content="یوکے ویزا ہیلپ کنسلٹنٹس تمام قسم کے یوکے ویزا اور امیگریشن درخواستوں کے لیے ماہرانہ مشورہ اور مدد فراہم کرتے ہیں۔ مفت مشاورت کے لیے ہم سے رابطہ کریں۔"
+        />
+        <meta
+          name="keywords"
+          content="یوکے ویزا, امیگریشن, ویزا کنسلٹنٹس, یوکے امیگریشن سروسز, مفت ویزا مشاورت, یوکے ویزا ہیلپ"
+        />
+      </Head>
       <Navigation
         title="یوکے ویزا ہیلپ کنسلٹنٹس"
         menuItems={[

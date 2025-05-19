@@ -6,10 +6,24 @@ import { motion } from "framer-motion";
 import ContactForm from "@/components/ContactForm";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import Head from "next/head";
 
 export default function BengaliPage() {
   return (
     <div className="min-h-screen font-[family-name:var(--font-geist-sans)]">
+      <Head>
+        <title>
+          ইউকে ভিসা হেল্প কনসালটেন্টস - ইউকে ভিসা ও ইমিগ্রেশন বিশেষজ্ঞ
+        </title>
+        <meta
+          name="description"
+          content="ইউকে ভিসা হেল্প কনসালটেন্টস সব ধরনের ইউকে ভিসা এবং ইমিগ্রেশন আবেদনের জন্য বিশেষজ্ঞ পরামর্শ এবং সহায়তা প্রদান করে। বিনামূল্যে পরামর্শের জন্য আমাদের সাথে যোগাযোগ করুন।"
+        />
+        <meta
+          name="keywords"
+          content="ইউকে ভিসা, ইমিগ্রেশন, ভিসা কনসালটেন্ট, ইউকে ইমিগ্রেশন পরিষেবা, বিনামূল্যে ভিসা পরামর্শ, ইউকে ভিসা সাহায্য"
+        />
+      </Head>
       <Navigation
         title="ইউকে ভিসা হেল্প কনসালট্যান্টস"
         menuItems={[

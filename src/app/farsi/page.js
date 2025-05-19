@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import ContactForm from "@/components/ContactForm";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import Head from "next/head";
 
 export default function FarsiPage() {
   return (
@@ -13,6 +14,17 @@ export default function FarsiPage() {
       className="min-h-screen font-[family-name:var(--font-geist-sans)]"
       dir="rtl"
     >
+      <Head>
+        <title>مشاوران ویزای انگلستان - متخصصان ویزا و مهاجرت انگلستان</title>
+        <meta
+          name="description"
+          content="مشاوران ویزای انگلستان برای انواع ویزاها و درخواست های مهاجرت به انگلستان مشاوره و کمک تخصصی ارائه می دهند. برای مشاوره رایگان با ما تماس بگیرید."
+        />
+        <meta
+          name="keywords"
+          content="ویزای انگلستان, مهاجرت, مشاوران ویزا, خدمات مهاجرت انگلستان, مشاوره رایگان ویزا, کمک ویزای انگلستان"
+        />
+      </Head>
       <Navigation
         title="مشاوران کمک ویزای انگلستان"
         titleStyle={{ direction: "rtl", textAlign: "right" }}

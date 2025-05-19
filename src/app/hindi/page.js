@@ -6,10 +6,24 @@ import { motion } from "framer-motion";
 import ContactForm from "@/components/ContactForm";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import Head from "next/head";
 
 export default function HindiPage() {
   return (
     <div className="min-h-screen font-[family-name:var(--font-geist-sans)]">
+      <Head>
+        <title>
+          यूके वीज़ा हेल्प कंसल्टेंट्स - यूके वीज़ा और इमिग्रेशन विशेषज्ञ
+        </title>
+        <meta
+          name="description"
+          content="यूके वीज़ा हेल्प कंसल्टेंट्स सभी प्रकार के यूके वीज़ा और आव्रजन आवेदनों के लिए विशेषज्ञ सलाह और सहायता प्रदान करते हैं। निःशुल्क परामर्श के लिए हमसे संपर्क करें।"
+        />
+        <meta
+          name="keywords"
+          content="यूके वीज़ा, आव्रजन, वीज़ा सलाहकार, यूके आव्रजन सेवाएं, मुफ्त वीज़ा परामर्श, यूके वीज़ा मदद"
+        />
+      </Head>
       <Navigation
         title="यूके वीज़ा हेल्प कंसल्टेंट्स"
         menuItems={[

@@ -11,6 +11,7 @@ import { motion } from "framer-motion";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ContactForm from "@/components/ContactForm";
+import Head from "next/head";
 
 export default function PashtoPage() {
   return (
@@ -19,6 +20,19 @@ export default function PashtoPage() {
       dir="rtl"
       lang="ps"
     >
+      <Head>
+        <title>
+          د برتانیا د ویزې مشاورین - د برتانیا د ویزې او مهاجرت متخصصین
+        </title>
+        <meta
+          name="description"
+          content="د برتانیا ویزې مشاورین د برتانیا ټولو ډولونو ویزو او مهاجرت غوښتنلیکونو لپاره متخصص مشوره او مرسته چمتو کوي. د وړیا مشورې لپاره موږ سره اړیکه ونیسئ."
+        />
+        <meta
+          name="keywords"
+          content="د برتانیا ویزه, مهاجرت, د ویزې مشاورین, د برتانیا مهاجرت خدمتونه, د ویزې وړیا مشوره, د برتانیا ویزې مرسته"
+        />
+      </Head>
       <Navigation
         title="د برېتانیا ویزې مرستې"
         menuItems={[

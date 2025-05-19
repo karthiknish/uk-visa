@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import ContactForm from "@/components/ContactForm";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import Head from "next/head";
 
 export default function DariPage() {
   return (
@@ -13,6 +14,17 @@ export default function DariPage() {
       className="min-h-screen font-[family-name:var(--font-geist-sans)]"
       dir="rtl"
     >
+      <Head>
+        <title>مشاوران ویزه بریتانیا - متخصصان ویزه و مهاجرت بریتانیا</title>
+        <meta
+          name="description"
+          content="مشاوران ویزه بریتانیا برای تمام انواع ویزه ها و درخواست های مهاجرت به بریتانیا مشاوره و کمک تخصصی ارائه می دهند. برای مشاوره رایگان با ما تماس بگیرید."
+        />
+        <meta
+          name="keywords"
+          content="ویزه بریتانیا, مهاجرت, مشاوران ویزه, خدمات مهاجرت بریتانیا, مشاوره رایگان ویزه, کمک ویزه بریتانیا"
+        />
+      </Head>
       <Navigation
         title="مشاوران کمک ویزای بریتانیا"
         titleStyle={{ direction: "rtl", textAlign: "right" }}

@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import ContactForm from "@/components/ContactForm";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import Head from "next/head";
 
 export default function ArabicPage() {
   return (
@@ -13,6 +14,20 @@ export default function ArabicPage() {
       className="min-h-screen font-[family-name:var(--font-geist-sans)]"
       dir="rtl"
     >
+      <Head>
+        <title>
+          مستشارو تأشيرات المملكة المتحدة - متخصصون في التأشيرات والهجرة إلى
+          المملكة المتحدة
+        </title>
+        <meta
+          name="description"
+          content="يقدم مستشارو تأشيرات المملكة المتحدة المساعدة والمشورة المتخصصة لجميع أنواع تأشيرات المملكة المتحدة وطلبات الهجرة. اتصل بنا للحصول على استشارة مجانية."
+        />
+        <meta
+          name="keywords"
+          content="تأشيرة المملكة المتحدة, الهجرة, مستشارو التأشيرات, خدمات الهجرة في المملكة المتحدة, استشارة مجانية للتأشيرة, مساعدة تأشيرة المملكة المتحدة"
+        />
+      </Head>
       <Navigation
         title="مستشارو تأشيرات المملكة المتحدة"
         menuItems={[

@@ -6,10 +6,24 @@ import { motion } from "framer-motion";
 import ContactForm from "@/components/ContactForm";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import Head from "next/head";
 
 export default function PunjabiPage() {
   return (
     <div className="min-h-screen font-[family-name:var(--font-geist-sans)]">
+      <Head>
+        <title>
+          ਯੂਕੇ ਵੀਜ਼ਾ ਹੈਲਪ ਕੰਸਲਟੈਂਟਸ - ਯੂਕੇ ਵੀਜ਼ਾ ਅਤੇ ਇਮੀਗ੍ਰੇਸ਼ਨ ਮਾਹਿਰ
+        </title>
+        <meta
+          name="description"
+          content="ਯੂਕੇ ਵੀਜ਼ਾ ਹੈਲਪ ਕੰਸਲਟੈਂਟਸ ਹਰ ਕਿਸਮ ਦੇ ਯੂਕੇ ਵੀਜ਼ਾ ਅਤੇ ਇਮੀਗ੍ਰੇਸ਼ਨ ਅਰਜ਼ੀਆਂ ਲਈ ਮਾਹਰ ਸਲਾਹ ਅਤੇ ਸਹਾਇਤਾ ਪ੍ਰਦਾਨ ਕਰਦੇ ਹਨ। ਮੁਫ਼ਤ ਸਲਾਹ ਲਈ ਸਾਡੇ ਨਾਲ ਸੰਪਰਕ ਕਰੋ।"
+        />
+        <meta
+          name="keywords"
+          content="ਯੂਕੇ ਵੀਜ਼ਾ, ਇਮੀਗ੍ਰੇਸ਼ਨ, ਵੀਜ਼ਾ ਸਲਾਹਕਾਰ, ਯੂਕੇ ਇਮੀਗ੍ਰੇਸ਼ਨ ਸੇਵਾਵਾਂ, ਮੁਫ਼ਤ ਵੀਜ਼ਾ ਸਲਾਹ, ਯੂਕੇ ਵੀਜ਼ਾ ਮਦਦ"
+        />
+      </Head>
       <Navigation
         title="ਯੂਕੇ ਵੀਜ਼ਾ ਹੈਲਪ ਕੰਸਲਟੈਂਟਸ"
         menuItems={[
