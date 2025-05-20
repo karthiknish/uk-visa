@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -8,28 +8,17 @@ import Footer from "@/components/Footer";
 export default function AdminPage() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(
+    typeof window !== "undefined" &&
+      localStorage.getItem("isAdminLoggedIn") === "true"
+  );
   const [submissions, setSubmissions] = useState([]);
   const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const [hasFetched, setHasFetched] = useState(false);
   const router = useRouter();
 
-  useEffect(() => {
-    const loggedInStatus = localStorage.getItem("isAdminLoggedIn");
-    if (loggedInStatus === "true") {
-      setIsLoggedIn(true);
-    }
-  }, []);
-
-  useEffect(() => {
-    if (isLoggedIn) {
-      fetchSubmissions();
-      localStorage.setItem("isAdminLoggedIn", "true");
-    } else {
-      localStorage.removeItem("isAdminLoggedIn");
-    }
-  }, [isLoggedIn]);
-
+  // Handle login form submit
   const handleLogin = async (e) => {
     e.preventDefault();
     setError("");
@@ -43,27 +32,42 @@ export default function AdminPage() {
       const data = await response.json();
       if (data.success) {
         setIsLoggedIn(true);
+        if (typeof window !== "undefined") {
+          localStorage.setItem("isAdminLoggedIn", "true");
+        }
       } else {
         setError(
           data.message || "Login failed. Please check your credentials."
         );
         setIsLoggedIn(false);
+        if (typeof window !== "undefined") {
+          localStorage.removeItem("isAdminLoggedIn");
+        }
       }
     } catch (err) {
       setError("An error occurred. Please try again.");
       console.error("Login fetch error:", err);
       setIsLoggedIn(false);
+      if (typeof window !== "undefined") {
+        localStorage.removeItem("isAdminLoggedIn");
+      }
     }
     setIsLoading(false);
   };
 
+  // Handle logout
   const handleLogout = () => {
     setIsLoggedIn(false);
     setUsername("");
     setPassword("");
     setSubmissions([]);
+    setHasFetched(false);
+    if (typeof window !== "undefined") {
+      localStorage.removeItem("isAdminLoggedIn");
+    }
   };
 
+  // Fetch submissions (called manually)
   const fetchSubmissions = async () => {
     setIsLoading(true);
     try {
@@ -71,6 +75,7 @@ export default function AdminPage() {
       const data = await response.json();
       if (data.success && Array.isArray(data.submissions)) {
         setSubmissions(data.submissions);
+        setError("");
       } else {
         setError(data.message || "Failed to fetch submissions.");
         setSubmissions([]);
@@ -81,11 +86,18 @@ export default function AdminPage() {
       setSubmissions([]);
     }
     setIsLoading(false);
+    setHasFetched(true);
   };
 
+  // Row click handler
   const handleRowClick = (submissionId) => {
     router.push(`/admin/submissions/${submissionId}`);
   };
+
+  // If just logged in, fetch submissions (simulate useEffect)
+  if (isLoggedIn && !hasFetched && !isLoading) {
+    fetchSubmissions();
+  }
 
   if (!isLoggedIn) {
     return (
